@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>НМТ · Комплекс 3 · Модуль 3.1 — Confusing Words: Money &amp; Shopping</title>
+<style>
+  :root{
+    --ink:#1f2933; --muted:#5b6770; --line:#d8dee4;
+    --blue:#1d4ed8; --blue-soft:#e8effc;
+    --green:#157347; --green-soft:#e7f6ee;
+    --red:#b42318;  --red-soft:#fdecea;
+    --amber:#92610e; --amber-soft:#fff6dd;
+    --paper:#ffffff; --bg:#f4f6f8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.55}
+  .page{max-width:900px;margin:0 auto;padding:20px 16px 60px}
+
+  .test-head{background:linear-gradient(135deg,#12294d,#1d4ed8);color:#fff;border-radius:14px;
+             padding:22px 26px;margin-bottom:12px}
+  .test-head .crumb{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.75;font-family:Arial,sans-serif}
+  .test-head h1{margin:6px 0 4px;font-size:26px;font-family:Arial,sans-serif;font-weight:700}
+  .test-head p{margin:0;font-size:15px;opacity:.9;font-family:Arial,sans-serif}
+
+  .nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;font-family:Arial,sans-serif}
+  .nav a{display:inline-block;padding:8px 14px;border-radius:10px;background:#fff;border:1px solid var(--line);
+         color:var(--blue);text-decoration:none;font-size:14px;font-weight:700}
+  .nav a:hover{border-color:var(--blue)}
+  .nav a.here{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .nav a.home{background:#eef2f7;color:#33475b}
+
+  .instr{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--blue);
+         border-radius:12px;padding:18px 22px;margin-bottom:14px}
+  .instr h2{margin:0 0 8px;font-family:Arial,sans-serif;font-size:17px;color:var(--blue)}
+  .instr p{margin:6px 0}
+  .instr .en{font-style:italic;color:#243b53;background:#f0f6ff;padding:2px 6px;border-radius:4px}
+  .tip{margin-top:12px;background:var(--amber-soft);border:1px solid #f0dfa8;border-radius:10px;
+       padding:12px 16px;font-family:Arial,sans-serif;font-size:14.5px;color:#57430a}
+  .tip b{color:var(--amber)}
+  .trap{margin-top:8px;background:var(--amber-soft);border:1px solid #f0dfa8;border-radius:8px;
+        padding:8px 12px;font-family:Arial,sans-serif;font-size:14px;color:#57430a}
+  .trap b{color:var(--amber)}
+
+  details{margin-top:10px}
+  summary{cursor:pointer;font-family:Arial,sans-serif;font-weight:700;color:var(--blue);font-size:15px}
+  .steps{counter-reset:step;margin:12px 0 4px;padding:0;list-style:none}
+  .steps li{position:relative;padding:8px 0 8px 52px;border-bottom:1px dashed var(--line);font-family:Arial,sans-serif;font-size:15px}
+  .steps li:last-child{border-bottom:none}
+  .steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:8px;
+    width:34px;height:34px;border-radius:50%;background:var(--blue-soft);color:var(--blue);
+    font-weight:700;display:flex;align-items:center;justify-content:center}
+
+  .ref{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:14px}
+  .ref h2{margin:0 0 4px;font-family:Arial,sans-serif;font-size:18px;color:#102a43}
+  .ref .gloss{color:var(--muted);font-size:14.5px;font-family:Arial,sans-serif;margin-bottom:8px}
+  .ref table{border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14.5px;margin-top:6px}
+  .ref td{border:1px solid var(--line);padding:8px 12px;vertical-align:top}
+  .ref td.word{font-weight:700;color:var(--blue);width:170px}
+  .ref td .ex{display:block;font-style:italic;color:#243b53;margin-top:4px}
+  .ref td .tr{display:block;font-size:12.5px;color:var(--muted)}
+  mark.hl{background:#fff1a8;padding:0 3px;border-radius:3px}
+  .pairbox{background:#f0f6ff;border:1px solid #c7dbf7;border-radius:10px;padding:10px 14px;margin-top:10px;
+           font-family:Arial,sans-serif;font-size:14.5px}
+  .pairbox .lbl{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:4px}
+
+  .part{font-family:Arial,sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;
+        color:var(--muted);margin:26px 0 10px}
+  .part-anchor{scroll-margin-top:16px}
+
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+  .q .q-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .q .q-num{font-family:Arial,sans-serif;font-weight:700;font-size:13px;color:var(--muted)}
+  .q .q-tag{font-family:Arial,sans-serif;font-size:11.5px;font-weight:700;background:var(--blue-soft);color:var(--blue);
+            border-radius:99px;padding:2px 10px}
+  .q .sent{margin:8px 0 10px;font-size:17px}
+  select.gap{max-width:200px;padding:3px 8px;margin:0 3px;border-radius:8px;border:2px dashed var(--blue);
+      background:var(--blue-soft);color:var(--blue);font-family:Arial,sans-serif;font-weight:700;font-size:14px;
+      cursor:pointer;vertical-align:middle}
+  select.gap.ok{border-style:solid;border-color:var(--green);background:var(--green-soft);color:var(--green);cursor:default}
+  select.gap.bad{border-style:solid;border-color:var(--red);background:var(--red-soft);color:var(--red);
+      animation:shake .3s}
+  @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+  mark.q{background:#d3f9d8;padding:1px 4px;border-radius:3px}
+
+  .expl{display:none;margin:4px 0 14px;border:1px solid var(--line);border-radius:10px;background:#fbfcfd;padding:12px 16px}
+  .expl.show{display:block}
+  .expl .ans-line{font-family:Arial,sans-serif;font-weight:700;font-size:15px;margin-bottom:6px;color:var(--green)}
+  .expl .lbl{display:block;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+  .expl .quote{font-style:italic;background:#fff;border-left:3px solid var(--green);padding:6px 10px;border-radius:0 6px 6px 0;margin-top:4px;font-size:15.5px}
+  .expl p.note{font-family:Arial,sans-serif;font-size:14.5px;margin:6px 0 0}
+  .expl table{border-collapse:collapse;margin-top:6px;font-family:Arial,sans-serif;font-size:14px;width:100%}
+  .expl td{border:1px solid var(--line);padding:5px 10px;vertical-align:top}
+  .expl td.no{color:var(--red);font-weight:700;width:140px}
+
+  .gtext{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin-bottom:14px}
+  .gtext h3{margin:0 0 4px;font-family:Arial,sans-serif;font-size:20px;color:#102a43;text-align:center}
+  .gtext p{margin:12px 0;font-size:16.5px;text-align:justify}
+
+  .clinic{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--red);
+          border-radius:12px;padding:18px 22px;margin-bottom:14px}
+  .clinic h2{margin:0 0 8px;font-family:Arial,sans-serif;font-size:17px;color:var(--red)}
+  .clinic-item{border-bottom:1px dashed var(--line);padding:10px 0;font-family:Arial,sans-serif;font-size:14.5px}
+  .clinic-item:last-child{border-bottom:none}
+  .clinic-item .sent-wrong{font-style:italic;color:#243b53}
+  .clinic-item .rule-line{display:block;margin-top:4px;color:#57430a;background:var(--amber-soft);border-radius:6px;padding:4px 8px}
+  .clinic-empty{font-family:Arial,sans-serif;color:var(--green);font-weight:700}
+
+  .controls{position:sticky;bottom:12px;margin-top:18px;background:var(--paper);border:1px solid var(--line);
+            border-radius:14px;padding:14px 18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;
+            box-shadow:0 6px 24px rgba(16,42,67,.12);z-index:10}
+  .controls .btn{border:none;border-radius:10px;padding:12px 26px;font-family:Arial,sans-serif;
+                 font-weight:700;font-size:16px;cursor:pointer}
+  #resetBtn{background:#eef2f7;color:#33475b}
+  #resetBtn:hover{background:#e2e8f0}
+  .controls a.btn{background:var(--blue);color:#fff;text-decoration:none}
+  .controls a.btn.back{background:#eef2f7;color:#33475b}
+  #score{font-family:Arial,sans-serif;font-weight:700;font-size:16px;margin-left:auto;color:var(--muted)}
+  #score.good{color:var(--green)} #score.mid{color:var(--amber)} #score.low{color:var(--red)}
+
+  @media print{
+    body{background:#fff}
+    .controls,.tip,details,.nav{display:none}
+    .expl{display:block !important}
+  }
+  @media(max-width:560px){
+    .test-head h1{font-size:21px}
+    select.gap{max-width:160px}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="test-head">
+    <div class="crumb">НМТ · Англійська мова · Комплекс 3 «Світ навколо нас» · Модуль 3.1</div>
+    <h1>Confusing Words: Money &amp; Shopping</h1>
+    <p>Довідник → 14 завдань → 2 тексти формату НМТ → Error Clinic · Рівень B2 · British English</p>
+  </div>
+
+  <nav class="nav">
+    <a class="home" href="../index.html">⌂ Усі комплекси</a>
+    <a class="home" href="index.html">Комплекс 3</a>
+    <a class="here" href="#ref1">📖 Довідник</a>
+    <a href="#part1">✏️ Тренажер 1–14</a>
+    <a href="#text1">📰 Текст 1 (1–7)</a>
+    <a href="#text2">📰 Текст 2 (8–14)</a>
+    <a href="#clinic">🔁 Error Clinic</a>
+  </nav>
+
+  <div class="instr">
+    <h2>Як працювати з модулем</h2>
+    <p><b>Крок 1.</b> Прочитайте <b>довідник</b>: 8 пар слів про гроші та покупки. Зверніть увагу на питання-тести в рамках «⚠️ Пастка».</p>
+    <p><b>Крок 2.</b> <b>14 одиничних завдань</b> A/B/C/D — кожне речення перевіряє одну пару.</p>
+    <p><b>Крок 3.</b> <b>2 тексти НМТ</b> по 7 пропусків: пари змішані в контексті.</p>
+    <p><b>Крок 4.</b> <b>Error Clinic</b> — повторення помилок.</p>
+    <div class="tip"><b>Головне правило модуля:</b> грошова лексика завжди має «напрямок»: гроші <b>до мене</b> (borrow, win, earn) чи <b>від мене</b> (lend, spend, pay)? Визначте напрямок — і половина варіантів відпадає одразу.</div>
+  </div>
+
+  <!-- ================= ДОВІДНИК ================= -->
+  <div class="part part-anchor" id="ref1">📖 Довідник — 8 пар-контрастів</div>
+
+  <div class="ref" id="ref-bl">
+    <h2>borrow / lend</h2>
+    <div class="gloss">Беру в борг vs даю в борг. Одна дія — два напрямки, два дієслова.</div>
+    <table>
+      <tr><td class="word">borrow (from)</td><td>позичити СОБІ (беру я, поверну пізніше)
+        <span class="ex">Can I <mark class="hl">borrow</mark> your bike for the weekend?</span><span class="tr">Можна я візьму твій велосипед на вихідні?</span></td></tr>
+      <tr><td class="word">lend (to)</td><td>позичити КОМУСЬ (даю я, мені повернуть)
+        <span class="ex">Can you <mark class="hl">lend</mark> me £10 until Friday?</span><span class="tr">Можеш позичити мені 10 фунтів до п'ятниці?</span></td></tr>
+    </table>
+    <div class="pairbox"><span class="lbl">Порівняйте</span>
+      I <mark class="hl">borrowed</mark> £10 <b>from</b> Anna. ↔ Anna <mark class="hl">lent</mark> £10 <b>to</b> me.<br>
+      <i>Одна й та сама десятка — два дієслова залежно від того, ХТО підмет.</i>
+    </div>
+    <div class="trap"><b>⚠️ Пастка:</b> «Позич мені» українською — одне слово для обох напрямків! Англійською: я беру → <b>borrow (from)</b>; я даю → <b>lend (to)</b>. Прийменник — підказка: from → borrow, to → lend.</div>
+  </div>
+
+  <div class="ref" id="ref-sp">
+    <h2>spend / waste / save</h2>
+    <div class="gloss">Три «долі» грошей і часу: використати / викинути / зібрати.</div>
+    <table>
+      <tr><td class="word">spend (on/doing)</td><td>витрачати (гроші, час) — нейтрально
+        <span class="ex">I <mark class="hl">spent</mark> £50 on new headphones.</span><span class="tr">Я витратив 50 фунтів на нові навушники.</span></td></tr>
+      <tr><td class="word">waste (on/doing)</td><td>марнувати (гроші, час) — шкода!
+        <span class="ex">Don't <mark class="hl">waste</mark> your money on that game — it's broken.</span><span class="tr">Не марнуй гроші на ту гру — вона зламалася.</span></td></tr>
+      <tr><td class="word">save (for)</td><td>збирати, відкладати (гроші); економити (час)
+        <span class="ex">She's <mark class="hl">saving</mark> for a new laptop.</span><span class="tr">Вона збирає на новий ноутбук.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> <b>spend</b> — просто факт витрати; <b>waste</b> — витрата + жаль («дарма!»). Якщо в реченні є «school fees», «need a new phone» — це spend; якщо «£40 for a mug?!» — waste.</div>
+  </div>
+
+  <div class="ref" id="ref-pa">
+    <h2>pay / afford / cost</h2>
+    <div class="gloss">Три дієслова з різними підметами: людина платить, людина може собі дозволити, а РІЧ коштує.</div>
+    <table>
+      <tr><td class="word">pay (for)</td><td>платити (людина + гроші/за річ)
+        <span class="ex">I <mark class="hl">paid</mark> £20 for this T-shirt.</span><span class="tr">Я заплатив 20 фунтів за цю футболку.</span></td></tr>
+      <tr><td class="word">afford (to do)</td><td>мати змогу, встигати фінансово (часто з can/can't)
+        <span class="ex">We can't <mark class="hl">afford</mark> to eat out every week.</span><span class="tr">Ми не можемо дозволити собі їсти в кафе щотижня.</span></td></tr>
+      <tr><td class="word">cost</td><td>коштувати (підмет — РІЧ!)
+        <span class="ex">This phone <mark class="hl">costs</mark> £300.</span><span class="tr">Цей телефон коштує 300 фунтів.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> тест на підмет: <b>хто/що в реченні?</b> Річ коштує → <b>cost</b> (The ticket costs £10). Людина платить → <b>pay</b>. «Могти дозволити» → <b>can afford</b>. «I cost £300» — неможливо!</div>
+  </div>
+
+  <div class="ref" id="ref-rb">
+    <h2>receipt / bill / fare</h2>
+    <div class="gloss">Три «папірці з цифрами» — три різні ситуації.</div>
+    <table>
+      <tr><td class="word">receipt</td><td>чек (у магазині — доказ покупки)
+        <span class="ex">Keep the <mark class="hl">receipt</mark> — you might need it for a refund.</span><span class="tr">Збережи чек — може знадобитися для повернення.</span></td></tr>
+      <tr><td class="word">bill</td><td>рахунок (у ресторані, за електрику)
+        <span class="ex">Can we have the <mark class="hl">bill</mark>, please?</span><span class="tr">Можна нам рахунок, будь ласка?</span></td></tr>
+      <tr><td class="word">fare</td><td>плата за ПРОЇЗД (автобус, таксі, потяг)
+        <span class="ex">The bus <mark class="hl">fare</mark> to the airport is £8.</span><span class="tr">Проїзд автобусом до аеропорту коштує 8 фунтів.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> shop → <b>receipt</b> (чек, що видають ПІСЛЯ оплати); restaurant/electricity → <b>bill</b> (рахунок, який треба сплатити); transport → <b>fare</b>. «Чек у ресторані» — це bill, не receipt!</div>
+  </div>
+
+  <div class="ref" id="ref-sb">
+    <h2>sale / bargain / discount</h2>
+    <div class="gloss">Розпродаж (подія магазину) / вдалий «знайд» (ваше відчуття) / знижка (відсоток).</div>
+    <table>
+      <tr><td class="word">sale (on sale)</td><td>розпродаж — подія, коли магазин знижує ціни
+        <span class="ex">I bought this coat in the January <mark class="hl">sale</mark>.</span><span class="tr">Я купила це пальто на січневому розпродажі.</span></td></tr>
+      <tr><td class="word">bargain</td><td>вигідна покупка — «коштує копійки, а виглядає на мільйон»
+        <span class="ex">£3 for these shoes? What a <mark class="hl">bargain</mark>!</span><span class="tr">Три фунти за ці черевики? Подарунок!</span></td></tr>
+      <tr><td class="word">discount</td><td>знижка (конкретний відсоток)
+        <span class="ex">Students get a 10% <mark class="hl">discount</mark> on everything.</span><span class="tr">Студенти мають знижку 10% на все.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> магазин оголошує <b>sale</b> (on sale = зі знижкою); ви знаходите <b>bargain</b>; касир застосовує <b>discount</b>. Пам'ятайте: for sale (продається) ≠ on sale (зі знижкою)!</div>
+  </div>
+
+  <div class="ref" id="ref-cc">
+    <h2>cash / change</h2>
+    <div class="gloss">Готівка (кошторис) vs решта (різниця після оплати).</div>
+    <table>
+      <tr><td class="word">cash (U)</td><td>готівка (купюри й монети, на відміну від картки)
+        <span class="ex">Can I pay in <mark class="hl">cash</mark>, or is it card only?</span><span class="tr">Можна готівкою, чи тільки карткою?</span></td></tr>
+      <tr><td class="word">change (U)</td><td>1) решта; 2) дрібні монети
+        <span class="ex">Here's your <mark class="hl">change</mark> — £3.50.</span><span class="tr">Ось ваша решта — 3,50.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> pay in <b>cash</b> (готівкою) vs get <b>change</b> back (решта). «Дрібні гроші» — теж change: I have no change for the machine.</div>
+  </div>
+
+  <div class="ref" id="ref-re">
+    <h2>refund / exchange</h2>
+    <div class="gloss">Повернути гроші vs обміняти річ. Магазин питає: «Refund or exchange?»</div>
+    <table>
+      <tr><td class="word">refund</td><td>повернення ГРОШЕЙ (get a refund)
+        <span class="ex">The jacket had a hole, so they gave me a full <mark class="hl">refund</mark>.</span><span class="tr">На куртці була дірка, тож мені повернули всю суму.</span></td></tr>
+      <tr><td class="word">exchange</td><td>обмін РЕЧІ на іншу (розмір, колір)
+        <span class="ex">Can I <mark class="hl">exchange</mark> this jumper for a larger size?</span><span class="tr">Чи можу я обміняти цей светр на більший розмір?</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> гроші назад → <b>refund</b>; інша річ → <b>exchange</b>. Маркер: «larger size / different colour» → exchange; «money back / hole in it» → refund.</div>
+  </div>
+
+  <div class="ref" id="ref-econ">
+    <h2>economic / economical</h2>
+    <div class="gloss">Економічний (про економіку країни) vs економний (береже гроші/паливо).</div>
+    <table>
+      <tr><td class="word">economic</td><td>економічний (система, криза, зростання)
+        <span class="ex">The country is facing a serious <mark class="hl">economic</mark> crisis.</span><span class="tr">Країна переживає серйозну економічну кризу.</span></td></tr>
+      <tr><td class="word">economical</td><td>економний, ощадливий (авто, людина, спосіб)
+        <span class="ex">This car is very <mark class="hl">economical</mark> — it uses almost no fuel.</span><span class="tr">Це авто дуже економне — майже не їсть пального.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> країна/уряд/зростання → <b>economic</b>; авто/праска/людина, що береже → <b>economical</b>. «Економна машина» ≠ economic car!</div>
+  </div>
+
+  <!-- ================= ЧАСТИНА 1: ОДИНИЧНІ ================= -->
+  <div class="part part-anchor" id="part1">✏️ Частина 1 · 14 одиничних завдань</div>
+
+  <div class="instr">
+    <h2>Завдання 1–14</h2>
+    <p>Оберіть правильне слово зі списку. Якщо помилитеся — уважно прочитайте пояснення: воно відповідає на питання <b>«а чому саме так?»</b>.</p>
+  </div>
+
+  <div id="singles"></div>
+
+  <!-- ================= ТЕКСТ 1 ================= -->
+  <div class="part part-anchor" id="text1">📰 Частина 2 · Текст 1 · завдання 1–7</div>
+
+  <div class="instr">
+    <h2>Текст 1 — «The January Sales»</h2>
+    <p><span class="en">For questions 1–7, read the text below and decide which answer (A, B, C or D) best fits each gap.</span></p>
+    <div class="tip"><b>Стратегія:</b> спочатку прочитайте увесь текст БЕЗ варіантів, щоб зрозуміти історію. Потім обирайте кожну відповідь.</div>
+  </div>
+
+  <div class="gtext">
+    <h3>The January Sales</h3>
+    <p>Every year, as soon as Christmas is over, British shops announce the January <select class="gap" data-block="t1" data-gap="1"></select> — two weeks when prices fall by up to 70%. My friend Mia loves it. She says she's a very <select class="gap" data-block="t1" data-gap="2"></select> shopper: she plans everything, compares prices and never buys anything she doesn't need.
+    <span class="expl" id="expl-t1-1"></span><span class="expl" id="expl-t1-2"></span></p>
+    <p>This year she wanted a new coat. She had been <select class="gap" data-block="t1" data-gap="3"></select> for one since October, putting away £20 every week, so she could easily <select class="gap" data-block="t1" data-gap="4"></select> a good one. In the first shop she found exactly what she wanted — for £45 instead of £150! «What a <select class="gap" data-block="t1" data-gap="5"></select>!» she cried. At the till she paid in <select class="gap" data-block="t1" data-gap="6"></select> because she doesn't trust cards, and carefully put the <select class="gap" data-block="t1" data-gap="7"></select> in her purse. «If there's a problem, I'll take it straight back,» she said.
+    <span class="expl" id="expl-t1-3"></span><span class="expl" id="expl-t1-4"></span><span class="expl" id="expl-t1-5"></span><span class="expl" id="expl-t1-6"></span><span class="expl" id="expl-t1-7"></span></p>
+  </div>
+
+  <!-- ================= ТЕКСТ 2 ================= -->
+  <div class="part part-anchor" id="text2">📰 Частина 3 · Текст 2 · завдання 8–14</div>
+
+  <div class="instr">
+    <h2>Текст 2 — «A Lesson in Money»</h2>
+    <p><span class="en">For questions 8–14, read the text below and decide which answer (A, B, C or D) best fits each gap.</span></p>
+    <div class="tip"><b>Стратегія:</b> зверніть увагу на <b>підмет</b> речення (людина чи річ?) і на <b>прийменники</b> (from / to / on / for) — вони одразу вказують на правильне дієслово.</div>
+  </div>
+
+  <div class="gtext">
+    <h3>A Lesson in Money</h3>
+    <p>When I was sixteen, I wanted a new phone, but I knew my parents couldn't <select class="gap" data-block="t2" data-gap="8"></select> to buy me one — times were hard, and the country's <select class="gap" data-block="t2" data-gap="9"></select> problems affected every family. So I asked my older brother if he could <select class="gap" data-block="t2" data-gap="10"></select> me £200. «You'll have to give it back,» he warned.
+    <span class="expl" id="expl-t2-8"></span><span class="expl" id="expl-t2-9"></span><span class="expl" id="expl-t2-10"></span></p>
+    <p>I found a phone that <select class="gap" data-block="t2" data-gap="11"></select> only £180, so I even had some money left. For the next six months I worked in a café every Saturday. When the manager gave me the <select class="gap" data-block="t2" data-gap="12"></select> for my first shift — £25 in an envelope — I felt incredibly rich! I didn't <select class="gap" data-block="t2" data-gap="13"></select> a penny on sweets or games, as I used to. Week by week, I paid my brother back. He smiled and said, «See? Earning money feels better than spending it.» He was right. These days, before I buy anything, I ask myself: do I really need it, or would it just be a <select class="gap" data-block="t2" data-gap="14"></select> of money?
+    <span class="expl" id="expl-t2-11"></span><span class="expl" id="expl-t2-12"></span><span class="expl" id="expl-t2-13"></span><span class="expl" id="expl-t2-14"></span></p>
+  </div>
+
+  <!-- ================= ERROR CLINIC ================= -->
+  <div class="part part-anchor" id="clinic">🔁 Error Clinic — робота над помилками</div>
+
+  <div class="clinic">
+    <h2>Error Clinic</h2>
+    <p style="font-family:Arial,sans-serif;font-size:14.5px;margin:0 0 10px">Тут з'являться всі завдання, де ви помилилися хоча б раз. Після завершення тренажера поверніться сюди й поясніть кожну помилку самі собі.</p>
+    <div id="clinicList"><div class="clinic-empty">Поки що помилок немає. Чудово — так тримати! 💪</div></div>
+  </div>
+
+  <!-- ================= CONTROLS ================= -->
+  <div class="controls">
+    <a class="btn back" href="index.html">← Комплекс 3</a>
+    <button class="btn" id="resetBtn">🔄 Скинути все</button>
+    <a class="btn" href="modul-3-2.html">Наступний модуль →</a>
+    <span id="score">Результат: 0 / 28</span>
+  </div>
+
+</div>
+
+<script>
+/* ===================== ДАНІ ===================== */
+const SINGLES = [
+{id:1, ref:'#ref-bl', tag:'borrow / lend', sent:'Could you ___ me your dictionary for a minute, please?',
+ opts:[['A','borrow'],['B','lend'],['C','save'],['D','owe']], ans:'B',
+ why:'Вас просять ДАТИ словник (гроші/річ ідуть від вас) → lend. Модель: lend something to somebody.',
+ no:[['borrow','це «взяти СОБІ». Неможливо «borrow me» — borrow завжди йде з from: I borrowed a dictionary from her.'],
+     ['save','«збирати / економити» — не пасує за змістом.'],
+     ['owe','«бути винним» (I owe you £10) — тут про це не йдеться.']],
+ trap:'⚠️ Підмет — «you», рух речі: від вас до мене → lend.'},
+{id:2, ref:'#ref-bl', tag:'borrow / lend', sent:'I need to ___ some money from my parents to buy a ticket.',
+ opts:[['A','lend'],['B','borrow'],['C','earn'],['D','charge']], ans:'B',
+ why:'Гроші йдуть ДО мене, прийменник from → borrow (from). Я візьму й поверну.',
+ no:[['lend','це «давати в борг». Lend + to: my parents will lend money to me — але тоді підмет «my parents».'],
+     ['earn','«заробляти» працею — тут ви просто просите позичити.'],
+     ['charge','«брати плату / стягувати» (The hotel charged me £50) — не про позику.']],
+ trap:'⚠️ Тест: прийменник from → borrow; прийменник to → lend.'},
+{id:3, ref:'#ref-sp', tag:'spend / waste / save', sent:'Don\'t ___ your pocket money on chewing gum — you wanted a new game!',
+ opts:[['A','spend'],['B','save'],['C','waste'],['D','pay']], ans:'C',
+ why:'Речення звучить із жалем («ти ж хотів нову гру!») — це марнування → waste (on).',
+ no:[['spend','граматично можливе (spend on), але втрачається зміст шкодування: жуйка замість мрії — це waste.'],
+     ['save','протилежний зміст — збирати гроші.'],
+     ['pay','pay for something / pay somebody — потрібен for, а тут on.']],
+ trap:'⚠️ Spend — факт витрати; waste — витрата + «дарма!». Тут друга частина речення («ти ж хотів гру») сигналить про waste.'},
+{id:4, ref:'#ref-sp', tag:'spend / waste / save', sent:'We ___ two hours looking for a parking place in the city centre.',
+ opts:[['A','saved'],['B','spent'],['C','wasted'],['D','cost']], ans:'B',
+ why:'Нейтральна витрата часу → spend time (doing something): spent two hours looking.',
+ no:[['saved','зекономити час — тут нічого не зекономили, навпаки.'],
+     ['wasted','граматично можливе, але речення нейтральне, без оцінки «марно».'],
+     ['cost','cost — лише про ціну речі (The trip cost £200), не про «провести час».']],
+ trap:'⚠️ Spend + time + V-ing: I spent the evening reading.'},
+{id:5, ref:'#ref-pa', tag:'pay / afford / cost', sent:'The tickets to the concert ___ £40 each.',
+ opts:[['A','pay'],['B','afford'],['C','spend'],['D','cost']], ans:'D',
+ why:'Підмет — РІЧ (the tickets) → cost. Речі коштують, люди платять.',
+ no:[['pay','платить ЛЮДИНА: I paid £40 for the tickets.'],
+     ['afford','«мати змогу»: I can\'t afford the tickets — теж з підметом-людиною.'],
+     ['spend','витрачає ЛЮДИНА: I spent £40 on the tickets.']],
+ trap:'⚠️ Тест на підмет: The tickets ___ → cost; I ___ → pay / spend / afford.'},
+{id:6, ref:'#ref-pa', tag:'pay / afford / cost', sent:'We can\'t ___ to buy a car this year — we\'re saving for a flat.',
+ opts:[['A','pay'],['B','cost'],['C','afford'],['D','spend']], ans:'C',
+ why:'«Не можемо дозволити собі» → can\'t afford + to do. Друга частина («збираємо на квартиру») пояснює брак грошей.',
+ no:[['pay','pay to buy — некоректна конструкція: pay for a car, а не pay to buy.'],
+     ['cost','підмет «we» — люди, а cost вимагає підмет-річ.'],
+     ['spend','spend to buy — некоректно: spend money on a car.']],
+ trap:'⚠️ can / can\'t + afford to do — стійка конструкція про фінансову можливість.'},
+{id:7, ref:'#ref-rb', tag:'receipt / bill / fare', sent:'When you return a T-shirt to the shop, you must show the ___.',
+ opts:[['A','bill'],['B','fare'],['C','receipt'],['D','discount']], ans:'C',
+ why:'Магазин + доказ покупки → receipt (чек). Без чека повернення не приймуть.',
+ no:[['bill','рахунок у ресторані або за комуналку — не в магазині.'],
+     ['fare','плата за проїзд (bus fare) — транспорт, не магазин.'],
+     ['discount','знижка — це відсоток, а не папірець.']],
+ trap:'⚠️ Shop → receipt; restaurant → bill; bus/taxi → fare.'},
+{id:8, ref:'#ref-rb', tag:'receipt / bill / fare', sent:'How much is the bus ___ from here to the city centre?',
+ opts:[['A','receipt'],['B','bill'],['C','fare'],['D','change']], ans:'C',
+ why:'Питання про вартість ПРОЇЗДУ → fare. Класичне словосполучення: bus/train/taxi fare.',
+ no:[['receipt','чек — папірець ПІСЛЯ покупки, а не вартість поїздки.'],
+     ['bill','рахунок (ресторан, електрика) — не проїзд.'],
+     ['change','решта / дрібні монети.']],
+ trap:'⚠️ Fare — лише про транспорт. Ціна квитка: ticket price, але плата за проїзд: fare.'},
+{id:9, ref:'#ref-sb', tag:'sale / bargain / discount', sent:'I bought these jeans in the summer ___ — they were half price!',
+ opts:[['A','bargain'],['B','sale'],['C','discount'],['D','offer']], ans:'B',
+ why:'Подія-розпродаж у магазині → the summer sale. Стійко: in the sale.',
+ no:[['bargain','bargain — це сама вигідна покупка (These jeans were a bargain!), а не подія.'],
+     ['discount','знижка (відсоток): at a discount, а не in the discount.'],
+     ['offer','спецпропозиція: on offer; in the offer — некоректно.']],
+ trap:'⚠️ in the sale (подія) / a bargain (покупка) / a 50% discount (відсоток).'},
+{id:10, ref:'#ref-cc', tag:'cash / change', sent:'I\'ve no coins for the coffee machine — have you got any ___?',
+ opts:[['A','cash'],['B','change'],['C','bill'],['D','fare']], ans:'B',
+ why:'Дрібні монети для автомата → change. Стійко: have you got any change?',
+ no:[['cash','cash — готівка взагалі (купюри + монети). Для автомата потрібні саме дрібні — change.'],
+     ['bill','рахунок у ресторані — не сюди.'],
+     ['fare','плата за проїзд — інша ситуація.']],
+ trap:'⚠️ pay in cash (готівкою, не карткою) vs give me some change (дрібні).'},
+{id:11, ref:'#ref-re', tag:'refund / exchange', sent:'The shop gave me a full ___ because the toaster didn\'t work at all.',
+ opts:[['A','exchange'],['B','refund'],['C','receipt'],['D','discount']], ans:'B',
+ why:'Товар зламаний, магазин повернув ГРОШІ → refund. Маркери: didn\'t work, gave me a full...',
+ no:[['exchange','обмін на іншу річ (розмір/колір) — а тут гроші назад.'],
+     ['receipt','чек — це доказ покупки, його видають ВАМ, не повертають як компенсацію.'],
+     ['discount','знижка — це менша ціна при купівлі, а не повернення грошей.']],
+ trap:'⚠️ Гроші назад → refund; інша річ → exchange.'},
+{id:12, ref:'#ref-re', tag:'refund / exchange', sent:'This jumper is too small — can I ___ it for a medium size?',
+ opts:[['A','refund'],['B','change into'],['C','exchange'],['D','return back']], ans:'C',
+ why:'Мета — отримати ІНШИЙ РОЗМІР → exchange it for a medium. Маркери: too small, for a medium size.',
+ no:[['refund','повернення грошей — а тут ви хочете річ, тільки іншу.'],
+     ['change into','change INTO = перетворитися (The frog changed into a prince!).'],
+     ['return back','back зайве (return вже = «назад») і конструкція з for не працює.']],
+ trap:'⚠️ exchange something FOR something — обміняти на.'},
+{id:13, ref:'#ref-econ', tag:'economic / economical', sent:'Buying a monthly ticket is more ___ than paying every day.',
+ opts:[['A','economic'],['B','economy'],['C','economical'],['D','economist']], ans:'C',
+ why:'Ощадливий варіант, що економить гроші → economical. Порівняння more economical.',
+ no:[['economic','про економіку країни (economic growth), не про вигідну покупку.'],
+     ['economy','іменник «економіка» — після more потрібен прикметник.'],
+     ['economist','«економіст» — людина, професія.']],
+ trap:'⚠️ more ___ than — потрібен прикметник про вигоду → economical.'},
+{id:14, ref:'#ref-econ', tag:'economic / economical', sent:'The government is worried about the country\'s slow ___ growth.',
+ opts:[['A','economical'],['B','economic'],['C','economy'],['D','economise']], ans:'B',
+ why:'Зростання ЕКОНОМІКИ країни → economic growth — сталий вислів у новинах і текстах НМТ.',
+ no:[['economical','«ощадливий» — авто/спосіб, що береже гроші. Економіка країни не буває «ощадливою».'],
+     ['economy','іменник; тут потрібен прикметник перед growth.'],
+     ['economise','дієслово «економити» — форма не та.']],
+ trap:'⚠️ growth/crisis/development → economic; car/heater/person → economical.'}
+];
+
+const TEXT1 = {
+1:{ans:'B', word:'sale', opts:[['A','bargain'],['B','sale'],['C','discount'],['D','offer']],
+   quote:'…British shops announce the January <mark class="q">sale</mark> — two weeks when prices fall…',
+   why:'Подія, яку оголошують магазини, із зниженням цін → the January sale. Далі «prices fall by up to 70%» підтверджує: це розпродаж.',
+   no:[['bargain','bargain — це окрема вигідна покупка, а не масова подія магазинів.'],
+      ['discount','знижка (70%) — наслідок розпродажу, а не сама подія; не кажуть «announce the January discount».'],
+      ['offer','надто загальне; сталий вислів саме the January sales.']],
+   trap:'⚠️ announce the January ___ + prices fall → sale.'},
+2:{ans:'D', word:'economical', opts:[['A','economic'],['B','careful with'],['C','wasteful'],['D','economical']],
+   quote:'…she\'s a very <mark class="q">economical</mark> shopper: she plans everything, compares prices…',
+   why:'Опис людини, що планує, порівнює ціни й не купує зайвого → economical (ощадлива).',
+   no:[['economic','про економіку країни, не про звички покупця.'],
+      ['careful with','careful with money — гарне словосполучення, але «a careful with shopper» граматично неможливе: потрібен один прикметник перед shopper.'],
+      ['wasteful','«марнотратний» — протилежність описаної поведінки.']],
+   trap:'⚠️ Людина, що береже гроші → economical, НЕ economic.'},
+3:{ans:'A', word:'saving', opts:[['A','saving'],['B','spending'],['C','wasting'],['D','paying']],
+   quote:'…She had been <mark class="q">saving</mark> for one since October, putting away £20 every week…',
+   why:'«Putting away £20 every week» = відкладала гроші → saving (for). Дієслово другої частини речення — пряма підказка.',
+   no:[['spending','витрачати — але ж вона ще не купила пальто.'],
+      ['wasting','марнувати — суперечить змісту.'],
+      ['paying','pay for — платити за конкретну річ; тут вона лише збирає.']],
+   trap:'⚠️ Шукайте дублер-підказку: putting away = saving.'},
+4:{ans:'C', word:'afford', opts:[['A','cost'],['B','pay'],['C','afford'],['D','spend']],
+   quote:'…so she could easily <mark class="q">afford</mark> a good one.',
+   why:'«Могла дозволити собі» → could afford. Вона накопичила — отже, грошей вистачало.',
+   no:[['cost','cost — підмет-річ: The coat cost £45. А тут підмет — she.'],
+      ['pay','потрібно pay FOR: pay for a good one. Само по собі pay + річ — некоректно.'],
+      ['spend','потрібно spend ON: spend money on a good one.']],
+   trap:'⚠️ could/can\'t + afford — «могти/не могти дозволити собі».'},
+5:{ans:'A', word:'bargain', opts:[['A','bargain'],['B','sale'],['C','discount'],['D','change']],
+   quote:'«What a <mark class="q">bargain</mark>!» she cried.',
+   why:'Вигук «What a …!» про вдалу покупку (£45 замість £150) → bargain. Сталий вислів: What a bargain!',
+   no:[['sale','розпродаж — подія (ми в ній весь текст); What a sale! — не вислів про конкретну покупку.'],
+      ['discount','знижка: What a discount! — так не кажуть; кажуть a 70% discount.'],
+      ['change','решта — геть не в тему.']],
+   trap:'⚠️ What a ___! + радість від ціни → bargain.'},
+6:{ans:'B', word:'cash', opts:[['A','change'],['B','cash'],['C','coins'],['D','credit']],
+   quote:'…she paid in <mark class="q">cash</mark> because she doesn\'t trust cards…',
+   why:'Пояснення «doesn\'t trust cards» вказує на спосіб оплати → paid in cash (готівкою). Стійко: pay in cash / pay by card.',
+   no:[['change','решта — її отримують, а не платять нею як способом.'],
+      ['coins','coins — лише монети; вона могла платити й купюрами. Категорія — cash.'],
+      ['credit','суперечить «doesn\'t trust cards».']],
+   trap:'⚠️ Протиставлення карткам → in cash.'},
+7:{ans:'D', word:'receipt', opts:[['A','bill'],['B','fare'],['C','change'],['D','receipt']],
+   quote:'…and carefully put the <mark class="q">receipt</mark> in her purse.',
+   why:'Магазин + «I\'ll take it straight back» (поверну товар) → потрібен чек → receipt. Останнє речення — пряма підказка.',
+   no:[['bill','рахунок у ресторані — а дія в магазині одягу.'],
+      ['fare','проїзд — тема транспорту.'],
+      ['change','решту теж кладуть у гаманець, але «обережно прибрала для можливого повернення» — це чек.']],
+   trap:'⚠️ Хочеш мати змогу повернути товар → бережи receipt.'}
+};
+
+const TEXT2 = {
+8:{ans:'B', word:'afford', opts:[['A','pay'],['B','afford'],['C','cost'],['D','spend']],
+   quote:'…I knew my parents couldn\'t <mark class="q">afford</mark> to buy me one…',
+   why:'«Не могли дозволити собі купити» → couldn\'t afford to buy. Конструкція afford + to do.',
+   no:[['pay','pay me to buy / pay for — конструкція з to buy не працює.'],
+      ['cost','підмет-люди (my parents) — а cost вимагає річ: The phone cost £200.'],
+      ['spend','spend money on / spend time doing — з to buy не поєднується.']],
+   trap:'⚠️ can\'t afford + to do — класична пастка НМТ: перевіряйте інфінітив після пропуску.'},
+9:{ans:'A', word:'economic', opts:[['A','economic'],['B','economical'],['C','economy'],['D','money']],
+   quote:'…the country\'s <mark class="q">economic</mark> problems affected every family.',
+   why:'Проблеми ЕКОНОМІКИ країни → economic problems. Маркер: the country\'s — масштаб держави.',
+   no:[['economical','«ощадливі» — країна не буває «ощадливою» в такому контексті.'],
+      ['economy','іменник; тут потрібен прикметник перед problems.'],
+      ['money','money problems — розмовне «проблеми з грошима», а тут про стан економіки: economic.']],
+   trap:'⚠️ country/government → economic; person/car → economical.'},
+10:{ans:'D', word:'lend', opts:[['A','borrow'],['B','save'],['C','earn'],['D','lend']],
+   quote:'…if he could <mark class="q">lend</mark> me £200.',
+   why:'Прошу брата ДАТИ мені гроші → lend me £200 (= lend £200 to me). Гроші йдуть від нього до мене.',
+   no:[['borrow','borrow = взяти СОБІ; «borrow me» — неможливо. Можливо: I asked if I could borrow £200 from him.'],
+      ['save','збирати — брат нічого не збирав.'],
+      ['earn','заробляти — це робитиму я в кафе, не брат.']],
+   trap:'⚠️ «me» після пропуску → lend me (дати мені). Borrow me — типова помилка!'},
+11:{ans:'C', word:'cost', opts:[['A','paid'],['B','spent'],['C','cost'],['D','afforded']],
+   quote:'…I found a phone that <mark class="q">cost</mark> only £180…',
+   why:'Підмет підрядного — a phone (РІЧ) → cost. Слівце «only» показує: ціна нижча за очікувану.',
+   no:[['paid','платить людина: I paid £180.'],
+      ['spent','витрачає людина: I spent £180 on a phone.'],
+      ['afforded','afford — «мати змогу», з підметом-людиною й часто з can.']],
+   trap:'⚠️ Тест на підмет: a phone that ___ → cost.'},
+12:{ans:'B', word:'pay', opts:[['A','salary'],['B','pay'],['C','change'],['D','fare']],
+   quote:'…the manager gave me the <mark class="q">pay</mark> for my first shift — £25 in an envelope…',
+   why:'Гроші за зміну (роботу) → the pay for my shift. Пояснення після тире («£25 in an envelope») — це оплата праці.',
+   no:[['salary','salary — місячний оклад найманого працівника; за одну суботню зміну кажуть pay / wages, не salary.'],
+      ['change','решта — це різниця при розрахунку, а не винагорода за роботу.'],
+      ['fare','плата за проїзд — тема транспорту.']],
+   trap:'⚠️ salary = оклад за місяць; pay/wages = оплата за день/зміну/годину.'},
+13:{ans:'A', word:'spend', opts:[['A','spend'],['B','waste'],['C','pay'],['D','cost']],
+   quote:'…I didn\'t <mark class="q">spend</mark> a penny on sweets or games, as I used to.',
+   why:'Нейтральне «не витрачав жодного пенні» → spend on. «As I used to» — раніше витрачав, тепер ні.',
+   no:[['waste','waste — з оцінкою «марно»; речення нейтрально-фактичне, жодного осуду солодощів тут немає.'],
+      ['pay','pay FOR — а тут on (spend on).'],
+      ['cost','підмет-людина (I) — cost вимагає річ.']],
+   trap:'⚠️ Прийменник on → spend (on) / waste (on); між ними вибирайте за оцінкою: нейтрально → spend.'},
+14:{ans:'D', word:'waste', opts:[['A','cost'],['B','price'],['C','spending'],['D','waste']],
+   quote:'…do I really need it, or would it just be a <mark class="q">waste</mark> of money?',
+   why:'«А чи не буде це марнотою грошей?» → сталий вислів a waste of money. Питання «do I really need it?» задає оцінку «можливо, дарма».',
+   no:[['cost','cost of money — нема такого висловлювання; cost — дієслово/іменник про ціну речі.'],
+      ['price','a price of money — некоректно.'],
+      ['spending','spending — процес витрачання взагалі (government spending); «a spending of money» не існує.']],
+   trap:'⚠️ a ___ of money + сумнів у потребі → waste.'}
+};
+
+const TOTAL = SINGLES.length + Object.keys(TEXT1).length + Object.keys(TEXT2).length;
+
+/* ===================== РУШІЙ ===================== */
+const attempts = {};   // key -> кількість спроб
+const solved   = {};   // key -> true
+const mistakeIds = new Set();  // 's-3', 't1-2', ...
+
+function getData(block, id){
+  if(block === 's')  return SINGLES.find(q => q.id === id);
+  if(block === 't1') return TEXT1[id];
+  if(block === 't2') return TEXT2[id];
+}
+function explId(block, id){ return 'expl-' + (block==='s' ? 's' + id : block + '-' + id); }
+function keyOf(block, id){ return block + '-' + id; }
+
+function buildGap(sel){
+  const block = sel.dataset.block, id = +sel.dataset.gap;
+  const d = getData(block, id);
+  sel.innerHTML = '';
+  const ph = document.createElement('option');
+  ph.value = ''; ph.textContent = '…оберіть…'; ph.disabled = true; ph.selected = true;
+  sel.appendChild(ph);
+  d.opts.forEach(([letter, word]) => {
+    const o = document.createElement('option');
+    o.value = letter; o.textContent = letter + '  ' + word;
+    sel.appendChild(o);
+  });
+}
+
+function buildSingles(){
+  const host = document.getElementById('singles');
+  SINGLES.forEach(q => {
+    const box = document.createElement('div');
+    box.className = 'q';
+    box.innerHTML =
+      '<div class="q-top"><span class="q-num">Завдання ' + q.id + ' / 14</span>' +
+      '<span class="q-tag">' + q.tag + '</span></div>' +
+      '<div class="sent">' + q.sent.replace('___', '<select class="gap" data-block="s" data-gap="' + q.id + '"></select>') + '</div>' +
+      '<div class="expl" id="expl-s' + q.id + '"></div>';
+    host.appendChild(box);
+  });
+}
+
+function renderExplanation(block, id, correctLetter, chosenLetter){
+  const d = getData(block, id);
+  const ex = document.getElementById(explId(block, id));
+  const correctWord = d.opts.find(([l]) => l === correctLetter)[1];
+  const chosenWord  = chosenLetter ? d.opts.find(([l]) => l === chosenLetter)[1] : null;
+
+  let html = '<div class="ans-line">✅ Правильна відповідь: ' + correctLetter + ') ' + correctWord + '</div>';
+  if (d.quote) {
+    html += '<span class="lbl">Підказка з тексту</span><div class="quote">«' + d.quote + '»</div>';
+  } else {
+    html += '<div class="quote">«' + d.sent.replace('___', '<mark class="q">' + correctWord + '</mark>') + '»</div>';
+  }
+  html += '<span class="lbl">Чому саме так?</span><p class="note">' + d.why + '</p>';
+  if (chosenLetter && chosenLetter !== correctLetter) {
+    const row = d.no.find(([w]) => w === chosenWord);
+    html += '<span class="lbl">Ваша відповідь</span><table><tr><td class="no">❌ ' +
+            chosenLetter + ') ' + chosenWord + '</td><td>' + (row ? row[1] : '') + '</td></tr></table>';
+  }
+  html += '<span class="lbl">Інші варіанти</span><table>' +
+          d.no.filter(([w]) => w !== chosenWord)
+              .map(([w, why]) => '<tr><td class="no">❌ ' + w + '</td><td>' + why + '</td></tr>').join('') +
+          '</table>';
+  html += '<div class="trap">' + d.trap + '</div>';
+  if (block === 's') {
+    html += '<p class="note" style="margin-top:8px">📖 Див. довідник: <a href="' + d.ref + '" style="color:var(--blue)">' + d.tag + '</a></p>';
+  }
+  ex.innerHTML = html;
+  ex.classList.add('show');
+}
+
+function refreshScore(){
+  let n = 0;
+  for (const k in solved) if (solved[k] && (attempts[k] || 0) === 1) n++;
+  const el = document.getElementById('score');
+  el.textContent = 'Результат: ' + n + ' / ' + TOTAL + ' з першої спроби';
+  el.className = n === TOTAL ? 'good' : (n >= TOTAL * 0.66 ? 'mid' : 'low');
+}
+
+function renderClinic(){
+  const host = document.getElementById('clinicList');
+  if (!mistakeIds.size) {
+    host.innerHTML = '<div class="clinic-empty">Поки що помилок немає. Чудово — так тримати! 💪</div>';
+    return;
+  }
+  host.innerHTML = '';
+  [...mistakeIds].forEach(key => {
+    const [block, idStr] = key.split('-');
+    const id = +idStr;
+    const d = getData(block, id);
+    const item = document.createElement('div');
+    item.className = 'clinic-item';
+    const label = block === 's' ? 'Завдання ' + id + ' (тренажер)' :
+                  block === 't1' ? 'Текст 1, пропуск ' + id : 'Текст 2, пропуск ' + id;
+    const correctLetter = block === 's' ? d.ans : d.ans;
+    const correctWord = d.opts.find(([l]) => l === correctLetter)[1];
+    item.innerHTML =
+      '<b>' + label + ':</b> <span class="sent-wrong">«' +
+      (d.sent || d.quote.replace(/<[^>]+>/g, '')) + '»</span><br>' +
+      'Правильно: <b style="color:var(--green)">' + correctLetter + ') ' + correctWord + '</b>' +
+      '<span class="rule-line">' + d.trap + '</span>';
+    host.appendChild(item);
+  });
+}
+
+document.addEventListener('change', e => {
+  const sel = e.target.closest('select.gap');
+  if (!sel) return;
+  const block = sel.dataset.block, id = +sel.dataset.gap;
+  const key = keyOf(block, id);
+  const d = getData(block, id);
+  attempts[key] = (attempts[key] || 0) + 1;
+
+  if (sel.value === d.ans) {
+    solved[key] = true;
+    sel.classList.remove('bad'); sel.classList.add('ok');
+    sel.disabled = true;
+  } else {
+    solved[key] = false;
+    mistakeIds.add(key);
+    sel.classList.remove('ok'); sel.classList.add('bad');
+    setTimeout(() => sel.classList.remove('bad'), 600);
+    sel.value = '';
+  }
+  renderExplanation(block, id, d.ans, sel.value);
+  refreshScore();
+  renderClinic();
+});
+
+document.getElementById('resetBtn').addEventListener('click', () => {
+  Object.keys(attempts).forEach(k => delete attempts[k]);
+  Object.keys(solved).forEach(k => delete solved[k]);
+  mistakeIds.clear();
+  document.querySelectorAll('select.gap').forEach(sel => {
+    sel.disabled = false;
+    sel.classList.remove('ok', 'bad');
+    buildGap(sel);
+  });
+  document.querySelectorAll('.expl').forEach(el => { el.innerHTML = ''; el.classList.remove('show'); });
+  refreshScore();
+  renderClinic();
+});
+
+buildSingles();
+document.querySelectorAll('select.gap').forEach(buildGap);
+refreshScore();
+</script>
+</body>
+</html>
