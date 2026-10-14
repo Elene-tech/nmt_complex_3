@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>НМТ · Комплекс 3 · Модуль 3.2 — Confusing Words: Weather &amp; Environment</title>
+<style>
+  :root{
+    --ink:#1f2933; --muted:#5b6770; --line:#d8dee4;
+    --blue:#1d4ed8; --blue-soft:#e8effc;
+    --green:#157347; --green-soft:#e7f6ee;
+    --red:#b42318;  --red-soft:#fdecea;
+    --amber:#92610e; --amber-soft:#fff6dd;
+    --paper:#ffffff; --bg:#f4f6f8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.55}
+  .page{max-width:900px;margin:0 auto;padding:20px 16px 60px}
+
+  .test-head{background:linear-gradient(135deg,#12294d,#1d4ed8);color:#fff;border-radius:14px;
+             padding:22px 26px;margin-bottom:12px}
+  .test-head .crumb{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.75;font-family:Arial,sans-serif}
+  .test-head h1{margin:6px 0 4px;font-size:26px;font-family:Arial,sans-serif;font-weight:700}
+  .test-head p{margin:0;font-size:15px;opacity:.9;font-family:Arial,sans-serif}
+
+  .nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;font-family:Arial,sans-serif}
+  .nav a{display:inline-block;padding:8px 14px;border-radius:10px;background:#fff;border:1px solid var(--line);
+         color:var(--blue);text-decoration:none;font-size:14px;font-weight:700}
+  .nav a:hover{border-color:var(--blue)}
+  .nav a.here{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .nav a.home{background:#eef2f7;color:#33475b}
+
+  .instr{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--blue);
+         border-radius:12px;padding:18px 22px;margin-bottom:14px}
+  .instr h2{margin:0 0 8px;font-family:Arial,sans-serif;font-size:17px;color:var(--blue)}
+  .instr p{margin:6px 0}
+  .instr .en{font-style:italic;color:#243b53;background:#f0f6ff;padding:2px 6px;border-radius:4px}
+  .tip{margin-top:12px;background:var(--amber-soft);border:1px solid #f0dfa8;border-radius:10px;
+       padding:12px 16px;font-family:Arial,sans-serif;font-size:14.5px;color:#57430a}
+  .tip b{color:var(--amber)}
+  .trap{margin-top:8px;background:var(--amber-soft);border:1px solid #f0dfa8;border-radius:8px;
+        padding:8px 12px;font-family:Arial,sans-serif;font-size:14px;color:#57430a}
+  .trap b{color:var(--amber)}
+
+  details{margin-top:10px}
+  summary{cursor:pointer;font-family:Arial,sans-serif;font-weight:700;color:var(--blue);font-size:15px}
+  .steps{counter-reset:step;margin:12px 0 4px;padding:0;list-style:none}
+  .steps li{position:relative;padding:8px 0 8px 52px;border-bottom:1px dashed var(--line);font-family:Arial,sans-serif;font-size:15px}
+  .steps li:last-child{border-bottom:none}
+  .steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:8px;
+    width:34px;height:34px;border-radius:50%;background:var(--blue-soft);color:var(--blue);
+    font-weight:700;display:flex;align-items:center;justify-content:center}
+
+  .ref{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:14px}
+  .ref h2{margin:0 0 4px;font-family:Arial,sans-serif;font-size:18px;color:#102a43}
+  .ref .gloss{color:var(--muted);font-size:14.5px;font-family:Arial,sans-serif;margin-bottom:8px}
+  .ref table{border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14.5px;margin-top:6px}
+  .ref td{border:1px solid var(--line);padding:8px 12px;vertical-align:top}
+  .ref td.word{font-weight:700;color:var(--blue);width:170px}
+  .ref td .ex{display:block;font-style:italic;color:#243b53;margin-top:4px}
+  .ref td .tr{display:block;font-size:12.5px;color:var(--muted)}
+  mark.hl{background:#fff1a8;padding:0 3px;border-radius:3px}
+  .pairbox{background:#f0f6ff;border:1px solid #c7dbf7;border-radius:10px;padding:10px 14px;margin-top:10px;
+           font-family:Arial,sans-serif;font-size:14.5px}
+  .pairbox .lbl{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:4px}
+
+  .part{font-family:Arial,sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;
+        color:var(--muted);margin:26px 0 10px}
+  .part-anchor{scroll-margin-top:16px}
+
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+  .q .q-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .q .q-num{font-family:Arial,sans-serif;font-weight:700;font-size:13px;color:var(--muted)}
+  .q .q-tag{font-family:Arial,sans-serif;font-size:11.5px;font-weight:700;background:var(--blue-soft);color:var(--blue);
+            border-radius:99px;padding:2px 10px}
+  .q .sent{margin:8px 0 10px;font-size:17px}
+  select.gap{max-width:200px;padding:3px 8px;margin:0 3px;border-radius:8px;border:2px dashed var(--blue);
+      background:var(--blue-soft);color:var(--blue);font-family:Arial,sans-serif;font-weight:700;font-size:14px;
+      cursor:pointer;vertical-align:middle}
+  select.gap.ok{border-style:solid;border-color:var(--green);background:var(--green-soft);color:var(--green);cursor:default}
+  select.gap.bad{border-style:solid;border-color:var(--red);background:var(--red-soft);color:var(--red);
+      animation:shake .3s}
+  @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+  mark.q{background:#d3f9d8;padding:1px 4px;border-radius:3px}
+
+  .expl{display:none;margin:4px 0 14px;border:1px solid var(--line);border-radius:10px;background:#fbfcfd;padding:12px 16px}
+  .expl.show{display:block}
+  .expl .ans-line{font-family:Arial,sans-serif;font-weight:700;font-size:15px;margin-bottom:6px;color:var(--green)}
+  .expl .lbl{display:block;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+  .expl .quote{font-style:italic;background:#fff;border-left:3px solid var(--green);padding:6px 10px;border-radius:0 6px 6px 0;margin-top:4px;font-size:15.5px}
+  .expl p.note{font-family:Arial,sans-serif;font-size:14.5px;margin:6px 0 0}
+  .expl table{border-collapse:collapse;margin-top:6px;font-family:Arial,sans-serif;font-size:14px;width:100%}
+  .expl td{border:1px solid var(--line);padding:5px 10px;vertical-align:top}
+  .expl td.no{color:var(--red);font-weight:700;width:140px}
+
+  .gtext{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin-bottom:14px}
+  .gtext h3{margin:0 0 4px;font-family:Arial,sans-serif;font-size:20px;color:#102a43;text-align:center}
+  .gtext p{margin:12px 0;font-size:16.5px;text-align:justify}
+
+  .clinic{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--red);
+          border-radius:12px;padding:18px 22px;margin-bottom:14px}
+  .clinic h2{margin:0 0 8px;font-family:Arial,sans-serif;font-size:17px;color:var(--red)}
+  .clinic-item{border-bottom:1px dashed var(--line);padding:10px 0;font-family:Arial,sans-serif;font-size:14.5px}
+  .clinic-item:last-child{border-bottom:none}
+  .clinic-item .sent-wrong{font-style:italic;color:#243b53}
+  .clinic-item .rule-line{display:block;margin-top:4px;color:#57430a;background:var(--amber-soft);border-radius:6px;padding:4px 8px}
+  .clinic-empty{font-family:Arial,sans-serif;color:var(--green);font-weight:700}
+
+  .controls{position:sticky;bottom:12px;margin-top:18px;background:var(--paper);border:1px solid var(--line);
+            border-radius:14px;padding:14px 18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;
+            box-shadow:0 6px 24px rgba(16,42,67,.12);z-index:10}
+  .controls .btn{border:none;border-radius:10px;padding:12px 26px;font-family:Arial,sans-serif;
+                 font-weight:700;font-size:16px;cursor:pointer}
+  #resetBtn{background:#eef2f7;color:#33475b}
+  #resetBtn:hover{background:#e2e8f0}
+  .controls a.btn{background:var(--blue);color:#fff;text-decoration:none}
+  .controls a.btn.back{background:#eef2f7;color:#33475b}
+  #score{font-family:Arial,sans-serif;font-weight:700;font-size:16px;margin-left:auto;color:var(--muted)}
+  #score.good{color:var(--green)} #score.mid{color:var(--amber)} #score.low{color:var(--red)}
+
+  @media print{
+    body{background:#fff}
+    .controls,.tip,details,.nav{display:none}
+    .expl{display:block !important}
+  }
+  @media(max-width:560px){
+    .test-head h1{font-size:21px}
+    select.gap{max-width:160px}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="test-head">
+    <div class="crumb">НМТ · Англійська мова · Комплекс 3 «Світ навколо нас» · Модуль 3.2</div>
+    <h1>Confusing Words: Weather &amp; Environment</h1>
+    <p>Довідник → 14 завдань → 2 тексти формату НМТ → Error Clinic · Рівень B2 · British English</p>
+  </div>
+
+  <nav class="nav">
+    <a class="home" href="../index.html">⌂ Усі комплекси</a>
+    <a class="home" href="index.html">Комплекс 3</a>
+    <a class="here" href="#ref1">📖 Довідник</a>
+    <a href="#part1">✏️ Тренажер 1–14</a>
+    <a href="#text1">📰 Текст 1 (1–7)</a>
+    <a href="#text2">📰 Текст 2 (8–14)</a>
+    <a href="#clinic">🔁 Error Clinic</a>
+  </nav>
+
+  <div class="instr">
+    <h2>Як працювати з модулем</h2>
+    <p><b>Крок 1.</b> Прочитайте <b>довідник</b>: 8 груп слів про погоду та довкілля. Зверніть увагу на рамки «⚠️ Пастка».</p>
+    <p><b>Крок 2.</b> <b>14 одиничних завдань</b> A/B/C/D — кожне речення перевіряє одну пару.</p>
+    <p><b>Крок 3.</b> <b>2 тексти НМТ</b> по 7 пропусків: пари змішані в контексті.</p>
+    <p><b>Крок 4.</b> <b>Error Clinic</b> — повторення помилок.</p>
+    <div class="tip"><b>Головне правило модуля:</b> слова про природу різняться <b>масштабом</b> і <b>силою</b>. Туман чи серпанок? Краплі чи злива? Тиждень погоди чи тисячоліття клімату? Визначте масштаб — і правильне слово знайдеться.</div>
+  </div>
+
+  <!-- ================= ДОВІДНИК ================= -->
+  <div class="part part-anchor" id="ref1">📖 Довідник — 8 груп-контрастів</div>
+
+  <div class="ref" id="ref-wc">
+    <h2>weather / climate</h2>
+    <div class="gloss">Погода (сьогодні, цього тижня) vs клімат (століттями, у цілому регіоні).</div>
+    <table>
+      <tr><td class="word">weather</td><td>погода — короткий термін, конкретне місце, конкретний день
+        <span class="ex">The <mark class="hl">weather</mark> was awful yesterday — rain all day.</span><span class="tr">Учора погода була жахлива — дощ увесь день.</span></td></tr>
+      <tr><td class="word">climate</td><td>клімат — довгостроковий «характер» погоди регіону
+        <span class="ex">The Mediterranean <mark class="hl">climate</mark> is perfect for growing olives.</span><span class="tr">Середземноморський клімат ідеальний для оливок.</span></td></tr>
+    </table>
+    <div class="pairbox"><span class="lbl">Порівняйте</span>
+      The <mark class="hl">weather</mark> this week is unusually cold. ↔ The <mark class="hl">climate</mark> here is usually mild.<br>
+      <i>Тиждень — weather; «зазвичай» — climate.</i>
+    </div>
+    <div class="trap"><b>⚠️ Пастка:</b> climate change — зміна КЛІМАТУ (глобальна, довга). «Weather change» так не скажуть. Маркери: yesterday/today/this week → weather; region/global/change → climate.</div>
+  </div>
+
+  <div class="ref" id="ref-fog">
+    <h2>fog / mist / smog</h2>
+    <div class="gloss">Три «хмари біля землі»: густий туман / легкий серпанок / отруйна суміш диму й туману.</div>
+    <table>
+      <tr><td class="word">fog</td><td>густий туман (видимість майже нульова)
+        <span class="ex">The airport closed because of thick <mark class="hl">fog</mark>.</span><span class="tr">Аеропорт зачинили через густий туман.</span></td></tr>
+      <tr><td class="word">mist</td><td>серпанок, імла (легка, над водою чи в горах, часто гарна)
+        <span class="ex">A light <mark class="hl">mist</mark> hung over the lake at sunrise.</span><span class="tr">Легкий серпанок стояв над озером на світанку.</span></td></tr>
+      <tr><td class="word">smog</td><td>смог = smoke + fog (забруднене повітря міст)
+        <span class="ex">In the 1950s, London suffered from deadly <mark class="hl">smog</mark>.</span><span class="tr">У 1950-х Лондон страждав від смертельного смогу.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> smog — це ПРОМИСЛОВЕ забруднення (фабрики, міста). Біля озера вранці — mist; на дорозі з нульовою видимістю — fog; над містом із заводами — smog.</div>
+  </div>
+
+  <div class="ref" id="ref-rain">
+    <h2>drizzle / pour / flood</h2>
+    <div class="gloss">Мряка / злива як із відра / повінь. Від краплин до катастрофи.</div>
+    <table>
+      <tr><td class="word">drizzle</td><td>мрячити — дрібний дощик (можна йти без парасольки)
+        <span class="ex">It's only <mark class="hl">drizzling</mark> — we can still walk.</span><span class="tr">Це лише мряка — можна йти пішки.</span></td></tr>
+      <tr><td class="word">pour</td><td>лити як із відра (heavy rain, pouring rain)
+        <span class="ex">It was <mark class="hl">pouring</mark> with rain, so we stayed inside.</span><span class="tr">Дощ лив як із відра, тож ми залишилися вдома.</span></td></tr>
+      <tr><td class="word">flood</td><td>затоплювати; повінь (вода виходить із берегів)
+        <span class="ex">The river <mark class="hl">flooded</mark> the village after three days of rain.</span><span class="tr">Після трьох днів дощу річка затопила село.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> drizzling = можна гуляти; pouring = сиди вдома; flooded = рятуй речі! Мовозавчення НМТ любить саме «силу» явища.</div>
+  </div>
+
+  <div class="ref" id="ref-rub">
+    <h2>waste / litter / rubbish</h2>
+    <div class="gloss">Три «сміття» з різним акцентом: відходи-взагалі / сміття на вулиці / домашнє сміття.</div>
+    <table>
+      <tr><td class="word">waste (U)</td><td>відходи (промислові, побутові); марнування
+        <span class="ex">Industrial <mark class="hl">waste</mark> must be treated before it reaches rivers.</span><span class="tr">Промислові відходи треба очищати, перш ніж вони потраплять у річки.</span></td></tr>
+      <tr><td class="word">litter (U)</td><td>сміття, розкидане НА ВУЛИЦЯХ / у парках
+        <span class="ex">Please don't drop <mark class="hl">litter</mark> in the park.</span><span class="tr">Будь ласка, не кидайте сміття в парку.</span></td></tr>
+      <tr><td class="word">rubbish (U)</td><td>побутове сміття (домашнє, у відрі)
+        <span class="ex">Take the <mark class="hl">rubbish</mark> out, please — the bin is full.</span><span class="tr">Винеси сміття, будь ласка — відро повне.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> усе три — незлічувані (не «rubbishes»)! Вуличне → litter (drop litter); домашнє → rubbish; фабричне/тема марнування → waste (a waste of time!).</div>
+  </div>
+
+  <div class="ref" id="ref-ex">
+    <h2>extinct / endangered</h2>
+    <div class="gloss">Зниклі НАЗАВЖДИ vs під загрозою зникнення (ще можна врятувати).</div>
+    <table>
+      <tr><td class="word">extinct</td><td>вимерлий (не лишилося жодного!)
+        <span class="ex">Dinosaurs became <mark class="hl">extinct</mark> 65 million years ago.</span><span class="tr">Динозаври вимерли 65 мільйонів років тому.</span></td></tr>
+      <tr><td class="word">endangered</td><td>під загрозою зникнення (ще живуть, але мало)
+        <span class="ex">The Amur leopard is one of the most <mark class="hl">endangered</mark> cats in the world.</span><span class="tr">Амурський леопард — одна з найрідкісніших кішок світу.</span></td></tr>
+    </table>
+    <div class="pairbox"><span class="lbl">Порівняйте</span>
+      Pandas are <mark class="hl">endangered</mark> — but we can still save them.<br>
+      The dodo is <mark class="hl">extinct</mark> — it's too late to save it.
+    </div>
+    <div class="trap"><b>⚠️ Пастка:</b> «вимираючий» українською ≠ extinct! Extinct = вимер (dodo, dinosaurs). Про тварин, яких ще можна врятувати, → endangered species.</div>
+  </div>
+
+  <div class="ref" id="ref-fp">
+    <h2>forecast / prediction</h2>
+    <div class="gloss">Прогноз погоди (офіційний, від метеорологів) vs будь-яке передбачення.</div>
+    <table>
+      <tr><td class="word">forecast</td><td>прогноз (погоди) — науковий, щоденний
+        <span class="ex">The weather <mark class="hl">forecast</mark> says it will snow tomorrow.</span><span class="tr">Прогноз погоди каже, що завтра буде сніг.</span></td></tr>
+      <tr><td class="word">prediction</td><td>передбачення (про майбутнє взагалі — наука, спорт, вибори)
+        <span class="ex">Scientists' <mark class="hl">predictions</mark> about rising sea levels are worrying.</span><span class="tr">Передбачення вчених про підйом рівня моря тривожні.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> the weather ___ — майже завжди forecast. Prediction ширше: можна про клімат за 50 років, а weather forecast — на завтра/тиждень.</div>
+  </div>
+
+  <div class="ref" id="ref-rr">
+    <h2>recycle / reuse</h2>
+    <div class="gloss">Переробити на заводі (нова сировина) vs використати повторно (та сама річ).</div>
+    <table>
+      <tr><td class="word">recycle</td><td>переробляти (папір, пластик → новий продукт)
+        <span class="ex">We <mark class="hl">recycle</mark> all our plastic bottles and paper.</span><span class="tr">Ми здаємо на переробку всі пластикові пляшки й папір.</span></td></tr>
+      <tr><td class="word">reuse</td><td>використовувати повторно (ту саму річ ще раз)
+        <span class="ex">I <mark class="hl">reuse</mark> glass jars to store rice and pasta.</span><span class="tr">Я повторно використовую скляні банки для круп і пасти.</span></td></tr>
+    </table>
+    <div class="pairbox"><span class="lbl">Порівняйте</span>
+      I <mark class="hl">reuse</mark> the jar. → Later it is <mark class="hl">recycled</mark> into new glass.<br>
+      <i>Спочатку використав ще раз сам — потім завод переробив.</i>
+    </div>
+    <div class="trap"><b>⚠️ Пастка:</b> re-use = та сама банка/сумка ще раз; recycle = завод, переробка, новий продукт. «Кинути пляшку в жовтий контейнер» → recycle.</div>
+  </div>
+
+  <div class="ref" id="ref-gw">
+    <h2>global / worldwide</h2>
+    <div class="gloss">Глобальний (стосується всієї планети як системи) vs по всьому світу (в усіх країнах).</div>
+    <table>
+      <tr><td class="word">global</td><td>глобальний — про системи: climate, warming, economy
+        <span class="ex"><mark class="hl">Global</mark> warming is changing life in the Arctic.</span><span class="tr">Глобальне потепління змінює життя в Арктиці.</span></td></tr>
+      <tr><td class="word">worldwide</td><td>по всьому світу — про поширення: sales, fame, events
+        <span class="ex">The singer became famous <mark class="hl">worldwide</mark> after one video.</span><span class="tr">Співачка прославилася на весь світ після одного відео.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> сталі пари: <b>global</b> warming, <b>global</b> climate; а «відомий у всьому світі», «продається скрізь» → worldwide (часто прислівник у кінці речення).</div>
+  </div>
+
+  <!-- ================= ЧАСТИНА 1: ОДИНИЧНІ ================= -->
+  <div class="part part-anchor" id="part1">✏️ Частина 1 · 14 одиничних завдань</div>
+
+  <div class="instr">
+    <h2>Завдання 1–14</h2>
+    <p>Оберіть правильне слово зі списку. Якщо помилитеся — уважно прочитайте пояснення: воно відповідає на питання <b>«а чому саме так?»</b>.</p>
+  </div>
+
+  <div id="singles"></div>
+
+  <!-- ================= ТЕКСТ 1 ================= -->
+  <div class="part part-anchor" id="text1">📰 Частина 2 · Текст 1 · завдання 1–7</div>
+
+  <div class="instr">
+    <h2>Текст 1 — «The Storm that Changed a Village»</h2>
+    <p><span class="en">For questions 1–7, read the text below and decide which answer (A, B, C or D) best fits each gap.</span></p>
+    <div class="tip"><b>Стратегія:</b> спочатку прочитайте увесь текст БЕЗ варіантів, щоб зрозуміти історію. Потім обирайте кожну відповідь.</div>
+  </div>
+
+  <div class="gtext">
+    <h3>The Storm that Changed a Village</h3>
+    <p>The <select class="gap" data-block="t1" data-gap="1"></select> in our part of the country is usually mild, but that October everything went wrong. For three days it <select class="gap" data-block="t1" data-gap="2"></select> with rain without stopping. On the fourth morning the river <select class="gap" data-block="t1" data-gap="3"></select> the lower streets, and families had to leave their homes in boats.
+    <span class="expl" id="expl-t1-1"></span><span class="expl" id="expl-t1-2"></span><span class="expl" id="expl-t1-3"></span></p>
+    <p>When the water finally went down, the streets were full of <select class="gap" data-block="t1" data-gap="4"></select> — broken branches, plastic bags and bottles everywhere. Volunteers spent the whole weekend cleaning up. Old Mr Davies, who has lived here for sixty years, said he had never seen anything like it. «The weather <select class="gap" data-block="t1" data-gap="5"></select> had warned us, but nobody listened,» he sighed. Scientists say such storms are becoming more common because of <select class="gap" data-block="t1" data-gap="6"></select> warming. Now the village has a new rule: nobody may throw bottles away — everyone must <select class="gap" data-block="t1" data-gap="7"></select> them.
+    <span class="expl" id="expl-t1-4"></span><span class="expl" id="expl-t1-5"></span><span class="expl" id="expl-t1-6"></span><span class="expl" id="expl-t1-7"></span></p>
+  </div>
+
+  <!-- ================= ТЕКСТ 2 ================= -->
+  <div class="part part-anchor" id="text2">📰 Частина 3 · Текст 2 · завдання 8–14</div>
+
+  <div class="instr">
+    <h2>Текст 2 — «A School Goes Green»</h2>
+    <p><span class="en">For questions 8–14, read the text below and decide which answer (A, B, C or D) best fits each gap.</span></p>
+    <div class="tip"><b>Стратегія:</b> зверніть увагу на <b>масштаб</b> (вулиця чи планета?) і на <b>сталі словосполучення</b> — вони вирішують усе.</div>
+  </div>
+
+  <div class="gtext">
+    <h3>A School Goes Green</h3>
+    <p>Last year our school decided to become «green». The first problem was obvious: there was <select class="gap" data-block="t2" data-gap="8"></select> all over the playground — crisp packets, cans, sweet wrappers. «We can't study in a place like this,» said our teacher, Mrs Lane. So every Friday we now collect the <select class="gap" data-block="t2" data-gap="9"></select> from our classrooms and sort it: paper in the blue bin, plastic in the yellow one. Everything in the yellow bin goes to a factory where it is <select class="gap" data-block="t2" data-gap="10"></select> and turned into new products.
+    <span class="expl" id="expl-t2-8"></span><span class="expl" id="expl-t2-9"></span><span class="expl" id="expl-t2-10"></span></p>
+    <p>Our next project is about animals. We learnt that the snow leopard is an <select class="gap" data-block="t2" data-gap="11"></select> species — there are only a few thousand left, but people are working hard to save them. It is too late for the dodo, which became <select class="gap" data-block="t2" data-gap="12"></select> centuries ago, but not for the leopard. Mrs Lane also showed us a documentary about <select class="gap" data-block="t2" data-gap="13"></select> in big cities — the dirty grey air caused by cars and factories. «Your <select class="gap" data-block="t2" data-gap="14"></select> for the future of this planet matters,» she told us. «One day it will be your world.»
+    <span class="expl" id="expl-t2-11"></span><span class="expl" id="expl-t2-12"></span><span class="expl" id="expl-t2-13"></span><span class="expl" id="expl-t2-14"></span></p>
+  </div>
+
+  <!-- ================= ERROR CLINIC ================= -->
+  <div class="part part-anchor" id="clinic">🔁 Error Clinic — робота над помилками</div>
+
+  <div class="clinic">
+    <h2>Error Clinic</h2>
+    <p style="font-family:Arial,sans-serif;font-size:14.5px;margin:0 0 10px">Тут з'являться всі завдання, де ви помилилися хоча б раз. Після завершення тренажера поверніться сюди й поясніть кожну помилку самі собі.</p>
+    <div id="clinicList"><div class="clinic-empty">Поки що помилок немає. Чудово — так тримати! 💪</div></div>
+  </div>
+
+  <!-- ================= CONTROLS ================= -->
+  <div class="controls">
+    <a class="btn back" href="index.html">← Комплекс 3</a>
+    <button class="btn" id="resetBtn">🔄 Скинути все</button>
+    <a class="btn" href="modul-3-3.html">Наступний модуль →</a>
+    <span id="score">Результат: 0 / 28</span>
+  </div>
+
+</div>
+
+<script>
+/* ===================== ДАНІ ===================== */
+const SINGLES = [
+{id:1, ref:'#ref-wc', tag:'weather / climate', sent:'What\'s the ___ like in Kyiv today? Shall we take an umbrella?',
+ opts:[['A','climate'],['B','weather'],['C','forecast'],['D','season']], ans:'B',
+ why:'Питання про погоду СЬОГОДНІ (зонт!) → weather. Формула: What\'s the weather like?',
+ no:[['climate','клімат — це десятиліття й регіони, а не «сьогодні».'],
+     ['forecast','прогноз — це те, що ми СЛУХАЄМО по радіо; а тут запитують про реальну погоду зараз.'],
+     ['season','пора року (spring, summer) — надто великий масштаб для «сьогодні».']],
+ trap:'⚠️ What\'s the weather like? — стала фраза, яку НМТ обожнює.'},
+{id:2, ref:'#ref-wc', tag:'weather / climate', sent:'The ___ of northern Scotland is cold and wet all year round.',
+ opts:[['A','weather'],['B','climate'],['C','forecast'],['D','temperature']], ans:'B',
+ why:'«All year round», цілий регіон → клімат. Постійний характер погоди місцевості.',
+ no:[['weather','погода — про сьогодні/завтра, а не про «весь рік, завжди».'],
+     ['forecast','прогноз — передбачення на найближчі дні, а не опис регіону.'],
+     ['temperature','температура — лише градуси; cold AND wet — це вже опис клімату.']],
+ trap:'⚠️ Регіон + «весь рік / зазвичай» → climate.'},
+{id:3, ref:'#ref-fog', tag:'fog / mist / smog', sent:'Drivers had to stop: the ___ was so thick that they couldn\'t see the road.',
+ opts:[['A','mist'],['B','smog'],['C','fog'],['D','smoke']], ans:'C',
+ why:'Нульова видимість на дорозі → густий туман → fog. «Couldn\'t see the road» — маркер густоти.',
+ no:[['mist','легкий серпанок — крізь нього видно; красиво, але не небезпечно.'],
+     ['smog','смог — забруднене повітря міст (дим + туман); тут натяку на фабрики немає.'],
+     ['smoke','дим — від вогню, не погодне явище само по собі.']],
+ trap:'⚠️ «can\'t see / thick» → fog; «light / over the lake» → mist; «city / factories» → smog.'},
+{id:4, ref:'#ref-fog', tag:'fog / mist / smog', sent:'In the 1950s, terrible ___ from factories covered the streets of London.',
+ opts:[['A','mist'],['B','fog'],['C','drizzle'],['D','smog']], ans:'D',
+ why:'Місто + фабрики + 1950-ті → легендарний лондонський смог → smog (smoke + fog).',
+ no:[['mist','серпанок — чистий, природний; фабрики не виробляють mist.'],
+     ['fog','просто туман — але ключ «from factories» вказує на забруднення → smog.'],
+     ['drizzle','мряка — це дощ, а не повітря від фабрик.']],
+ trap:'⚠️ Фабрики/місто/забруднення → smog.'},
+{id:5, ref:'#ref-rain', tag:'drizzle / pour / flood', sent:'Take an umbrella! It\'s ___ outside — you\'ll get wet in a minute.',
+ opts:[['A','drizzling'],['B','flooding'],['C','pouring'],['D','freezing']], ans:'C',
+ why:'«Змокнеш за хвилину» → злива → pouring (with rain). Сила явища — максимальна, але без повені.',
+ no:[['drizzling','мряка — при ній не змокнеш «за хвилину».'],
+     ['flooding','повінь — вода в домівках; про неї не кажуть «візьми парасольку».'],
+     ['freezing','мороз — до чого тут парасолька?']],
+ trap:'⚠️ Тест на силу: drizzling (можна йти) < pouring (сиди вдома) < flooding (рятуйся).'},
+{id:6, ref:'#ref-rain', tag:'drizzle / pour / flood', sent:'After the heavy rain, the river rose and ___ three villages.',
+ opts:[['A','drizzled'],['B','poured'],['C','flooded'],['D','mist']], ans:'C',
+ why:'Річка вийшла з берегів і затопила села → flooded. Маркери: river rose, villages.',
+ no:[['drizzled','мряка — надто слабке; річки не виходять з берегів від мряки.'],
+     ['poured','pour — про дощ із неба (it poured with rain), а не про дію річки на села.'],
+     ['mist','іменник «серпанок» — тут потрібне дієслово.']],
+ trap:'⚠️ Річка + села/вулиці → flood.'},
+{id:7, ref:'#ref-rub', tag:'waste / litter / rubbish', sent:'People who drop ___ on the beach should pay a fine.',
+ opts:[['A','waste'],['B','rubbish'],['C','litter'],['D','garbage bag']], ans:'C',
+ why:'Сміття, кинуте на пляжі/вулиці → litter. Стійкий вираз: drop litter.',
+ no:[['waste','відходи взагалі (промислові) — не про кинутий папірець.'],
+     ['rubbish','домашнє сміття у відрі; на пляжі — litter.'],
+     ['garbage bag','мішок для сміття — його не «кидають» як дрібне сміття.']],
+ trap:'⚠️ drop litter — «кидати сміття (де не слід)». Litter bin — урна на вулиці.'},
+{id:8, ref:'#ref-rub', tag:'waste / litter / rubbish', sent:'Could you take the ___ out? The kitchen bin is completely full.',
+ opts:[['A','litter'],['B','waste'],['C','rubbish'],['D','smog']], ans:'C',
+ why:'Домашнє сміття з кухонного відра → rubbish. Стійко: take the rubbish out.',
+ no:[['litter','вуличне сміття — не те, що накопичується в кухонному відрі.'],
+     ['waste','занадто абстрактне/промислове для домашньої сцени.'],
+     ['smog','смог — забруднене повітря, його не виносять.']],
+ trap:'⚠️ Кухня/відро/дім → rubbish; вулиця → litter; завод → waste.'},
+{id:9, ref:'#ref-ex', tag:'extinct / endangered', sent:'If we don\'t protect tigers now, they may become ___ within fifty years.',
+ opts:[['A','endangered'],['B','extinct'],['C','extincted'],['D','dangerous']], ans:'B',
+ why:'«Якщо не захистимо — зникнуть НАЗАВЖДИ» → become extinct. Майбутній остаточний результат.',
+ no:[['endangered','тигри ВЖЕ endangered (під загрозою); речення про наступний, фатальний крок.'],
+     ['extincted','такого слова не існує.'],
+     ['dangerous','«небезпечні» — сплутано з endangered; тигри небезпечні для нас, але тут небезпека загрожує ЇМ.']],
+ trap:'⚠️ endangered = ще можна врятувати; extinct = назавжди (dinosaurs, dodo).'},
+{id:10, ref:'#ref-ex', tag:'extinct / endangered', sent:'The panda is an ___ species, but its numbers are slowly growing thanks to protection.',
+ opts:[['A','extinct'],['B','endangered'],['C','dangerous'],['D','extinction']], ans:'B',
+ why:'«Під загрозою, але чисельність РОСТЕ» → endangered. Якби вимерли — рости було б нікому.',
+ no:[['extinct','вимерлий — жодної панди не лишилося б; суперечить «numbers are growing».'],
+     ['dangerous','небезпечний — не про стан виду.'],
+     ['extinction','іменник «вимирання»; після an потрібен прикметник.']],
+ trap:'⚠️ «numbers growing / being saved» → endangered, не extinct.'},
+{id:11, ref:'#ref-fp', tag:'forecast / prediction', sent:'According to the weather ___, tomorrow will be sunny and warm.',
+ opts:[['A','prediction'],['B','forecast'],['C','climate'],['D','forecasting']], ans:'B',
+ why:'Офіційний прогноз погоди на завтра → the weather forecast — стале словосполучення.',
+ no:[['prediction','можливе в широкому сенсі, але стала пара — weather forecast.'],
+     ['climate','клімат не каже, якою буде погода завтра.'],
+     ['forecasting','герундій «прогнозування»; після the weather потрібен іменник-назва бюлетеня → forecast.']],
+ trap:'⚠️ the weather forecast — вчимо як одну фразу.'},
+{id:12, ref:'#ref-fp', tag:'forecast / prediction', sent:'Scientists make ___ about how the planet will look in 2100.',
+ opts:[['A','forecasts'],['B','predictions'],['C','weathers'],['D','mist']], ans:'B',
+ why:'Передбачення вчених про далеке майбутнє планети → predictions. Make predictions — стійко.',
+ no:[['forecasts','forecast — про погоду на дні/тиждень; рік 2100 — надто далеко для прогнозу погоди.'],
+     ['weathers','weather незлічуваний, множини немає.'],
+     ['mist','серпанок — геть інша тема.']],
+ trap:'⚠️ Погода на завтра → forecast; майбутнє планети/наука → prediction.'},
+{id:13, ref:'#ref-rr', tag:'recycle / reuse', sent:'Don\'t buy plastic bags — just ___ the ones you already have at home.',
+ opts:[['A','recycle'],['B','reuse'],['C','reduce'],['D','rewind']], ans:'B',
+ why:'Використати ТІ САМІ пакети ще раз → reuse. Підказка: «the ones you already have».',
+ no:[['recycle','переробка — це завод, контейнери, нова сировина; вдома ви пакети не переробляєте.'],
+     ['reduce','зменшувати — справжнє екослово (reduce, reuse, recycle), але тут дія «використай ще раз».'],
+     ['rewind','перемотувати — стара касета, не пакети.']],
+ trap:'⚠️ Та сама річ ще раз → reuse; завод-переробка → recycle. Мантра: reduce, reuse, recycle!'},
+{id:14, ref:'#ref-gw', tag:'global / worldwide', sent:'___ warming is melting the ice at both poles.',
+ opts:[['A','Worldwide'],['B','Global'],['C','World'],['D','Earthly']], ans:'B',
+ why:'Сталий термін: global warming — потепління планетарної СИСТЕМИ клімату.',
+ no:[['Worldwide','worldwide — «по всьому світу» (про поширення: famous worldwide); з warming сталий вираз — global.'],
+     ['World','world warming — так не кажуть; потрібен прикметник.'],
+     ['Earthly','«земний, бренний» (earthly life) — не термін науки про клімат.']],
+ trap:'⚠️ global warming, global climate change — вчимо як неподільні пари.'}
+];
+
+const TEXT1 = {
+1:{ans:'A', word:'climate', opts:[['A','climate'],['B','weather'],['C','forecast'],['D','mist']],
+   quote:'The <mark class="q">climate</mark> in our part of the country is usually mild…',
+   why:'«Usually mild», цілий регіон → клімат. Далі «that October everything went wrong» — контраст одного сезону зі звичним КЛІМАТОМ.',
+   no:[['weather','погода — конкретний день; а тут загальна характеристика регіону (usually).'],
+      ['forecast','прогноз не буває «м\'яким» — він передбачає погоду.'],
+      ['mist','серпанок — локальне явище, а не характеристика регіону.']],
+   trap:'⚠️ usually + регіон → climate.'},
+2:{ans:'C', word:'poured', opts:[['A','drizzled'],['B','flooded'],['C','poured'],['D','forecast']],
+   quote:'For three days it <mark class="q">poured</mark> with rain without stopping.',
+   why:'Три дні безперервної зливи → it poured with rain. Стійка конструкція: pour WITH rain.',
+   no:[['drizzled','мряка три дні — неприємно, але річка б не вийшла з берегів (див. далі про повінь).'],
+      ['flooded','flood — дія річки/води на землю, а не «it ___ with rain».'],
+      ['forecast','іменник «прогноз»; потрібне дієслово.']],
+   trap:'⚠️ it ___ with rain → poured. Дощ ллє — pour; землю топить — flood.'},
+3:{ans:'B', word:'flooded', opts:[['A','poured'],['B','flooded'],['C','drizzled'],['D','rained']],
+   quote:'…the river <mark class="q">flooded</mark> the lower streets…',
+   why:'Річка (підмет) затопила вулиці → flooded. Результат триденної зливи — повінь.',
+   no:[['poured','pour — про дощ із неба; річка не «pour» вулиці.'],
+      ['drizzled','мряка — мікроскопічна сила для такої катастрофи.'],
+      ['rained','it rained — дощить; «the river rained the streets» — безглуздо.']],
+   trap:'⚠️ river + streets/villages → flood.'},
+4:{ans:'D', word:'litter', opts:[['A','smog'],['B','rubbish'],['C','waste'],['D','litter']],
+   quote:'…the streets were full of <mark class="q">litter</mark> — broken branches, plastic bags and bottles everywhere.',
+   why:'Сміття, розкидане ПО ВУЛИЦЯХ → litter. Перелік «plastic bags and bottles everywhere» — класичне вуличне сміття після повені.',
+   no:[['smog','забруднене повітря — його не прибирають волонтери граблями.'],
+      ['rubbish','домашнє сміття у відрах; на вулицях — litter.'],
+      ['waste','можливе широко, але точне слово для «сміття на вулицях» — litter.']],
+   trap:'⚠️ На вулиці/пляжі/парку → litter; у домашньому відрі → rubbish.'},
+5:{ans:'A', word:'forecast', opts:[['A','forecast'],['B','prediction'],['C','climate'],['D','weather']],
+   quote:'The weather <mark class="q">forecast</mark> had warned us, but nobody listened…',
+   why:'Офіційне попередження про погоду напередодні → the weather forecast. Сталий вираз.',
+   no:[['prediction','широке «передбачення»; перед штормом попереджає саме weather forecast.'],
+      ['climate','клімат не «попереджає» про конкретний шторм.'],
+      ['weather','the weather had warned — погода сама не видає попереджень; її прогнозують.']],
+   trap:'⚠️ the weather ___ warned us → forecast.'},
+6:{ans:'C', word:'global', opts:[['A','worldwide'],['B','worldly'],['C','global'],['D','universal']],
+   quote:'…because of <mark class="q">global</mark> warming.',
+   why:'Сталий науковий термін: global warming. Без варіантів.',
+   no:[['worldwide','поширення по країнах (sales worldwide) — не про кліматичну систему.'],
+      ['worldly','«мирський, світський» (worldly pleasures) — зовсім інше значення.'],
+      ['universal','універсальний — філософське; термін науки — global warming.']],
+   trap:'⚠️ global warming — неподільна пара.'},
+7:{ans:'B', word:'recycle', opts:[['A','reuse'],['B','recycle'],['C','refuse'],['D','reduce']],
+   quote:'…nobody may throw bottles away — everyone must <mark class="q">recycle</mark> them.',
+   why:'Протиставлення throw away ↔ recycle: пляшки йдуть на переробку. Селищне правило про сортування.',
+   no:[['reuse','повторне використання — можливе, але правило села після повені стосується системної переробки відходів; з «throw away» протиставляється саме recycle.'],
+      ['refuse','відмовлятися (refuse to do) — граматично не пасує з them.'],
+      ['reduce','reduce them — «зменшувати пляшки»? Потрібне reduce waste.']],
+   trap:'⚠️ throw away ↔ recycle — стандартна пара в еко-текстах НМТ.'}
+};
+
+const TEXT2 = {
+8:{ans:'C', word:'litter', opts:[['A','rubbish'],['B','waste'],['C','litter'],['D','smog']],
+   quote:'…there was <mark class="q">litter</mark> all over the playground — crisp packets, cans, sweet wrappers.',
+   why:'Сміття, розкидане по майданчику (пачки, бляшанки, обгортки) → litter. Класична картина вуличного сміття.',
+   no:[['rubbish','домашнє сміття; на шкільному майданчику — litter.'],
+      ['waste','загальне «відходи»; конкретика (обгортки на землі) вимагає litter.'],
+      ['smog','повітряне забруднення — не лежить на майданчику.']],
+   trap:'⚠️ Обгортки/бляшанки на землі → litter.'},
+9:{ans:'A', word:'rubbish', opts:[['A','rubbish'],['B','litter'],['C','weather'],['D','climate']],
+   quote:'…we now collect the <mark class="q">rubbish</mark> from our classrooms and sort it…',
+   why:'Сміття з КЛАСІВ (домашнього типу, у відрах) → rubbish. Collect/take out the rubbish — стійко.',
+   no:[['litter','litter — те, що кидають на вулиці; з класів збирають rubbish.'],
+      ['weather','погоду не сортують.'],
+      ['climate','клімат не зібрати у відро.']],
+   trap:'⚠️ Приміщення/відра → rubbish; земля на вулиці → litter.'},
+10:{ans:'D', word:'recycled', opts:[['A','reused'],['B','reduced'],['C','refused'],['D','recycled']],
+   quote:'…goes to a factory where it is <mark class="q">recycled</mark> and turned into new products.',
+   why:'Завод + «turned into new products» → переробка → recycled. Формула recycled into new products — підказка.',
+   no:[['reused','reuse — використати ту саму річ ще раз; на заводі річ не «використовують ще раз», а переробляють.'],
+      ['reduced','зменшений — пластик не стає «новим продуктом» від зменшення.'],
+      ['refused','відхилений — сенс протилежний.']],
+   trap:'⚠️ factory + new products → recycle.'},
+11:{ans:'B', word:'endangered', opts:[['A','extinct'],['B','endangered'],['C','dangerous'],['D','global']],
+   quote:'…the snow leopard is an <mark class="q">endangered</mark> species — there are only a few thousand left…',
+   why:'«Лишилося кілька тисяч, але люди рятують» → endangered. Вид існує, але під загрозою.',
+   no:[['extinct','вимерлий — жодного не лишилося б; суперечить «a few thousand left».'],
+      ['dangerous','небезпечний (для людей) — речення про загрозу САМОМУ виду.'],
+      ['global','глобальний — не описує статус виду.']],
+   trap:'⚠️ «only a few left, but we can save them» → endangered.'},
+12:{ans:'A', word:'extinct', opts:[['A','extinct'],['B','endangered'],['C','endangering'],['D','dangerous']],
+   quote:'…the dodo, which became <mark class="q">extinct</mark> centuries ago…',
+   why:'Додо зник НАЗАВЖДИ століття тому → became extinct. «It is too late» — пряма підказка.',
+   no:[['endangered','під загрозою = ще живі; для додо вже «too late».'],
+      ['endangering','форма дієслова «наражаючи на небезпеку» — після became потрібен прикметник стану.'],
+      ['dangerous','небезпечний — додо був беззахисним, а не небезпечним.']],
+   trap:'⚠️ dodo/dinosaurs + «too late» → extinct.'},
+13:{ans:'C', word:'smog', opts:[['A','mist'],['B','fog'],['C','smog'],['D','drizzle']],
+   quote:'…a documentary about <mark class="q">smog</mark> in big cities — the dirty grey air caused by cars and factories.',
+   why:'«Dirty grey air caused by cars and factories» — точне визначення смогу → smog.',
+   no:[['mist','серпанок — чистий природний явище, без авто і фабрик.'],
+      ['fog','густий туман — природний; «dirty grey air» — це забруднення → smog.'],
+      ['drizzle','мряка — дощ, не повітря.']],
+   trap:'⚠️ cars/factories/dirty air → smog (smoke + fog).'},
+14:{ans:'D', word:'responsibility', opts:[['A','prediction'],['B','forecast'],['C','waste'],['D','responsibility']],
+   quote:'«Your <mark class="q">responsibility</mark> for the future of this planet matters…»',
+   why:'«Ваша відповідальність за майбутнє планети» → responsibility for — сталий патерн з цього юніта.',
+   no:[['prediction','передбачення — учні не «передбачають» майбутнє, вони за нього відповідають.'],
+      ['forecast','прогноз — та сама проблема, що й з prediction.'],
+      ['waste','«відходи за майбутнє планети» — безглуздо.']],
+   trap:'⚠️ responsibility for sth — ключовий патерн: your ___ for the future → responsibility.'}
+};
+
+const TOTAL = SINGLES.length + Object.keys(TEXT1).length + Object.keys(TEXT2).length;
+
+/* ===================== РУШІЙ ===================== */
+const attempts = {};
+const solved   = {};
+const mistakeIds = new Set();
+
+function getData(block, id){
+  if(block === 's')  return SINGLES.find(q => q.id === id);
+  if(block === 't1') return TEXT1[id];
+  if(block === 't2') return TEXT2[id];
+}
+function explId(block, id){ return 'expl-' + (block==='s' ? 's' + id : block + '-' + id); }
+function keyOf(block, id){ return block + '-' + id; }
+
+function buildGap(sel){
+  const block = sel.dataset.block, id = +sel.dataset.gap;
+  const d = getData(block, id);
+  sel.innerHTML = '';
+  const ph = document.createElement('option');
+  ph.value = ''; ph.textContent = '…оберіть…'; ph.disabled = true; ph.selected = true;
+  sel.appendChild(ph);
+  d.opts.forEach(([letter, word]) => {
+    const o = document.createElement('option');
+    o.value = letter; o.textContent = letter + '  ' + word;
+    sel.appendChild(o);
+  });
+}
+
+function buildSingles(){
+  const host = document.getElementById('singles');
+  SINGLES.forEach(q => {
+    const box = document.createElement('div');
+    box.className = 'q';
+    box.innerHTML =
+      '<div class="q-top"><span class="q-num">Завдання ' + q.id + ' / 14</span>' +
+      '<span class="q-tag">' + q.tag + '</span></div>' +
+      '<div class="sent">' + q.sent.replace('___', '<select class="gap" data-block="s" data-gap="' + q.id + '"></select>') + '</div>' +
+      '<div class="expl" id="expl-s' + q.id + '"></div>';
+    host.appendChild(box);
+  });
+}
+
+function renderExplanation(block, id, correctLetter, chosenLetter){
+  const d = getData(block, id);
+  const ex = document.getElementById(explId(block, id));
+  const correctWord = d.opts.find(([l]) => l === correctLetter)[1];
+  const chosenWord  = chosenLetter ? d.opts.find(([l]) => l === chosenLetter)[1] : null;
+
+  let html = '<div class="ans-line">✅ Правильна відповідь: ' + correctLetter + ') ' + correctWord + '</div>';
+  if (d.quote) {
+    html += '<span class="lbl">Підказка з тексту</span><div class="quote">«' + d.quote + '»</div>';
+  } else {
+    html += '<div class="quote">«' + d.sent.replace('___', '<mark class="q">' + correctWord + '</mark>') + '»</div>';
+  }
+  html += '<span class="lbl">Чому саме так?</span><p class="note">' + d.why + '</p>';
+  if (chosenLetter && chosenLetter !== correctLetter) {
+    const row = d.no.find(([w]) => w === chosenWord);
+    html += '<span class="lbl">Ваша відповідь</span><table><tr><td class="no">❌ ' +
+            chosenLetter + ') ' + chosenWord + '</td><td>' + (row ? row[1] : '') + '</td></tr></table>';
+  }
+  html += '<span class="lbl">Інші варіанти</span><table>' +
+          d.no.filter(([w]) => w !== chosenWord)
+              .map(([w, why]) => '<tr><td class="no">❌ ' + w + '</td><td>' + why + '</td></tr>').join('') +
+          '</table>';
+  html += '<div class="trap">' + d.trap + '</div>';
+  if (block === 's') {
+    html += '<p class="note" style="margin-top:8px">📖 Див. довідник: <a href="' + d.ref + '" style="color:var(--blue)">' + d.tag + '</a></p>';
+  }
+  ex.innerHTML = html;
+  ex.classList.add('show');
+}
+
+function refreshScore(){
+  let n = 0;
+  for (const k in solved) if (solved[k] && (attempts[k] || 0) === 1) n++;
+  const el = document.getElementById('score');
+  el.textContent = 'Результат: ' + n + ' / ' + TOTAL + ' з першої спроби';
+  el.className = n === TOTAL ? 'good' : (n >= TOTAL * 0.66 ? 'mid' : 'low');
+}
+
+function renderClinic(){
+  const host = document.getElementById('clinicList');
+  if (!mistakeIds.size) {
+    host.innerHTML = '<div class="clinic-empty">Поки що помилок немає. Чудово — так тримати! 💪</div>';
+    return;
+  }
+  host.innerHTML = '';
+  [...mistakeIds].forEach(key => {
+    const [block, idStr] = key.split('-');
+    const id = +idStr;
+    const d = getData(block, id);
+    const item = document.createElement('div');
+    item.className = 'clinic-item';
+    const label = block === 's' ? 'Завдання ' + id + ' (тренажер)' :
+                  block === 't1' ? 'Текст 1, пропуск ' + id : 'Текст 2, пропуск ' + id;
+    const correctLetter = d.ans;
+    const correctWord = d.opts.find(([l]) => l === correctLetter)[1];
+    item.innerHTML =
+      '<b>' + label + ':</b> <span class="sent-wrong">«' +
+      (d.sent || d.quote.replace(/<[^>]+>/g, '')) + '»</span><br>' +
+      'Правильно: <b style="color:var(--green)">' + correctLetter + ') ' + correctWord + '</b>' +
+      '<span class="rule-line">' + d.trap + '</span>';
+    host.appendChild(item);
+  });
+}
+
+document.addEventListener('change', e => {
+  const sel = e.target.closest('select.gap');
+  if (!sel) return;
+  const block = sel.dataset.block, id = +sel.dataset.gap;
+  const key = keyOf(block, id);
+  const d = getData(block, id);
+  attempts[key] = (attempts[key] || 0) + 1;
+
+  if (sel.value === d.ans) {
+    solved[key] = true;
+    sel.classList.remove('bad'); sel.classList.add('ok');
+    sel.disabled = true;
+  } else {
+    solved[key] = false;
+    mistakeIds.add(key);
+    sel.classList.remove('ok'); sel.classList.add('bad');
+    setTimeout(() => sel.classList.remove('bad'), 600);
+    sel.value = '';
+  }
+  renderExplanation(block, id, d.ans, sel.value);
+  refreshScore();
+  renderClinic();
+});
+
+document.getElementById('resetBtn').addEventListener('click', () => {
+  Object.keys(attempts).forEach(k => delete attempts[k]);
+  Object.keys(solved).forEach(k => delete solved[k]);
+  mistakeIds.clear();
+  document.querySelectorAll('select.gap').forEach(sel => {
+    sel.disabled = false;
+    sel.classList.remove('ok', 'bad');
+    buildGap(sel);
+  });
+  document.querySelectorAll('.expl').forEach(el => { el.innerHTML = ''; el.classList.remove('show'); });
+  refreshScore();
+  renderClinic();
+});
+
+buildSingles();
+document.querySelectorAll('select.gap').forEach(buildGap);
+refreshScore();
+</script>
+</body>
+</html>

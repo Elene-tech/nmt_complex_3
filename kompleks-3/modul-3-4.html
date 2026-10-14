@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>НМТ · Комплекс 3 · Модуль 3.4 — Collocations &amp; Word Patterns</title>
+<style>
+  :root{
+    --ink:#1f2933; --muted:#5b6770; --line:#d8dee4;
+    --blue:#1d4ed8; --blue-soft:#e8effc;
+    --green:#157347; --green-soft:#e7f6ee;
+    --red:#b42318;  --red-soft:#fdecea;
+    --amber:#92610e; --amber-soft:#fff6dd;
+    --paper:#ffffff; --bg:#f4f6f8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.55}
+  .page{max-width:900px;margin:0 auto;padding:20px 16px 60px}
+
+  .test-head{background:linear-gradient(135deg,#12294d,#1d4ed8);color:#fff;border-radius:14px;
+             padding:22px 26px;margin-bottom:12px}
+  .test-head .crumb{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.75;font-family:Arial,sans-serif}
+  .test-head h1{margin:6px 0 4px;font-size:26px;font-family:Arial,sans-serif;font-weight:700}
+  .test-head p{margin:0;font-size:15px;opacity:.9;font-family:Arial,sans-serif}
+
+  .nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;font-family:Arial,sans-serif}
+  .nav a{display:inline-block;padding:8px 14px;border-radius:10px;background:#fff;border:1px solid var(--line);
+         color:var(--blue);text-decoration:none;font-size:14px;font-weight:700}
+  .nav a:hover{border-color:var(--blue)}
+  .nav a.here{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .nav a.home{background:#eef2f7;color:#33475b}
+
+  .instr{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--blue);
+         border-radius:12px;padding:18px 22px;margin-bottom:14px}
+  .instr h2{margin:0 0 8px;font-family:Arial,sans-serif;font-size:17px;color:var(--blue)}
+  .instr p{margin:6px 0}
+  .instr .en{font-style:italic;color:#243b53;background:#f0f6ff;padding:2px 6px;border-radius:4px}
+  .tip{margin-top:12px;background:var(--amber-soft);border:1px solid #f0dfa8;border-radius:10px;
+       padding:12px 16px;font-family:Arial,sans-serif;font-size:14.5px;color:#57430a}
+  .tip b{color:var(--amber)}
+  .trap{margin-top:8px;background:var(--amber-soft);border:1px solid #f0dfa8;border-radius:8px;
+        padding:8px 12px;font-family:Arial,sans-serif;font-size:14px;color:#57430a}
+  .trap b{color:var(--amber)}
+
+  details{margin-top:10px}
+  summary{cursor:pointer;font-family:Arial,sans-serif;font-weight:700;color:var(--blue);font-size:15px}
+  .steps{counter-reset:step;margin:12px 0 4px;padding:0;list-style:none}
+  .steps li{position:relative;padding:8px 0 8px 52px;border-bottom:1px dashed var(--line);font-family:Arial,sans-serif;font-size:15px}
+  .steps li:last-child{border-bottom:none}
+  .steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:8px;
+    width:34px;height:34px;border-radius:50%;background:var(--blue-soft);color:var(--blue);
+    font-weight:700;display:flex;align-items:center;justify-content:center}
+
+  .ref{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:14px}
+  .ref h2{margin:0 0 4px;font-family:Arial,sans-serif;font-size:18px;color:#102a43}
+  .ref .gloss{color:var(--muted);font-size:14.5px;font-family:Arial,sans-serif;margin-bottom:8px}
+  .ref table{border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14.5px;margin-top:6px}
+  .ref td{border:1px solid var(--line);padding:8px 12px;vertical-align:top}
+  .ref td.word{font-weight:700;color:var(--blue);width:200px}
+  .ref td .ex{display:block;font-style:italic;color:#243b53;margin-top:4px}
+  .ref td .tr{display:block;font-size:12.5px;color:var(--muted)}
+  mark.hl{background:#fff1a8;padding:0 3px;border-radius:3px}
+  .pairbox{background:#f0f6ff;border:1px solid #c7dbf7;border-radius:10px;padding:10px 14px;margin-top:10px;
+           font-family:Arial,sans-serif;font-size:14.5px}
+  .pairbox .lbl{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:4px}
+
+  .odd-box{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:14px}
+  .odd-round{border-top:1px dashed var(--line);padding:12px 0}
+  .odd-round:first-of-type{border-top:none}
+  .odd-q{font-family:Arial,sans-serif;font-size:14.5px;margin-bottom:8px}
+  .odd-q b{color:var(--blue)}
+  .odd-opts{display:flex;flex-wrap:wrap;gap:8px}
+  .odd-btn{border:1.5px solid var(--line);border-radius:10px;padding:7px 16px;cursor:pointer;
+      font-family:Arial,sans-serif;font-size:14px;font-weight:700;background:#fff;color:var(--ink)}
+  .odd-btn:hover{border-color:var(--blue)}
+  .odd-btn.hit{border-color:var(--green);background:var(--green-soft);color:var(--green);cursor:default}
+  .odd-btn.keep{border-color:var(--line);background:#f4f6f8;color:var(--muted);cursor:default;font-weight:400}
+  .odd-btn.err{border-color:var(--red);background:var(--red-soft);color:var(--red);animation:shake .3s}
+  .odd-note{display:none;font-family:Arial,sans-serif;font-size:13px;color:var(--muted);margin-top:6px}
+  .odd-note.show{display:block}
+  .odd-score{font-family:Arial,sans-serif;font-weight:700;font-size:14.5px;color:var(--muted);margin-top:12px}
+  .odd-score.good{color:var(--green)}
+
+  .part{font-family:Arial,sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;
+        color:var(--muted);margin:26px 0 10px}
+  .part-anchor{scroll-margin-top:16px}
+
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+  .q .q-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .q .q-num{font-family:Arial,sans-serif;font-weight:700;font-size:13px;color:var(--muted)}
+  .q .q-tag{font-family:Arial,sans-serif;font-size:11.5px;font-weight:700;background:var(--blue-soft);color:var(--blue);
+            border-radius:99px;padding:2px 10px}
+  .q .sent{margin:8px 0 10px;font-size:17px}
+  select.gap{max-width:200px;padding:3px 8px;margin:0 3px;border-radius:8px;border:2px dashed var(--blue);
+      background:var(--blue-soft);color:var(--blue);font-family:Arial,sans-serif;font-weight:700;font-size:14px;
+      cursor:pointer;vertical-align:middle}
+  select.gap.ok{border-style:solid;border-color:var(--green);background:var(--green-soft);color:var(--green);cursor:default}
+  select.gap.bad{border-style:solid;border-color:var(--red);background:var(--red-soft);color:var(--red);
+      animation:shake .3s}
+  @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+  mark.q{background:#d3f9d8;padding:1px 4px;border-radius:3px}
+
+  .expl{display:none;margin:4px 0 14px;border:1px solid var(--line);border-radius:10px;background:#fbfcfd;padding:12px 16px}
+  .expl.show{display:block}
+  .expl .ans-line{font-family:Arial,sans-serif;font-weight:700;font-size:15px;margin-bottom:6px;color:var(--green)}
+  .expl .lbl{display:block;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+  .expl .quote{font-style:italic;background:#fff;border-left:3px solid var(--green);padding:6px 10px;border-radius:0 6px 6px 0;margin-top:4px;font-size:15.5px}
+  .expl p.note{font-family:Arial,sans-serif;font-size:14.5px;margin:6px 0 0}
+  .expl table{border-collapse:collapse;margin-top:6px;font-family:Arial,sans-serif;font-size:14px;width:100%}
+  .expl td{border:1px solid var(--line);padding:5px 10px;vertical-align:top}
+  .expl td.no{color:var(--red);font-weight:700;width:140px}
+
+  .gtext{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin-bottom:14px}
+  .gtext h3{margin:0 0 4px;font-family:Arial,sans-serif;font-size:20px;color:#102a43;text-align:center}
+  .gtext p{margin:12px 0;font-size:16.5px;text-align:justify}
+
+  .clinic{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--red);
+          border-radius:12px;padding:18px 22px;margin-bottom:14px}
+  .clinic h2{margin:0 0 8px;font-family:Arial,sans-serif;font-size:17px;color:var(--red)}
+  .clinic-item{border-bottom:1px dashed var(--line);padding:10px 0;font-family:Arial,sans-serif;font-size:14.5px}
+  .clinic-item:last-child{border-bottom:none}
+  .clinic-item .sent-wrong{font-style:italic;color:#243b53}
+  .clinic-item .rule-line{display:block;margin-top:4px;color:#57430a;background:var(--amber-soft);border-radius:6px;padding:4px 8px}
+  .clinic-empty{font-family:Arial,sans-serif;color:var(--green);font-weight:700}
+
+  .controls{position:sticky;bottom:12px;margin-top:18px;background:var(--paper);border:1px solid var(--line);
+            border-radius:14px;padding:14px 18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;
+            box-shadow:0 6px 24px rgba(16,42,67,.12);z-index:10}
+  .controls .btn{border:none;border-radius:10px;padding:12px 26px;font-family:Arial,sans-serif;
+                 font-weight:700;font-size:16px;cursor:pointer}
+  #resetBtn{background:#eef2f7;color:#33475b}
+  #resetBtn:hover{background:#e2e8f0}
+  .controls a.btn{background:var(--blue);color:#fff;text-decoration:none}
+  .controls a.btn.back{background:#eef2f7;color:#33475b}
+  #score{font-family:Arial,sans-serif;font-weight:700;font-size:16px;margin-left:auto;color:var(--muted)}
+  #score.good{color:var(--green)} #score.mid{color:var(--amber)} #score.low{color:var(--red)}
+
+  @media print{
+    body{background:#fff}
+    .controls,.tip,details,.nav{display:none}
+    .expl{display:block !important}
+  }
+  @media(max-width:560px){
+    .test-head h1{font-size:21px}
+    select.gap{max-width:160px}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="test-head">
+    <div class="crumb">НМТ · Англійська мова · Комплекс 3 «Світ навколо нас» · Модуль 3.4</div>
+    <h1>Collocations &amp; Word Patterns: прийменники</h1>
+    <p>Довідник → Odd One Out → 14 завдань → 2 тексти НМТ → Error Clinic · Рівень B2 · British English</p>
+  </div>
+
+  <nav class="nav">
+    <a class="home" href="../index.html">⌂ Усі комплекси</a>
+    <a class="home" href="index.html">Комплекс 3</a>
+    <a class="here" href="#ref1">📖 Довідник</a>
+    <a href="#odd">🎯 Odd One Out</a>
+    <a href="#part1">✏️ Тренажер 1–14</a>
+    <a href="#text1">📰 Текст 1 (1–7)</a>
+    <a href="#text2">📰 Текст 2 (8–14)</a>
+    <a href="#clinic">🔁 Error Clinic</a>
+  </nav>
+
+  <div class="instr">
+    <h2>Як працювати з модулем</h2>
+    <p><b>Крок 1.</b> Прочитайте <b>довідник</b>: патерни згруповано за прийменниками — так їх легше запам'ятати блоками.</p>
+    <p><b>Крок 2.</b> Розминка <b>Odd One Out</b>: знайдіть слово, яке НЕ поєднується з показаним прийменником.</p>
+    <p><b>Крок 3.</b> <b>14 одиничних завдань</b> + <b>2 тексти НМТ</b> — прийменники в контексті.</p>
+    <p><b>Крок 4.</b> <b>Error Clinic</b> — повторення помилок.</p>
+    <div class="tip"><b>Головне правило модуля:</b> прийменник не можна перекласти з української — його можна лише <b>запам'ятати як частину слова</b>. Вчіть не «depend = залежати», а «depend <b>ON</b> = залежати <b>ВІД</b>». Прийменник — це «хвіст» слова, який завжди йде з ним.</div>
+  </div>
+
+  <!-- ================= ДОВІДНИК ================= -->
+  <div class="part part-anchor" id="ref1">📖 Довідник — патерни за прийменниками</div>
+
+  <div class="ref" id="ref-of">
+    <h2>Група OF — «з чого»</h2>
+    <div class="gloss">Емоції й стани: страх, гордість, усвідомлення, брак чогось.</div>
+    <table>
+      <tr><td class="word">afraid of sth/doing</td><td>боятися чогось
+        <span class="ex">I'm <mark class="hl">afraid of</mark> spiders.</span><span class="tr">Я боюся павуків.</span></td></tr>
+      <tr><td class="word">aware of sth</td><td>усвідомлювати щось
+        <span class="ex">Are you <mark class="hl">aware of</mark> the risks?</span><span class="tr">Ти усвідомлюєш ризики?</span></td></tr>
+      <tr><td class="word">proud of sth/sb</td><td>пишатися кимсь/чимось
+        <span class="ex">Her parents are very <mark class="hl">proud of</mark> her.</span><span class="tr">Її батьки дуже нею пишаються.</span></td></tr>
+      <tr><td class="word">short of sth</td><td>мати брак чогось
+        <span class="ex">We're <mark class="hl">short of</mark> time — hurry up!</span><span class="tr">У нас мало часу — поспішай!</span></td></tr>
+      <tr><td class="word">instead of sth/doing</td><td>замість чогось
+        <span class="ex">Let's walk <mark class="hl">instead of</mark> taking the bus.</span><span class="tr">Давай підемо пішки замість автобуса.</span></td></tr>
+      <tr><td class="word">dream of/about doing</td><td>мріяти про щось
+        <span class="ex">She <mark class="hl">dreams of</mark> becoming a vet.</span><span class="tr">Вона мріє стати ветеринаром.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> українською «боятися <u>когось</u>» (родовий) — хочеться сказати <i>afraid from</i>. Ні! Лише <b>afraid OF</b>. І «замість» = instead <b>OF</b> (+ герундій: instead of going), а не «instead to go».</div>
+  </div>
+
+  <div class="ref" id="ref-on">
+    <h2>Група ON — «на чомусь»</h2>
+    <div class="gloss">Залежність, захоплення, наполягання.</div>
+    <table>
+      <tr><td class="word">depend on sth/sb</td><td>залежати від
+        <span class="ex">The price <mark class="hl">depends on</mark> the season.</span><span class="tr">Ціна залежить від сезону.</span></td></tr>
+      <tr><td class="word">keen on sth/doing</td><td>захоплюватися чимось
+        <span class="ex">He's really <mark class="hl">keen on</mark> photography.</span><span class="tr">Він справді захоплюється фотографією.</span></td></tr>
+      <tr><td class="word">insist on sth/doing</td><td>наполягати на чомусь
+        <span class="ex">She <mark class="hl">insisted on</mark> paying for dinner.</span><span class="tr">Вона наполягла, що заплатить за вечерю.</span></td></tr>
+    </table>
+    <div class="pairbox"><span class="lbl">Порівняйте</span>
+      It <mark class="hl">depends on</mark> you. ↔ I'm <mark class="hl">keen on</mark> it. ↔ I <mark class="hl">insist on</mark> it.<br>
+      <i>Три різні значення — один прийменник ON.</i>
+    </div>
+    <div class="trap"><b>⚠️ Пастка:</b> «залежить <u>від</u>» — хочеться <i>from</i>, але правильно <b>depend ON</b>. «Захоплюватися <u>чимось</u>» — хочеться <i>with/by</i>, а треба <b>keen ON</b>. Український прийменник НІКОЛИ не підказує англійський!</div>
+  </div>
+
+  <div class="ref" id="ref-in">
+    <h2>Група IN — «у чомусь»</h2>
+    <div class="gloss">Участь, спеціалізація, успіх.</div>
+    <table>
+      <tr><td class="word">succeed in doing</td><td>досягти успіху, вдатися
+        <span class="ex">She <mark class="hl">succeeded in</mark> passing her driving test.</span><span class="tr">Їй вдалося скласти іспит з водіння.</span></td></tr>
+      <tr><td class="word">specialise in sth</td><td>спеціалізуватися на
+        <span class="ex">This shop <mark class="hl">specialises in</mark> vintage guitars.</span><span class="tr">Цей магазин спеціалізується на вінтажних гітарах.</span></td></tr>
+      <tr><td class="word">take part in sth</td><td>брати участь у
+        <span class="ex">Over 300 students <mark class="hl">took part in</mark> the competition.</span><span class="tr">Понад 300 учнів узяли участь у змаганні.</span></td></tr>
+      <tr><td class="word">experienced in sth/doing</td><td>досвідчений у чомусь
+        <span class="ex">We're looking for someone <mark class="hl">experienced in</mark> teaching children.</span><span class="tr">Шукаємо людину з досвідом роботи з дітьми.</span></td></tr>
+      <tr><td class="word">interested in sth/doing</td><td>зацікавлений у
+        <span class="ex">Are you <mark class="hl">interested in</mark> modern art?</span><span class="tr">Тебе цікавить сучасне мистецтво?</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> succeed <b>IN doing</b> — НЕ «succeed to do»! (To do пишемо після manage: managed to do.) «Брати участь <u>у</u>» — українською прийменник той самий, але в англійській це фіксований патерн: take part <b>IN</b>.</div>
+  </div>
+
+  <div class="ref" id="ref-for">
+    <h2>Група FOR — «за / для»</h2>
+    <div class="gloss">Причина, відповідальність, слава, заявки.</div>
+    <table>
+      <tr><td class="word">apologise (to sb) for sth</td><td>вибачатися за щось
+        <span class="ex">He <mark class="hl">apologised for</mark> being late.</span><span class="tr">Він вибачився за запізнення.</span></td></tr>
+      <tr><td class="word">famous for sth</td><td>відомий чимось
+        <span class="ex">Italy is <mark class="hl">famous for</mark> its cuisine.</span><span class="tr">Італія відома своєю кухнею.</span></td></tr>
+      <tr><td class="word">responsible for sth</td><td>відповідальний за
+        <span class="ex">Who is <mark class="hl">responsible for</mark> this mess?</span><span class="tr">Хто відповідає за цей безлад?</span></td></tr>
+      <tr><td class="word">apply for sth</td><td>подавати заявку на
+        <span class="ex">She <mark class="hl">applied for</mark> a place at medical school.</span><span class="tr">Вона подала заявку на медичний.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> «вибачитися <u>за</u>» — збігається, добре. Але «відомий <u>як</u>» ≠ famous as: <b>famous FOR</b> + причина слави. І запам'ятайте пару: <b>apply FOR</b> a job (заявка НА роботу), але <b>apply TO</b> a university (заявка ДО закладу).</div>
+  </div>
+
+  <div class="ref" id="ref-to">
+    <h2>Група TO — «до / кому»</h2>
+    <div class="gloss">Належність, прив'язаність, спрямування.</div>
+    <table>
+      <tr><td class="word">belong to sb/sth</td><td>належати комусь/чомусь
+        <span class="ex">This guitar <mark class="hl">belongs to</mark> my uncle.</span><span class="tr">Ця гітара належить моєму дядькові.</span></td></tr>
+      <tr><td class="word">listen to sth/sb</td><td>слухати щось/когось
+        <span class="ex">I love <mark class="hl">listening to</mark> jazz in the evening.</span><span class="tr">Люблю слухати джаз увечері.</span></td></tr>
+      <tr><td class="word">refer to sth</td><td>посилатися на щось
+        <span class="ex">The teacher <mark class="hl">referred to</mark> last week's test.</span><span class="tr">Учитель послався на минулотижневий тест.</span></td></tr>
+      <tr><td class="word">attached to sth/sb</td><td>прив'язаний до
+        <span class="ex">Children often get <mark class="hl">attached to</mark> a favourite toy.</span><span class="tr">Діти часто прив'язуються до улюбленої іграшки.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> «належить <u>мені</u>» — хочеться <i>belong me</i> без прийменника. Ні: <b>belong TO me</b>. Те саме з listen: <b>listen TO music</b> — прийменник обов'язковий, хоча українською його немає!</div>
+  </div>
+
+  <div class="ref" id="ref-with">
+    <h2>Група WITH / ABOUT — «з ким / про що»</h2>
+    <div class="gloss">Стосунки й теми: знайомство, розчарування, суперечки.</div>
+    <table>
+      <tr><td class="word">familiar with sth</td><td>знайомий з чимось (добре знаю)
+        <span class="ex">Are you <mark class="hl">familiar with</mark> this software?</span><span class="tr">Ти знайомий із цією програмою?</span></td></tr>
+      <tr><td class="word">disappointed with sth</td><td>розчарований чимось
+        <span class="ex">Fans were <mark class="hl">disappointed with</mark> the result.</span><span class="tr">Вболівальники були розчаровані результатом.</span></td></tr>
+      <tr><td class="word">argue with sb about sth</td><td>сперечатися з кимось про щось
+        <span class="ex">Stop <mark class="hl">arguing with</mark> me <mark class="hl">about</mark> money!</span><span class="tr">Припини сваритися зі мною через гроші!</span></td></tr>
+      <tr><td class="word">worry about sth/sb</td><td>хвилюватися про
+        <span class="ex">Don't <mark class="hl">worry about</mark> the exam — you're ready.</span><span class="tr">Не хвилюйся про іспит — ти готовий.</span></td></tr>
+    </table>
+    <div class="pairbox"><span class="lbl">Тонке розрізнення</span>
+      This name is <mark class="hl">familiar to</mark> me. ↔ I am <mark class="hl">familiar with</mark> this name.<br>
+      <i>Річ familiar TO людині; людина familiar WITH річчю. Підмет визначає прийменник!</i>
+    </div>
+    <div class="trap"><b>⚠️ Пастка:</b> «сваритися <u>з</u> кимось» — збігається (argue WITH), але «<u>через</u> гроші» = <b>about</b> money, не through/because of. Два прийменники — два різні елементи: with + людина, about + тема.</div>
+  </div>
+
+  <!-- ================= ODD ONE OUT ================= -->
+  <div class="part part-anchor" id="odd">🎯 Odd One Out — розминка: знайдіть слово, яке НЕ поєднується з прийменником</div>
+
+  <div class="odd-box">
+    <p style="font-family:Arial,sans-serif;font-size:14.5px;color:var(--muted);margin:0"><b>Як грати:</b> у кожному ряді три слова поєднуються з показаним прийменником, а одне — ні. Клацніть <b>зайве</b> слово. Зелене — ваша відповідь, сірі — ті, що справді поєднуються.</p>
+    <div id="oddList"></div>
+    <div class="odd-score" id="oddScore">Знайдено зайвих: 0 / 8</div>
+  </div>
+
+  <!-- ================= ЧАСТИНА 1: ОДИНИЧНІ ================= -->
+  <div class="part part-anchor" id="part1">✏️ Частина 1 · 14 одиничних завдань</div>
+
+  <div class="instr">
+    <h2>Завдання 1–14</h2>
+    <p><span class="en">For questions 1–14 choose the correct answer (A, B, C or D).</span></p>
+    <details>
+      <summary>📋 Стратегія: як не помилитися з прийменником</summary>
+      <ol class="steps">
+        <li><b>Знайдіть слово-«господаря»</b> перед пропуском (afraid, keen, depend…). Саме воно «володіє» прийменником.</li>
+        <li><b>НЕ перекладайте український прийменник.</b> «Залежить від» ≠ depend from. Прийменник — частина англійського слова, а не переклад українського.</li>
+        <li><b>Подивіться, що ПІСЛЯ пропуску.</b> Герундій (-ing)? Іменник? Це звужує вибір: succeed in do<b>ing</b>, afraid of do<b>ing</b>, dream of do<b>ing</b>.</li>
+        <li><b>Скажіть фразу «на слух».</b> Якщо ви читали довідник уголос — правильний варіант «зазвучить» знайомо.</li>
+      </ol>
+      <div class="tip"><b>Залік іде за першу спробу.</b> Помилилися — прочитайте рамку «⚠️ Пастка»: там пояснено, яка саме калька вас підловила.</div>
+    </details>
+  </div>
+
+  <div id="singles"></div>
+
+  <!-- ================= ТЕКСТ 1 ================= -->
+  <div class="part part-anchor" id="text1">📰 Частина 2 · Текст 1 · завдання 1–7</div>
+
+  <div class="instr">
+    <h2>Текст 1 — «A Summer at the Wildlife Centre»</h2>
+    <p><span class="en">For questions 1–7, read the text below and decide which answer (A, B, C or D) best fits each gap.</span></p>
+    <div class="tip"><b>Стратегія:</b> кожен пропуск — це прийменник. Знайдіть слово-«господаря» ліворуч (keen, applied, responsible…) — і пригадайте його «хвіст».</div>
+  </div>
+
+  <div class="gtext">
+    <h3>A Summer at the Wildlife Centre</h3>
+    <p>Ever since I was small, I've been keen <select class="gap" data-block="t1" data-gap="1"></select> animals, so when I saw an advertisement for summer volunteers at the Wildlife Centre, I immediately applied <select class="gap" data-block="t1" data-gap="2"></select> a place. Two weeks later I got an interview. The manager asked if I was experienced <select class="gap" data-block="t1" data-gap="3"></select> working with birds. I admitted I wasn't, but said I was a fast learner.
+    <span class="expl" id="expl-t1-1"></span><span class="expl" id="expl-t1-2"></span><span class="expl" id="expl-t1-3"></span></p>
+    <p>I got the place! Every morning I was responsible <select class="gap" data-block="t1" data-gap="4"></select> feeding the owls. At first I was afraid <select class="gap" data-block="t1" data-gap="5"></select> making a mistake, but the other volunteers helped me. Instead <select class="gap" data-block="t1" data-gap="6"></select> spending my summer in front of a screen, I spent it outdoors. By August I felt I truly belonged <select class="gap" data-block="t1" data-gap="7"></select> the team. It was the best summer of my life.
+    <span class="expl" id="expl-t1-4"></span><span class="expl" id="expl-t1-5"></span><span class="expl" id="expl-t1-6"></span><span class="expl" id="expl-t1-7"></span></p>
+  </div>
+
+  <!-- ================= ТЕКСТ 2 ================= -->
+  <div class="part part-anchor" id="text2">📰 Частина 3 · Текст 2 · завдання 8–14</div>
+
+  <div class="instr">
+    <h2>Текст 2 — «The Night Everything Went Wrong»</h2>
+    <p><span class="en">For questions 8–14, read the text below and decide which answer (A, B, C or D) best fits each gap.</span></p>
+    <div class="tip"><b>Стратегія:</b> зверніть увагу на форму після пропуску: якщо далі -ing (doing, going), це звужує вибір — після of, on, for, from, in завжди герундій.</div>
+  </div>
+
+  <div class="gtext">
+    <h3>The Night Everything Went Wrong</h3>
+    <p>Our school is famous <select class="gap" data-block="t2" data-gap="8"></select> its winter concert, and this year over a hundred students took part <select class="gap" data-block="t2" data-gap="9"></select> it. I was going to play the piano — my first solo! I'd always dreamed <select class="gap" data-block="t2" data-gap="10"></select> performing on a real stage.
+    <span class="expl" id="expl-t2-8"></span><span class="expl" id="expl-t2-9"></span><span class="expl" id="expl-t2-10"></span></p>
+    <p>But on the big night everything went wrong. First the microphones wouldn't work, and nobody could listen <select class="gap" data-block="t2" data-gap="11"></select> the singers. Then my little brother, who was sitting in the front row, started crying, and I couldn't concentrate. My hands were shaking so much that I succeeded <select class="gap" data-block="t2" data-gap="12"></select> playing only half of my piece. Afterwards I wanted to apologise <select class="gap" data-block="t2" data-gap="13"></select> ruining the evening, but Mrs Bell just smiled. «You've learnt the most important lesson,» she said. «Success doesn't depend <select class="gap" data-block="t2" data-gap="14"></select> everything going perfectly. It depends on carrying on when things go wrong.» My parents said they were still proud of me. Next year, I promised myself, things will be different.
+    <span class="expl" id="expl-t2-11"></span><span class="expl" id="expl-t2-12"></span><span class="expl" id="expl-t2-13"></span><span class="expl" id="expl-t2-14"></span></p>
+  </div>
+
+  <!-- ================= ERROR CLINIC ================= -->
+  <div class="part part-anchor" id="clinic">🔁 Error Clinic — робота над помилками</div>
+
+  <div class="clinic">
+    <h2>Error Clinic</h2>
+    <p style="font-family:Arial,sans-serif;font-size:14.5px;margin:0 0 10px">Тут з'являться всі завдання, де ви помилилися хоча б раз. Після завершення тренажера поверніться сюди й поясніть кожну помилку самі собі.</p>
+    <div id="clinicList"><div class="clinic-empty">Поки що помилок немає. Чудово — так тримати! 💪</div></div>
+  </div>
+
+  <!-- ================= CONTROLS ================= -->
+  <div class="controls">
+    <a class="btn back" href="index.html">← Комплекс 3</a>
+    <button class="btn" id="resetBtn">🔄 Скинути все</button>
+    <a class="btn" href="index.html">Мапа комплексу →</a>
+    <span id="score">Результат: 0 / 28</span>
+  </div>
+
+</div>
+
+<script>
+/* ================= ODD ONE OUT ================= */
+const ODD_ROUNDS = [
+  {prep:'of', opts:['afraid','aware','proud','keen'], odd:'keen',
+   note:'✓ afraid of · aware of · proud of. А keen поєднується з ON: keen on sport. Тут воно зайве.'},
+  {prep:'on', opts:['depend','insist','keen','succeed'], odd:'succeed',
+   note:'✓ depend on · insist on · keen on. А succeed — з IN: succeed in passing. НЕ «succeed to pass»!'},
+  {prep:'in', opts:['succeed','specialise','take part','responsible'], odd:'responsible',
+   note:'✓ succeed in · specialise in · take part in. А responsible — з FOR: responsible for the project.'},
+  {prep:'for', opts:['apologise','famous','apply','belong'], odd:'belong',
+   note:'✓ apologise for · famous for · apply for. А belong — з TO: belong to me. НЕ «belong me»!'},
+  {prep:'to', opts:['belong','listen','refer','familiar'], odd:'familiar',
+   note:'✓ belong to · listen to · refer to. А familiar — з WITH: familiar with the topic. (Але: this topic is familiar TO me!)'},
+  {prep:'with', opts:['familiar','disappointed','argue','aware'], odd:'aware',
+   note:'✓ familiar with · disappointed with · argue with (sb). А aware — з OF: aware of the problem.'},
+  {prep:'of', opts:['afraid','short','instead','depend'], odd:'depend',
+   note:'✓ afraid of · short of · instead of. А depend — з ON: depend on the weather.'},
+  {prep:'for', opts:['apply','famous','responsible','interested'], odd:'interested',
+   note:'✓ apply for · famous for · responsible for. А interested — з IN: interested in music.'}
+];
+(function buildOdd(){
+  const box = document.getElementById('oddList');
+  let found = 0;
+  ODD_ROUNDS.forEach((r,i)=>{
+    const div = document.createElement('div');
+    div.className = 'odd-round';
+    const q = document.createElement('div');
+    q.className = 'odd-q';
+    q.innerHTML = `<b>${i+1}.</b> Яке слово НЕ поєднується з <b>«${r.prep}»</b>?`;
+    div.appendChild(q);
+    const optsBox = document.createElement('div');
+    optsBox.className = 'odd-opts';
+    const note = document.createElement('div');
+    note.className = 'odd-note';
+    note.textContent = r.note;
+    r.opts.forEach(word=>{
+      const b = document.createElement('button');
+      b.className = 'odd-btn';
+      b.textContent = word + ' ' + r.prep;
+      b.onclick = ()=>{
+        if(div.dataset.done) return;
+        if(word === r.odd){
+          div.dataset.done = '1';
+          b.classList.add('hit');
+          optsBox.querySelectorAll('.odd-btn').forEach(o=>{ if(o!==b) o.classList.add('keep'); });
+          note.classList.add('show');
+          found++;
+          const sc = document.getElementById('oddScore');
+          sc.textContent = `Знайдено зайвих: ${found} / 8`;
+          if(found === 8){ sc.textContent = '✓ Усі 8 зайвих знайдено! Переходьте до тренажера.'; sc.classList.add('good'); }
+        } else {
+          b.classList.remove('err'); void b.offsetWidth;
+          b.classList.add('err');
+          setTimeout(()=>b.classList.remove('err'), 400);
+        }
+      };
+      optsBox.appendChild(b);
+    });
+    div.appendChild(optsBox);
+    div.appendChild(note);
+    box.appendChild(div);
+  });
+})();
+
+/* ===================== ДАНІ ===================== */
+const SINGLES = [
+{id:1, ref:'#ref-on', tag:'keen ___', sent:'My little brother is really keen ___ collecting football stickers.',
+ opts:[['A','in'],['B','of'],['C','on'],['D','for']], ans:'C',
+ why:'«Захоплюється колекціонуванням» → keen ON (doing). Після on — герундій: keen on collecting.',
+ no:[['in','interested in / specialise in — так; а keen — лише on.'],
+     ['of','afraid of / aware of — так; keen of — не існує.'],
+     ['for','keen for sth існує лише в конструкції «keen for sb to do» (хоче, щоб хтось щось зробив) — тут не той випадок.']],
+ trap:'⚠️ keen ON — як «закоханий У щось»: запам\'ятайте картинку: сидить ON колекції наклейок.'},
+{id:2, ref:'#ref-of', tag:'afraid ___', sent:'Don\'t be afraid ___ the dog — he\'s very friendly.',
+ opts:[['A','from'],['B','of'],['C','by'],['D','about']], ans:'B',
+ why:'«Боятися когось/чогось» → afraid OF. Страх — з групи OF (afraid, aware, proud, short).',
+ no:[['from','калька з українського «боюся від»? Не існує — afraid from неможливо.'],
+     ['by','by — для діяча в пасиві (bitten by a dog), не для страху.'],
+     ['about','worry about — так; afraid about — ні.']],
+ trap:'⚠️ Трійця-небіжчиця: afraid OF, scared OF, frightened OF — усі з OF!'},
+{id:3, ref:'#ref-on', tag:'depend ___', sent:'The price of the trip depends ___ how many people sign up.',
+ opts:[['A','of'],['B','from'],['C','on'],['D','about']], ans:'C',
+ why:'«Залежить від» → depend ON. Українське «від» — пастка: в англійській цей прийменник не перекладається.',
+ no:[['of','з OF йдуть afraid/aware/proud — не depend.'],
+     ['from','калька з «залежить ВІД» — найчастіша помилка! Depend from — не існує.'],
+     ['about','about — «про що» (talk about); залежність — on.']],
+ trap:'⚠️ depend ON = залежати ВІД. «Від» → on. Просто запам\'ятайте цю пару як одне слово: «діпéндон».'},
+{id:4, ref:'#ref-for', tag:'apologise ___', sent:'He apologised ___ forgetting my birthday.',
+ opts:[['A','about'],['B','of'],['C','at'],['D','for']], ans:'D',
+ why:'«Вибачився за…» → apologise FOR (doing). Модель: apologise (to sb) for sth/doing.',
+ no:[['about','sorry about — так; а дієслово apologise вимагає for.'],
+     ['of','of — група страху/гордості, не вибачень.'],
+     ['at','at — напрямок/місце (look at), не причина вибачення.']],
+ trap:'⚠️ BE sorry ABOUT = apologise FOR. Іменник/прикметник і дієслово беруть різні прийменники!'},
+{id:5, ref:'#ref-for', tag:'famous ___', sent:'This small town is famous ___ its medieval castle.',
+ opts:[['A','as'],['B','for'],['C','about'],['D','of']], ans:'B',
+ why:'«Відомий ЧИМОСЬ (причиною слави)» → famous FOR. Маркер: its medieval castle — те, ЧИМ місто славне.',
+ no:[['as','famous as + РОЛЬ: famous as a writer (відомий ЯК письменник). Тут не роль, а причина → for.'],
+     ['about','about — тема розмови, не слава.'],
+     ['of','of — група емоцій (afraid/proud), не слава.']],
+ trap:'⚠️ famous FOR + причина (castle, wine); famous AS + професія (a singer).'},
+{id:6, ref:'#ref-to', tag:'belong ___', sent:'This scarf doesn\'t belong ___ me — it must be Lucy\'s.',
+ opts:[['A','to'],['B','for'],['C','of'],['D','with']], ans:'A',
+ why:'«Належить комусь» → belong TO sb. Прийменник обов\'язковий: belong me — неможливо.',
+ no:[['for','for — мета (a gift for me); належність — to.'],
+     ['of','of — частина цілого (a piece of cake); належність людині — belong to.'],
+     ['with','with — «разом з», не володіння.']],
+ trap:'⚠️ Whose scarf is it? — It belongs TO Lucy. It\'s Lucy\'s.'},
+{id:7, ref:'#ref-in', tag:'succeed ___', sent:'After three attempts, she finally succeeded ___ passing her driving test.',
+ opts:[['A','to'],['B','at'],['C','in'],['D','on']], ans:'C',
+ why:'«Їй вдалося скласти» → succeed IN doing. Після in — лише герундій.',
+ no:[['to','succeed to do — класична помилка! «Вдалося зробити» інфінітивом — це manage TO do. Succeed — лише in doing.'],
+     ['at','at — для вмінь (good at), не для succeed.'],
+     ['on','on — depend/insist/keen; succeed — in.']],
+ trap:'⚠️ succeed IN doing = manage TO do. Той самий зміст — різні конструкції!'},
+{id:8, ref:'#ref-to', tag:'promise ___', sent:'She promised ___ me with my essay on Saturday.',
+ opts:[['A','helping'],['B','to help'],['C','help'],['D','for helping']], ans:'B',
+ why:'Після promise — ІНФІНІТИВ: promise TO do. Маркер: promise — дієслово наміру про майбутнє.',
+ no:[['helping','герундій після promise не вживається (порівняй: enjoy helping — там герундій).'],
+     ['help','інфінітив без to (help) йде після модальних (can help), не після promise.'],
+     ['for helping','for + -ing — причина подяки/вибачення (thank you for helping), не promise.']],
+ trap:'⚠️ Дієслово-обіцянка про майбутнє → to do: promise/agree/decide/hope TO do. Насолода/досвід → doing: enjoy/practise.'},
+{id:9, ref:'#ref-on', tag:'insist ___', sent:'Dad insisted ___ driving me to the station, although I wanted to walk.',
+ opts:[['A','in'],['B','on'],['C','for'],['D','at']], ans:'B',
+ why:'«Наполіг на тому, щоб підвезти» → insist ON doing.',
+ no:[['in','in — succeed/specialise; insist — on.'],
+     ['for','for — apply/apologise; insist for — не існує.'],
+     ['at','at — місця й час, не наполягання.']],
+ trap:'⚠️ Група ON = «тверда позиція»: insist on, depend on, keen on, rely on.'},
+{id:10, ref:'#ref-of', tag:'instead ___', sent:'Instead ___ going to the party, Tom stayed home and revised for the test.',
+ opts:[['A','than'],['B','from'],['C','of'],['D','to']], ans:'C',
+ why:'«Замість того щоб» → instead OF + герундій (instead of going).',
+ no:[['than','than — після порівнянь (better than); instead than — не існує.'],
+     ['from','from — походження; до instead не пасує.'],
+     ['to','instead to do — часта помилка! Після instead OF завжди іменник або -ing.']],
+ trap:'⚠️ instead OF doing — дві частини нерозривні: of нікуди не подіти.'},
+{id:11, ref:'#ref-of', tag:'prevent ___', sent:'The high fence prevents the deer ___ escaping from the reserve.',
+ opts:[['A','to'],['B','of'],['C','from'],['D','against']], ans:'C',
+ why:'«Заважає оленям ВТЕКТИ» → prevent sb FROM doing. Логіка: рух треба було б — загороджуємо ВІД нього.',
+ no:[['to','prevent to do — не існує (це не infinitive-дієслово).'],
+     ['of','of — після afraid/aware; prevent — from.'],
+     ['against','against — для warn against/protect against, але стандартний патерн тут: prevent FROM.']],
+ trap:'⚠️ prevent/stop sb FROM doing. «From» тут = «від (дії)» — відштовхування від дії.'},
+{id:12, ref:'#ref-to', tag:'enjoy ___', sent:'I really enjoy ___ to jazz when I\'m cooking.',
+ opts:[['A','to listen'],['B','listen'],['C','to listening'],['D','listening']], ans:'D',
+ why:'Після enjoy — лише ГЕРУНДІЙ: enjoy doing. Маркер: enjoy — дієслово задоволення.',
+ no:[['to listen','інфінітив після enjoy — неможливо (це не promise/decide).'],
+     ['listen','інфінітив без to — після модальних/let/make, не після enjoy.'],
+     ['to listening','пастка! «to + -ing» існує лише в look forward to doing; після enjoy жодного to немає.']],
+ trap:'⚠️ enjoy/avoid/practise/finish + doing. Дієслово «задоволення/процесу» → герундій без to.'},
+{id:13, ref:'#ref-of', tag:'proud ___', sent:'Her parents were very proud ___ her when she won the competition.',
+ opts:[['A','for'],['B','with'],['C','about'],['D','of']], ans:'D',
+ why:'«Пишалися нею» → proud OF sb. Емоція-оцінка → група OF.',
+ no:[['for','for — мета/отримувач; гордість — of.'],
+     ['with','pleased/happy with — так; proud with — ні.'],
+     ['about','excited about — так; proud about — ні.']],
+ trap:'⚠️ Гордість і страх — одна родина: proud OF, afraid OF. Обидва — про сильне почуття до об\'єкта.'},
+{id:14, ref:'#ref-in', tag:'specialise ___', sent:'After university, she wants to specialise ___ children\'s medicine.',
+ opts:[['A','on'],['B','at'],['C','in'],['D','for']], ans:'C',
+ why:'«Спеціалізуватися на» → specialise IN. Сфера діяльності — «всередині» неї → in.',
+ no:[['on','on — depend/insist/keen; specialise — in.'],
+     ['at','good AT — вміння; specialise IN — сфера. Тонка, але стала різниця.'],
+     ['for','for — apply/apologise; не спеціалізація.']],
+ trap:'⚠️ specialise IN = працювати В середині галузі. Як succeed in — теж «всередині» справи.'}
+];
+
+const TEXT1 = {
+1:{ans:'B', word:'on', opts:[['A','in'],['B','on'],['C','of'],['D','about']],
+   quote:'…I\'ve been keen <mark class="q">on</mark> animals…',
+   why:'«Захоплювалася тваринами» → keen ON. Маркер: слово-«господар» keen стоїть одразу перед пропуском.',
+   no:[['in','interested in — так; keen — лише on.'],
+      ['of','of — група afraid/proud; не keen.'],
+      ['about','excited/mad about — так; keen about — ні.']],
+   trap:'⚠️ keen ON — не перекладайте «захоплюватися чимось» як with!'},
+2:{ans:'C', word:'for', opts:[['A','to'],['B','at'],['C','for'],['D','on']],
+   quote:'…I immediately applied <mark class="q">for</mark> a place.',
+   why:'«Подала заявку НА місце» → apply FOR sth. Маркер: пропуск перед a place (предмет бажання).',
+   no:[['to','apply TO + заклад: apply TO the centre. Тут стоїть «a place» (що хочу отримати) → for.'],
+      ['at','at — напрямок дії, не заявки.'],
+      ['on','on — група depend/insist; apply on — не існує.']],
+   trap:'⚠️ apply FOR a job/place (що хочу) ≠ apply TO a university (куди).'},
+3:{ans:'A', word:'in', opts:[['A','in'],['B','with'],['C','of'],['D','for']],
+   quote:'…if I was experienced <mark class="q">in</mark> working with birds.',
+   why:'«Досвідчена у роботі з птахами» → experienced IN doing. Після in — герундій: in working.',
+   no:[['with','familiar with / busy with — так; experienced with — не стандарт НМТ.'],
+      ['of','of — група емоцій; досвід — «всередині» сфери → in.'],
+      ['for','for — відповідальність/заявки; не досвід.']],
+   trap:'⚠️ experienced IN = добрий В чомусь; як good at — але патерн інший!'},
+4:{ans:'D', word:'for', opts:[['A','of'],['B','about'],['C','on'],['D','for']],
+   quote:'…I was responsible <mark class="q">for</mark> feeding the owls.',
+   why:'«Відповідальна за годування» → responsible FOR (doing). Класичний патерн з юніта про роботу.',
+   no:[['of','of — afraid/proud; відповідальність — for.'],
+      ['about','worry about — хвилювання; responsible about — ні.'],
+      ['on','on — depend/insist; не відповідальність.']],
+   trap:'⚠️ responsible FOR + ділянка роботи. Запам\'ятайте разом: in charge of ≠ responsible for!'},
+5:{ans:'B', word:'of', opts:[['A','from'],['B','of'],['C','by'],['D','to']],
+   quote:'…I was afraid <mark class="q">of</mark> making a mistake…',
+   why:'«Боялася зробити помилку» → afraid OF doing (страх, що щось СТАНЕТЬСЯ). Після of — герундій.',
+   no:[['from','калька «боятися від» — afraid from не існує.'],
+      ['by','by — пасивний діяч (bitten by), не страх.'],
+      ['to','afraid TO make — теж існує, але означає «не наважувалася»; тут страх МОЖЛИВОЇ помилки → of making.']],
+   trap:'⚠️ afraid OF doing = боюся, що станеться; afraid TO do = не наважуюсь. Тут — перший випадок.'},
+6:{ans:'A', word:'of', opts:[['A','of'],['B','than'],['C','from'],['D','for']],
+   quote:'Instead <mark class="q">of</mark> spending my summer in front of a screen…',
+   why:'«Замість того щоб провести літо…» → instead OF + герундій (of spending).',
+   no:[['than','than — після порівнянь; instead than — не існує.'],
+      ['from','from — походження/відштовхування; не заміна.'],
+      ['for','for — мета; instead for — неможливо.']],
+   trap:'⚠️ instead OF — нерозривна пара; далі іменник або -ing.'},
+7:{ans:'C', word:'to', opts:[['A','with'],['B','in'],['C','to'],['D','for']],
+   quote:'…I felt I truly belonged <mark class="q">to</mark> the team.',
+   why:'«Відчула, що належу до команди» → belong TO. Тут не володіння річчю, а «своя людина» — але прийменник той самий: to.',
+   no:[['with','with — разом; належність — to.'],
+      ['in','in — участь (take part in); belong — to.'],
+      ['for','for — мета/отримувач; belong for — не існує.']],
+   trap:'⚠️ belong TO = 1) чиясь річ; 2) бути «своїм» у групі. Обидва значення — один прийменник.'}
+};
+
+const TEXT2 = {
+8:{ans:'A', word:'for', opts:[['A','for'],['B','as'],['C','of'],['D','about']],
+   quote:'Our school is famous <mark class="q">for</mark> its winter concert…',
+   why:'«Відома своїм концертом» → famous FOR + причина слави.',
+   no:[['as','famous as + роль (famous as a singer). Концерт — не роль школи, а те, ЧИМ вона славна → for.'],
+      ['of','of — група емоцій; не слава.'],
+      ['about','about — тема; famous about — не існує.']],
+   trap:'⚠️ famous FOR + річ/подія; famous AS + посада/роль.'},
+9:{ans:'D', word:'in', opts:[['A','at'],['B','on'],['C','for'],['D','in']],
+   quote:'…over a hundred students took part <mark class="q">in</mark> it.',
+   why:'«Взяли участь у ньому» → take part IN. Стала фраза, її треба знати як «тéйк-пáрт-ін».',
+   no:[['at','at — місце/час (at school); участь — in.'],
+      ['on','on — depend/insist; take part on — не існує.'],
+      ['for','for — мета; участь у події — in.']],
+   trap:'⚠️ take part IN a concert = participate IN. Обидва — з in!'},
+10:{ans:'B', word:'of', opts:[['A','for'],['B','of'],['C','to'],['D','with']],
+   quote:'I\'d always dreamed <mark class="q">of</mark> performing on a real stage.',
+   why:'«Мріяла виступати» → dream OF doing. Після of — герундій: of performing.',
+   no:[['for','for — мета; мрія — of.'],
+      ['to','dream to perform — часта помилка! Інфінітив після dream не вживається: of doing або about doing.'],
+      ['with','with — разом з; не мрія.']],
+   trap:'⚠️ dream OF/ABOUT doing — ніколи «dream to do»!'},
+11:{ans:'C', word:'to', opts:[['A','at'],['B','for'],['C','to'],['D','after']],
+   quote:'…nobody could listen <mark class="q">to</mark> the singers.',
+   why:'«Ніхто не міг слухати співаків» → listen TO. Прийменник обов\'язковий, хоч українською його немає.',
+   no:[['at','look at — дивитися; listen at — не існує.'],
+      ['for','listen for a sound = прислухатися, чи не пролунає; тут — слухати виступ → to.'],
+      ['after','look after — доглядати; listen after — не існує.']],
+   trap:'⚠️ listen TO ≠ hear. Hear + об\'єкт без прийменника; listen + TO + об\'єкт.'},
+12:{ans:'A', word:'in', opts:[['A','in'],['B','to'],['C','at'],['D','on']],
+   quote:'…I succeeded <mark class="q">in</mark> playing only half of my piece.',
+   why:'«Їй вдалося зіграти» → succeed IN doing. Далі герундій playing — підтверджує патерн.',
+   no:[['to','succeed to play — НЕ існує; інфінітив — це managed to play.'],
+      ['at','at — good at; succeed — in.'],
+      ['on','on — depend/insist; не succeed.']],
+   trap:'⚠️ succeed IN doing = manage TO do. Один зміст — дві різні граматики!'},
+13:{ans:'D', word:'for', opts:[['A','about'],['B','of'],['C','at'],['D','for']],
+   quote:'…I wanted to apologise <mark class="q">for</mark> ruining the evening…',
+   why:'«Вибачитися за зіпсований вечір» → apologise FOR doing. Далі ruining — герундій після for.',
+   no:[['about','sorry ABOUT — з прикметником; ДІЄСЛОВО apologise бере for.'],
+      ['of','of — емоції (afraid/proud); вибачення — for.'],
+      ['at','at — напрямок погляду/крику; не вибачення.']],
+   trap:'⚠️ apologise FOR ≠ be sorry ABOUT. Дієслово — for, прикметник — about!'},
+14:{ans:'B', word:'on', opts:[['A','from'],['B','on'],['C','of'],['D','about']],
+   quote:'«Success doesn\'t depend <mark class="q">on</mark> everything going perfectly…»',
+   why:'«Успіх не залежить від…» → depend ON. Ключова фраза тексту — і найчастіша пастка модуля.',
+   no:[['from','калька «залежить ВІД» → from. Найтиповіша помилка! Depend from — не існує.'],
+      ['of','of — емоції; залежність — on.'],
+      ['about','about — тема розмови; не залежність.']],
+   trap:'⚠️ Фінальна перевірка: «залежить від» = depend ON. Якщо запам\'ятаєте лише один патерн модуля — нехай буде цей.'}
+};
+
+const TOTAL = SINGLES.length + Object.keys(TEXT1).length + Object.keys(TEXT2).length;
+
+/* ===================== РУШІЙ ===================== */
+const attempts = {};
+const solved   = {};
+const mistakeIds = new Set();
+
+function getData(block, id){
+  if(block === 's')  return SINGLES.find(q => q.id === id);
+  if(block === 't1') return TEXT1[id];
+  if(block === 't2') return TEXT2[id];
+}
+function explId(block, id){ return 'expl-' + (block==='s' ? 's' + id : block + '-' + id); }
+function keyOf(block, id){ return block + '-' + id; }
+
+function buildGap(sel){
+  const block = sel.dataset.block, id = +sel.dataset.gap;
+  const d = getData(block, id);
+  sel.innerHTML = '';
+  const ph = document.createElement('option');
+  ph.value = ''; ph.textContent = '…оберіть…'; ph.disabled = true; ph.selected = true;
+  sel.appendChild(ph);
+  d.opts.forEach(([letter, word]) => {
+    const o = document.createElement('option');
+    o.value = letter; o.textContent = letter + '  ' + word;
+    sel.appendChild(o);
+  });
+}
+
+function buildSingles(){
+  const host = document.getElementById('singles');
+  SINGLES.forEach(q => {
+    const box = document.createElement('div');
+    box.className = 'q';
+    box.innerHTML =
+      '<div class="q-top"><span class="q-num">Завдання ' + q.id + ' / 14</span>' +
+      '<span class="q-tag">' + q.tag + '</span></div>' +
+      '<div class="sent">' + q.sent.replace('___', '<select class="gap" data-block="s" data-gap="' + q.id + '"></select>') + '</div>' +
+      '<div class="expl" id="expl-s' + q.id + '"></div>';
+    host.appendChild(box);
+  });
+}
+
+function renderExplanation(block, id, correctLetter, chosenLetter){
+  const d = getData(block, id);
+  const ex = document.getElementById(explId(block, id));
+  const correctWord = d.opts.find(([l]) => l === correctLetter)[1];
+  const chosenWord  = chosenLetter ? d.opts.find(([l]) => l === chosenLetter)[1] : null;
+
+  let html = '<div class="ans-line">✅ Правильна відповідь: ' + correctLetter + ') ' + correctWord + '</div>';
+  if (d.quote) {
+    html += '<span class="lbl">Підказка з тексту</span><div class="quote">«' + d.quote + '»</div>';
+  } else {
+    html += '<div class="quote">«' + d.sent.replace('___', '<mark class="q">' + correctWord + '</mark>') + '»</div>';
+  }
+  html += '<span class="lbl">Чому саме так?</span><p class="note">' + d.why + '</p>';
+  if (chosenLetter && chosenLetter !== correctLetter) {
+    const row = d.no.find(([w]) => w === chosenWord);
+    html += '<span class="lbl">Ваша відповідь</span><table><tr><td class="no">❌ ' +
+            chosenLetter + ') ' + chosenWord + '</td><td>' + (row ? row[1] : '') + '</td></tr></table>';
+  }
+  html += '<span class="lbl">Інші варіанти</span><table>' +
+          d.no.filter(([w]) => w !== chosenWord)
+              .map(([w, why]) => '<tr><td class="no">❌ ' + w + '</td><td>' + why + '</td></tr>').join('') +
+          '</table>';
+  html += '<div class="trap">' + d.trap + '</div>';
+  if (block === 's') {
+    html += '<p class="note" style="margin-top:8px">📖 Див. довідник: <a href="' + d.ref + '" style="color:var(--blue)">' + d.tag + '</a></p>';
+  }
+  ex.innerHTML = html;
+  ex.classList.add('show');
+}
+
+function refreshScore(){
+  let n = 0;
+  for (const k in solved) if (solved[k] && (attempts[k] || 0) === 1) n++;
+  const el = document.getElementById('score');
+  el.textContent = 'Результат: ' + n + ' / ' + TOTAL + ' з першої спроби';
+  el.className = n === TOTAL ? 'good' : (n >= TOTAL * 0.66 ? 'mid' : 'low');
+}
+
+function renderClinic(){
+  const host = document.getElementById('clinicList');
+  if (!mistakeIds.size) {
+    host.innerHTML = '<div class="clinic-empty">Поки що помилок немає. Чудово — так тримати! 💪</div>';
+    return;
+  }
+  host.innerHTML = '';
+  [...mistakeIds].forEach(key => {
+    const [block, idStr] = key.split('-');
+    const id = +idStr;
+    const d = getData(block, id);
+    const item = document.createElement('div');
+    item.className = 'clinic-item';
+    const label = block === 's' ? 'Завдання ' + id + ' (тренажер)' :
+                  block === 't1' ? 'Текст 1, пропуск ' + id : 'Текст 2, пропуск ' + id;
+    const correctLetter = d.ans;
+    const correctWord = d.opts.find(([l]) => l === correctLetter)[1];
+    item.innerHTML =
+      '<b>' + label + ':</b> <span class="sent-wrong">«' +
+      (d.sent || d.quote.replace(/<[^>]+>/g, '')) + '»</span><br>' +
+      'Правильно: <b style="color:var(--green)">' + correctLetter + ') ' + correctWord + '</b>' +
+      '<span class="rule-line">' + d.trap + '</span>';
+    host.appendChild(item);
+  });
+}
+
+document.addEventListener('change', e => {
+  const sel = e.target.closest('select.gap');
+  if (!sel) return;
+  const block = sel.dataset.block, id = +sel.dataset.gap;
+  const key = keyOf(block, id);
+  const d = getData(block, id);
+  attempts[key] = (attempts[key] || 0) + 1;
+
+  if (sel.value === d.ans) {
+    solved[key] = true;
+    sel.classList.remove('bad'); sel.classList.add('ok');
+    sel.disabled = true;
+  } else {
+    solved[key] = false;
+    mistakeIds.add(key);
+    sel.classList.remove('ok'); sel.classList.add('bad');
+    setTimeout(() => sel.classList.remove('bad'), 600);
+    sel.value = '';
+  }
+  renderExplanation(block, id, d.ans, sel.value);
+  refreshScore();
+  renderClinic();
+});
+
+document.getElementById('resetBtn').addEventListener('click', () => {
+  Object.keys(attempts).forEach(k => delete attempts[k]);
+  Object.keys(solved).forEach(k => delete solved[k]);
+  mistakeIds.clear();
+  document.querySelectorAll('select.gap').forEach(sel => {
+    sel.disabled = false;
+    sel.classList.remove('ok', 'bad');
+    buildGap(sel);
+  });
+  document.querySelectorAll('.expl').forEach(el => { el.innerHTML = ''; el.classList.remove('show'); });
+  document.querySelectorAll('.odd-round').forEach(div => {
+    delete div.dataset.done;
+    div.querySelectorAll('.odd-btn').forEach(b => b.classList.remove('hit','keep','err'));
+    const note = div.querySelector('.odd-note');
+    if (note) note.classList.remove('show');
+  });
+  const sc = document.getElementById('oddScore');
+  sc.textContent = 'Знайдено зайвих: 0 / 8';
+  sc.classList.remove('good');
+  refreshScore();
+  renderClinic();
+});
+
+buildSingles();
+document.querySelectorAll('select.gap').forEach(buildGap);
+refreshScore();
+</script>
+</body>
+</html>

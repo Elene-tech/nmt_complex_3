@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>НМТ · Комплекс 3 · Модуль 3.3 — Confusing Words: Entertainment &amp; Media</title>
+<style>
+  :root{
+    --ink:#1f2933; --muted:#5b6770; --line:#d8dee4;
+    --blue:#1d4ed8; --blue-soft:#e8effc;
+    --green:#157347; --green-soft:#e7f6ee;
+    --red:#b42318;  --red-soft:#fdecea;
+    --amber:#92610e; --amber-soft:#fff6dd;
+    --paper:#ffffff; --bg:#f4f6f8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.55}
+  .page{max-width:900px;margin:0 auto;padding:20px 16px 60px}
+
+  .test-head{background:linear-gradient(135deg,#12294d,#1d4ed8);color:#fff;border-radius:14px;
+             padding:22px 26px;margin-bottom:12px}
+  .test-head .crumb{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.75;font-family:Arial,sans-serif}
+  .test-head h1{margin:6px 0 4px;font-size:26px;font-family:Arial,sans-serif;font-weight:700}
+  .test-head p{margin:0;font-size:15px;opacity:.9;font-family:Arial,sans-serif}
+
+  .nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;font-family:Arial,sans-serif}
+  .nav a{display:inline-block;padding:8px 14px;border-radius:10px;background:#fff;border:1px solid var(--line);
+         color:var(--blue);text-decoration:none;font-size:14px;font-weight:700}
+  .nav a:hover{border-color:var(--blue)}
+  .nav a.here{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .nav a.home{background:#eef2f7;color:#33475b}
+
+  .instr{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--blue);
+         border-radius:12px;padding:18px 22px;margin-bottom:14px}
+  .instr h2{margin:0 0 8px;font-family:Arial,sans-serif;font-size:17px;color:var(--blue)}
+  .instr p{margin:6px 0}
+  .instr .en{font-style:italic;color:#243b53;background:#f0f6ff;padding:2px 6px;border-radius:4px}
+  .tip{margin-top:12px;background:var(--amber-soft);border:1px solid #f0dfa8;border-radius:10px;
+       padding:12px 16px;font-family:Arial,sans-serif;font-size:14.5px;color:#57430a}
+  .tip b{color:var(--amber)}
+  .trap{margin-top:8px;background:var(--amber-soft);border:1px solid #f0dfa8;border-radius:8px;
+        padding:8px 12px;font-family:Arial,sans-serif;font-size:14px;color:#57430a}
+  .trap b{color:var(--amber)}
+
+  details{margin-top:10px}
+  summary{cursor:pointer;font-family:Arial,sans-serif;font-weight:700;color:var(--blue);font-size:15px}
+  .steps{counter-reset:step;margin:12px 0 4px;padding:0;list-style:none}
+  .steps li{position:relative;padding:8px 0 8px 52px;border-bottom:1px dashed var(--line);font-family:Arial,sans-serif;font-size:15px}
+  .steps li:last-child{border-bottom:none}
+  .steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:8px;
+    width:34px;height:34px;border-radius:50%;background:var(--blue-soft);color:var(--blue);
+    font-weight:700;display:flex;align-items:center;justify-content:center}
+
+  .ref{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:14px}
+  .ref h2{margin:0 0 4px;font-family:Arial,sans-serif;font-size:18px;color:#102a43}
+  .ref .gloss{color:var(--muted);font-size:14.5px;font-family:Arial,sans-serif;margin-bottom:8px}
+  .ref table{border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14.5px;margin-top:6px}
+  .ref td{border:1px solid var(--line);padding:8px 12px;vertical-align:top}
+  .ref td.word{font-weight:700;color:var(--blue);width:170px}
+  .ref td .ex{display:block;font-style:italic;color:#243b53;margin-top:4px}
+  .ref td .tr{display:block;font-size:12.5px;color:var(--muted)}
+  mark.hl{background:#fff1a8;padding:0 3px;border-radius:3px}
+  .pairbox{background:#f0f6ff;border:1px solid #c7dbf7;border-radius:10px;padding:10px 14px;margin-top:10px;
+           font-family:Arial,sans-serif;font-size:14.5px}
+  .pairbox .lbl{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:4px}
+
+  .part{font-family:Arial,sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;
+        color:var(--muted);margin:26px 0 10px}
+  .part-anchor{scroll-margin-top:16px}
+
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+  .q .q-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .q .q-num{font-family:Arial,sans-serif;font-weight:700;font-size:13px;color:var(--muted)}
+  .q .q-tag{font-family:Arial,sans-serif;font-size:11.5px;font-weight:700;background:var(--blue-soft);color:var(--blue);
+            border-radius:99px;padding:2px 10px}
+  .q .sent{margin:8px 0 10px;font-size:17px}
+  select.gap{max-width:200px;padding:3px 8px;margin:0 3px;border-radius:8px;border:2px dashed var(--blue);
+      background:var(--blue-soft);color:var(--blue);font-family:Arial,sans-serif;font-weight:700;font-size:14px;
+      cursor:pointer;vertical-align:middle}
+  select.gap.ok{border-style:solid;border-color:var(--green);background:var(--green-soft);color:var(--green);cursor:default}
+  select.gap.bad{border-style:solid;border-color:var(--red);background:var(--red-soft);color:var(--red);
+      animation:shake .3s}
+  @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+  mark.q{background:#d3f9d8;padding:1px 4px;border-radius:3px}
+
+  .expl{display:none;margin:4px 0 14px;border:1px solid var(--line);border-radius:10px;background:#fbfcfd;padding:12px 16px}
+  .expl.show{display:block}
+  .expl .ans-line{font-family:Arial,sans-serif;font-weight:700;font-size:15px;margin-bottom:6px;color:var(--green)}
+  .expl .lbl{display:block;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+  .expl .quote{font-style:italic;background:#fff;border-left:3px solid var(--green);padding:6px 10px;border-radius:0 6px 6px 0;margin-top:4px;font-size:15.5px}
+  .expl p.note{font-family:Arial,sans-serif;font-size:14.5px;margin:6px 0 0}
+  .expl table{border-collapse:collapse;margin-top:6px;font-family:Arial,sans-serif;font-size:14px;width:100%}
+  .expl td{border:1px solid var(--line);padding:5px 10px;vertical-align:top}
+  .expl td.no{color:var(--red);font-weight:700;width:140px}
+
+  .gtext{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin-bottom:14px}
+  .gtext h3{margin:0 0 4px;font-family:Arial,sans-serif;font-size:20px;color:#102a43;text-align:center}
+  .gtext p{margin:12px 0;font-size:16.5px;text-align:justify}
+
+  .clinic{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--red);
+          border-radius:12px;padding:18px 22px;margin-bottom:14px}
+  .clinic h2{margin:0 0 8px;font-family:Arial,sans-serif;font-size:17px;color:var(--red)}
+  .clinic-item{border-bottom:1px dashed var(--line);padding:10px 0;font-family:Arial,sans-serif;font-size:14.5px}
+  .clinic-item:last-child{border-bottom:none}
+  .clinic-item .sent-wrong{font-style:italic;color:#243b53}
+  .clinic-item .rule-line{display:block;margin-top:4px;color:#57430a;background:var(--amber-soft);border-radius:6px;padding:4px 8px}
+  .clinic-empty{font-family:Arial,sans-serif;color:var(--green);font-weight:700}
+
+  .controls{position:sticky;bottom:12px;margin-top:18px;background:var(--paper);border:1px solid var(--line);
+            border-radius:14px;padding:14px 18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;
+            box-shadow:0 6px 24px rgba(16,42,67,.12);z-index:10}
+  .controls .btn{border:none;border-radius:10px;padding:12px 26px;font-family:Arial,sans-serif;
+                 font-weight:700;font-size:16px;cursor:pointer}
+  #resetBtn{background:#eef2f7;color:#33475b}
+  #resetBtn:hover{background:#e2e8f0}
+  .controls a.btn{background:var(--blue);color:#fff;text-decoration:none}
+  .controls a.btn.back{background:#eef2f7;color:#33475b}
+  #score{font-family:Arial,sans-serif;font-weight:700;font-size:16px;margin-left:auto;color:var(--muted)}
+  #score.good{color:var(--green)} #score.mid{color:var(--amber)} #score.low{color:var(--red)}
+
+  @media print{
+    body{background:#fff}
+    .controls,.tip,details,.nav{display:none}
+    .expl{display:block !important}
+  }
+  @media(max-width:560px){
+    .test-head h1{font-size:21px}
+    select.gap{max-width:160px}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="test-head">
+    <div class="crumb">НМТ · Англійська мова · Комплекс 3 «Світ навколо нас» · Модуль 3.3</div>
+    <h1>Confusing Words: Entertainment &amp; Media</h1>
+    <p>Довідник → 14 завдань → 2 тексти формату НМТ → Error Clinic · Рівень B2 · British English</p>
+  </div>
+
+  <nav class="nav">
+    <a class="home" href="../index.html">⌂ Усі комплекси</a>
+    <a class="home" href="index.html">Комплекс 3</a>
+    <a class="here" href="#ref1">📖 Довідник</a>
+    <a href="#part1">✏️ Тренажер 1–14</a>
+    <a href="#text1">📰 Текст 1 (1–7)</a>
+    <a href="#text2">📰 Текст 2 (8–14)</a>
+    <a href="#clinic">🔁 Error Clinic</a>
+  </nav>
+
+  <div class="instr">
+    <h2>Як працювати з модулем</h2>
+    <p><b>Крок 1.</b> Прочитайте <b>довідник</b>: 8 пар слів про театр, кіно, музику й телебачення. Зверніть увагу на рамки «⚠️ Пастка».</p>
+    <p><b>Крок 2.</b> <b>14 одиничних завдань</b> A/B/C/D — кожне речення перевіряє одну пару.</p>
+    <p><b>Крок 3.</b> <b>2 тексти НМТ</b> по 7 пропусків: пари змішані в контексті.</p>
+    <p><b>Крок 4.</b> <b>Error Clinic</b> — повторення помилок.</p>
+    <div class="tip"><b>Головне правило модуля:</b> у словах про розваги завжди питайте себе: <b>ДЕ це відбувається?</b> (сцена чи стадіон? екран чи газета?) і <b>ХТО діє?</b> (актор чи глядач? критик чи комік?). Місце й роль вирішують усе.</div>
+  </div>
+
+  <!-- ================= ДОВІДНИК ================= -->
+  <div class="part part-anchor" id="ref1">📖 Довідник — 8 пар-контрастів</div>
+
+  <div class="ref" id="ref-aud">
+    <h2>audience / spectators</h2>
+    <div class="gloss">Глядачі в залі (театр, кіно, концерт, ТБ) vs вболівальники на стадіоні.</div>
+    <table>
+      <tr><td class="word">audience</td><td>глядачі культурної події: вистава, фільм, концерт, телешоу
+        <span class="ex">The <mark class="hl">audience</mark> clapped for five minutes at the end of the play.</span><span class="tr">Глядачі аплодували п'ять хвилин наприкінці вистави.</span></td></tr>
+      <tr><td class="word">spectators</td><td>глядачі СПОРТИВНОЇ події: матч, перегони, змагання
+        <span class="ex">Forty thousand <mark class="hl">spectators</mark> watched the final at the stadium.</span><span class="tr">Сорок тисяч вболівальників дивилися фінал на стадіоні.</span></td></tr>
+    </table>
+    <div class="pairbox"><span class="lbl">Порівняйте</span>
+      The <mark class="hl">audience</mark> loved the concert. ↔ The <mark class="hl">spectators</mark> cheered when the striker scored.<br>
+      <i>Концерт — audience; гол на стадіоні — spectators.</i>
+    </div>
+    <div class="trap"><b>⚠️ Пастка:</b> тест: <b>що дивляться?</b> Спорт/стадіон → spectators. Театр/кіно/концерт/ТБ → audience. І ще: audience — зібраний іменник (the audience WAS…), а spectators — злічуваний (spectators were…).</div>
+  </div>
+
+  <div class="ref" id="ref-chp">
+    <h2>channel / programme</h2>
+    <div class="gloss">Канал (станція, що мовить цілодобово) vs програма (конкретна передача в ньому).</div>
+    <table>
+      <tr><td class="word">channel</td><td>телеканал (BBC One, MTV…), також радіостанція
+        <span class="ex">There's nothing good on TV — let's change the <mark class="hl">channel</mark>.</span><span class="tr">Нічого цікавого не показують — давай перемкнемо канал.</span></td></tr>
+      <tr><td class="word">programme</td><td>програма, передача (конкретна, із назвою й часом)
+        <span class="ex">My favourite <mark class="hl">programme</mark> starts at eight o'clock.</span><span class="tr">Моя улюблена передача починається о восьмій.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> перемикаємо кнопкою → change the <b>channel</b>; дивимося щось із назвою й розкладом → watch a <b>programme</b>. «Який твій улюблений канал?» ≠ «яка твоя улюблена програма?» — це різні питання!</div>
+  </div>
+
+  <div class="ref" id="ref-rc">
+    <h2>review / criticism</h2>
+    <div class="gloss">Рецензія (стаття з оцінкою) vs критика (несхвалення, зауваження).</div>
+    <table>
+      <tr><td class="word">review (C)</td><td>рецензія — текст критика у пресі: про фільм, книжку, виставу
+        <span class="ex">The new film got excellent <mark class="hl">reviews</mark> in all the newspapers.</span><span class="tr">Новий фільм отримав чудові рецензії в усіх газетах.</span></td></tr>
+      <tr><td class="word">criticism (U)</td><td>критика — висловлене несхвалення (може бути усним)
+        <span class="ex">She finds it hard to accept <mark class="hl">criticism</mark> of her work.</span><span class="tr">Їй важко сприймати критику своєї роботи.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> review — ЗЛІЧУВАНА стаття (a review, good reviews); criticism — НЕЗЛІЧУВАНЕ несхвалення (не «a criticism»!). Газета друкує reviews; люди висловлюють criticism.</div>
+  </div>
+
+  <div class="ref" id="ref-aps">
+    <h2>play / act / star</h2>
+    <div class="gloss">Три дієслова актора: грати роль / працювати актором / бути зіркою головної ролі.</div>
+    <table>
+      <tr><td class="word">play (a part/role)</td><td>грати конкретну роль
+        <span class="ex">Who <mark class="hl">plays</mark> the part of Romeo in this production?</span><span class="tr">Хто грає роль Ромео в цій постановці?</span></td></tr>
+      <tr><td class="word">act</td><td>грати, акторствувати (професія, процес)
+        <span class="ex">She <mark class="hl">acts</mark> brilliantly — you really believe her character.</span><span class="tr">Вона блискуче грає — її героїні справді віриш.</span></td></tr>
+      <tr><td class="word">star (in/as)</td><td>грати ГОЛОВНУ роль, «зірка фільму»
+        <span class="ex">He <mark class="hl">starred</mark> in three films last year.</span><span class="tr">Минулого року він знявся в головних ролях у трьох фільмах.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> play + the part/role OF; star + IN a film / AS a character; act — без «ролі» (act well/badly). «Він зіграв Гамлета» = he played Hamlet, а «він знявся у фільмі» = he starred in the film.</div>
+  </div>
+
+  <div class="ref" id="ref-sss">
+    <h2>scene / scenery / stage</h2>
+    <div class="gloss">Сцена (епізод п'єси) / краєвид (незлічуваний!) / сцена (місце, де грають).</div>
+    <table>
+      <tr><td class="word">scene (C)</td><td>епізод у п'єсі/фільмі; сцена (подія)
+        <span class="ex">The wedding <mark class="hl">scene</mark> in Act 2 made everyone cry.</span><span class="tr">Сцена весілля в другому акті розчулила всіх до сліз.</span></td></tr>
+      <tr><td class="word">scenery (U)</td><td>1) краєвид, ландшафт; 2) театральні декорації
+        <span class="ex">The <mark class="hl">scenery</mark> in the mountains was breathtaking.</span><span class="tr">Гірські краєвиди були захопливі.</span></td></tr>
+      <tr><td class="word">stage (C)</td><td>сцена як МАЙДАНЧИК, подіум
+        <span class="ex">The actors walked onto the <mark class="hl">stage</mark> and bowed.</span><span class="tr">Актори вийшли на сцену й вклонилися.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> scenery — НЕЗЛІЧУВАНЕ (не «sceneries»!). Актори стоять on <b>stage</b>; глядачі в захваті від <b>scenery</b> (краєвидів чи декорацій); «Act 1, Scene 2» — <b>scene</b>.</div>
+  </div>
+
+  <div class="ref" id="ref-bog">
+    <h2>band / orchestra / group</h2>
+    <div class="gloss">Три «музичні колективи»: рок/поп / симфонічний / будь-який гурт.</div>
+    <table>
+      <tr><td class="word">band</td><td>гурт (рок, поп, джаз; кілька людей: гітари, барабани)
+        <span class="ex">The <mark class="hl">band</mark> played all their greatest hits.</span><span class="tr">Гурт виконав усі свої найкращі хіти.</span></td></tr>
+      <tr><td class="word">orchestra</td><td>оркестр (симфонічний, 50–100 музикантів, диригент)
+        <span class="ex">The <mark class="hl">orchestra</mark> performed Beethoven's Ninth Symphony.</span><span class="tr">Оркестр виконав Дев'яту симфонію Бетховена.</span></td></tr>
+      <tr><td class="word">group</td><td>група — найзагальніше слово (співачки, діджеї, будь-хто)
+        <span class="ex">She sings in a pop <mark class="hl">group</mark> with three other girls.</span><span class="tr">Вона співає в поп-групі з трьома дівчатами.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> Бетховен, диригент, скрипки → <b>orchestra</b>. Гітари й барабани → <b>band</b>. Не знаєте складу → <b>group</b> (найнейтральніше).</div>
+  </div>
+
+  <div class="ref" id="ref-rp">
+    <h2>rehearse / practise</h2>
+    <div class="gloss">Репетирувати виступ (цілісно, з усіма) vs тренувати навичку (регулярно, частинами).</div>
+    <table>
+      <tr><td class="word">rehearse</td><td>репетирувати виставу/концерт перед показом
+        <span class="ex">We <mark class="hl">rehearse</mark> the play every evening until the opening night.</span><span class="tr">Ми репетируємо виставу щовечора до прем'єри.</span></td></tr>
+      <tr><td class="word">practise</td><td>тренуватися, вправлятися (навичка: інструмент, спорт, мова)
+        <span class="ex">You must <mark class="hl">practise</mark> the piano for an hour every day.</span><span class="tr">Треба займатися на піаніно по годині щодня.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> rehearse = прогнати ТВІР цілком перед публікою (rehearsal — репетиція); practise = щоденні вправи для вміння. Актори rehearse; піаніст practise. Британський правопис: дієслово practi<b>S</b>e, іменник practi<b>C</b>e!</div>
+  </div>
+
+  <div class="ref" id="ref-ccc">
+    <h2>comic / cartoon / comedian</h2>
+    <div class="gloss">Комікс (статичні малюнки) / мультфільм (анімація) / комік (ЛЮДИНА).</div>
+    <table>
+      <tr><td class="word">comic (C)</td><td>комікс — журнал із малюнками й бульбашками
+        <span class="ex">He collects old <mark class="hl">comics</mark> about superheroes.</span><span class="tr">Він колекціонує старі комікси про супергероїв.</span></td></tr>
+      <tr><td class="word">cartoon (C)</td><td>мультфільм; карикатура в газеті
+        <span class="ex">My little brother watches <mark class="hl">cartoons</mark> every Saturday morning.</span><span class="tr">Мій молодший брат дивиться мультики щосуботи вранці.</span></td></tr>
+      <tr><td class="word">comedian (C)</td><td>комік — ЛЮДИНА, що розважає жартами
+        <span class="ex">The <mark class="hl">comedian</mark> had the audience laughing within seconds.</span><span class="tr">Комік розсмішив глядачів за лічені секунди.</span></td></tr>
+    </table>
+    <div class="trap"><b>⚠️ Пастка:</b> питання-тест: <b>хто/що?</b> Людина на сцені жартує → comedian. На екрані рухомі малюнки → cartoon. На папері бульбашки з текстом → comic.</div>
+  </div>
+
+  <!-- ================= ЧАСТИНА 1: ОДИНИЧНІ ================= -->
+  <div class="part part-anchor" id="part1">✏️ Частина 1 · 14 одиничних завдань</div>
+
+  <div class="instr">
+    <h2>Завдання 1–14</h2>
+    <p>Оберіть правильне слово зі списку. Не вгадуйте — шукайте <b>маркери</b>: місце, роль, злічуваність, прийменники. Якщо помилитеся — прочитайте, <b>чому саме так</b>.</p>
+  </div>
+
+  <div id="singles"></div>
+
+  <!-- ================= ТЕКСТ 1 ================= -->
+  <div class="part part-anchor" id="text1">📰 Частина 2 · Текст 1 · завдання 1–7</div>
+
+  <div class="instr">
+    <h2>Текст 1 — «Opening Night»</h2>
+    <p><span class="en">For questions 1–7, read the text below and decide which answer (A, B, C or D) best fits each gap.</span></p>
+    <div class="tip"><b>Стратегія:</b> спочатку прочитайте увесь текст БЕЗ варіантів — зрозумійте, що це за подія і хто в ній хто. Тоді половина варіантів відпаде сама.</div>
+  </div>
+
+  <div class="gtext">
+    <h3>Opening Night</h3>
+    <p>Our school drama club had been working on «Romeo and Juliet» since September. We <select class="gap" data-block="t1" data-gap="1"></select> every Tuesday and Thursday, going through the whole play again and again. I was lucky enough to <select class="gap" data-block="t1" data-gap="2"></select> the part of Juliet — a dream come true for any sixteen-year-old actress! The school hall was transformed: volunteers painted the <select class="gap" data-block="t1" data-gap="3"></select> — a balcony, an Italian garden, even a fountain.
+    <span class="expl" id="expl-t1-1"></span><span class="expl" id="expl-t1-2"></span><span class="expl" id="expl-t1-3"></span></p>
+    <p>On the opening night the hall was full — an <select class="gap" data-block="t1" data-gap="4"></select> of two hundred parents, teachers and friends. When I first stepped onto the <select class="gap" data-block="t1" data-gap="5"></select>, my legs were shaking. But the balcony <select class="gap" data-block="t1" data-gap="6"></select> in Act 2 went perfectly, and at the end everyone stood up and clapped. The next day our school newspaper printed a wonderful <select class="gap" data-block="t1" data-gap="7"></select> of the show. «A triumph!» it said. We all signed it and pinned it on the club's noticeboard.
+    <span class="expl" id="expl-t1-4"></span><span class="expl" id="expl-t1-5"></span><span class="expl" id="expl-t1-6"></span><span class="expl" id="expl-t1-7"></span></p>
+  </div>
+
+  <!-- ================= ТЕКСТ 2 ================= -->
+  <div class="part part-anchor" id="text2">📰 Частина 3 · Текст 2 · завдання 8–14</div>
+
+  <div class="instr">
+    <h2>Текст 2 — «Friday Night on the Sofa»</h2>
+    <p><span class="en">For questions 8–14, read the text below and decide which answer (A, B, C or D) best fits each gap.</span></p>
+    <div class="tip"><b>Стратегія:</b> цей текст про телебачення й концерт. Тримайте в голові тести: «що дивляться?» (спорт чи шоу), «що перемикають?» (канал чи передачу), «хто на сцені?» (гурт, оркестр чи комік).</div>
+  </div>
+
+  <div class="gtext">
+    <h3>Friday Night on the Sofa</h3>
+    <p>Friday night is TV night in our house. At seven we always watch a quiz <select class="gap" data-block="t2" data-gap="8"></select> called «Brainbox» — Dad answers the questions before the players do and is very proud of it. At eight Mum takes the remote and changes the <select class="gap" data-block="t2" data-gap="9"></select> to BBC Two for her favourite drama series. Last week's episode ended with a shocking <select class="gap" data-block="t2" data-gap="10"></select> in which the detective finally met her enemy face to face.
+    <span class="expl" id="expl-t2-8"></span><span class="expl" id="expl-t2-9"></span><span class="expl" id="expl-t2-10"></span></p>
+    <p>At nine there's a live comedy show. This week's guest is a famous <select class="gap" data-block="t2" data-gap="11"></select> who has everyone laughing with his jokes about school dinners. Later, a rock <select class="gap" data-block="t2" data-gap="12"></select> from Manchester plays live in the studio — four lads with guitars and drums. Tomorrow the same channel is showing the Cup Final, and my brother is going with his friends. He says being one of 80,000 <select class="gap" data-block="t2" data-gap="13"></select> in the stadium is ten times better than watching at home. As for me, I prefer the sofa — and if the match is boring, I can always read one of my <select class="gap" data-block="t2" data-gap="14"></select> about superheroes under the blanket.
+    <span class="expl" id="expl-t2-11"></span><span class="expl" id="expl-t2-12"></span><span class="expl" id="expl-t2-13"></span><span class="expl" id="expl-t2-14"></span></p>
+  </div>
+
+  <!-- ================= ERROR CLINIC ================= -->
+  <div class="part part-anchor" id="clinic">🔁 Error Clinic — робота над помилками</div>
+
+  <div class="clinic">
+    <h2>Error Clinic</h2>
+    <p style="font-family:Arial,sans-serif;font-size:14.5px;margin:0 0 10px">Тут з'являться всі завдання, де ви помилилися хоча б раз. Після завершення тренажера поверніться сюди й поясніть кожну помилку самі собі.</p>
+    <div id="clinicList"><div class="clinic-empty">Поки що помилок немає. Чудово — так тримати! 💪</div></div>
+  </div>
+
+  <!-- ================= CONTROLS ================= -->
+  <div class="controls">
+    <a class="btn back" href="index.html">← Комплекс 3</a>
+    <button class="btn" id="resetBtn">🔄 Скинути все</button>
+    <a class="btn" href="modul-3-4.html">Наступний модуль →</a>
+    <span id="score">Результат: 0 / 28</span>
+  </div>
+
+</div>
+
+<script>
+/* ===================== ДАНІ ===================== */
+const SINGLES = [
+{id:1, ref:'#ref-aud', tag:'audience / spectators', sent:'The referee asked the ___ to stop throwing bottles onto the football pitch.',
+ opts:[['A','audience'],['B','spectators'],['C','actors'],['D','viewers']], ans:'B',
+ why:'Футбольне поле + бійка з пляшками → вболівальники на стадіоні → spectators. Спортивна подія — завжди spectators.',
+ no:[['audience','audience — глядачі культурних подій (театр, кіно, концерт). Футбол — спорт → spectators.'],
+     ['actors','актори ГРАЮТЬ, а не кидають пляшки з трибун.'],
+     ['viewers','viewers — телеглядачі біля екранів; суддя не може звернутися до них «припиніть кидати».']],
+ trap:'⚠️ Тест: стадіон/матч/суддя → spectators. Театр/концерт → audience.'},
+{id:2, ref:'#ref-aud', tag:'audience / spectators', sent:'At the end of the concert, the whole ___ stood up and shouted for one more song.',
+ opts:[['A','spectators'],['B','audience'],['C','orchestra'],['D','stage']], ans:'B',
+ why:'Концерт — культурна подія → audience. Зібраний іменник: the audience stood up.',
+ no:[['spectators','spectators — на спортивних змаганнях; концерт — це audience.'],
+     ['orchestra','оркестр — той, хто ГРАЄ; тут мова про тих, хто слухав і кричав «ще!».'],
+     ['stage','сцена не може «стати й кричати».']],
+ trap:'⚠️ Концерт/вистава/фільм → audience; матч → spectators.'},
+{id:3, ref:'#ref-chp', tag:'channel / programme', sent:'This film is boring — pass me the remote and I\'ll change the ___.',
+ opts:[['A','programme'],['B','channel'],['C','scene'],['D','review']], ans:'B',
+ why:'Перемикаємо пультом, щоб дивитися щось ІНШЕ → change the channel. Сталий вираз.',
+ no:[['programme','програму не «перемикають» — перемикають канал, на якому вона йде.'],
+     ['scene','сцену (епізод) глядач перемкнути не може.'],
+     ['review','рецензію читають у газеті, а не перемикають пультом.']],
+ trap:'⚠️ Пульт + «перемкнути» → channel.'},
+{id:4, ref:'#ref-chp', tag:'channel / programme', sent:'«Wild Britain» is a nature ___ about animals in their natural habitats.',
+ opts:[['A','channel'],['B','programme'],['C','station on'],['D','spectator']], ans:'B',
+ why:'«Wild Britain» — конкретна передача з назвою → a nature programme. Визначення: програма ПРО тварин.',
+ no:[['channel','канал — це станція, що ПОКАЗУЄ такі передачі цілодобово (напр., BBC). Сама «Wild Britain» — передача.'],
+     ['station on','граматично зламаний варіант — «a station on about animals» не складається.'],
+     ['spectator','глядач — людина, а не передача.']],
+ trap:'⚠️ Є назва й тема → programme; мовить цілодобово → channel.'},
+{id:5, ref:'#ref-rc', tag:'review / criticism', sent:'Before you buy tickets, read the ___ in today\'s newspaper — the critic loved the play.',
+ opts:[['A','criticism'],['B','review'],['C','rehearsal'],['D','scene']], ans:'B',
+ why:'Стаття критика в газеті з оцінкою вистави → review. Маркери: newspaper, the critic.',
+ no:[['criticism','criticism — несхвалення взагалі (і незлічуване — не «a criticism»); а тут конкретний текст у газеті → review.'],
+     ['rehearsal','репетиція — процес підготовки акторів, не стаття.'],
+     ['scene','епізод вистави — читають не епізод, а рецензію.']],
+ trap:'⚠️ Газета + критик + оцінка → review (злічуване: a review).'},
+{id:6, ref:'#ref-rc', tag:'review / criticism', sent:'Good teachers give helpful ___, not just low marks.',
+ opts:[['A','review'],['B','criticism'],['C','reviews of'],['D','critics']], ans:'B',
+ why:'«Корисна критика» від вчителя — зауваження, що допомагають → criticism (незлічуване). Маркер: give ___ (без артикля a!).',
+ no:[['review','review — стаття в пресі; «give a review» вчителям не властиво, і тут немає артикля.'],
+     ['reviews of','«give reviews of» — не кажуть; reviews ПИШУТЬ (write reviews).'],
+     ['critics','critics — це люди-критики; вчителі дають не «критиків».']],
+ trap:'⚠️ Без артикля + несхвалення/поради → criticism (U). З артиклем a + газета → review.'},
+{id:7, ref:'#ref-aps', tag:'play / act / star', sent:'Who ___ the part of the Wicked Witch in your school show?',
+ opts:[['A','stars'],['B','acts'],['C','plays'],['D','performs on']], ans:'C',
+ why:'«Грати роль» → play the part of — стала конструкція. Маркер: the part of.',
+ no:[['stars','star = грати ГОЛОВНУ роль (star in a film / as a character); з «the part of» не поєднується.'],
+     ['acts','act — акторствувати взагалі; «act the part» можливе рідко, але стандарт тестів — play the part.'],
+     ['performs on','perform + роль без «on»; конструкція зламається: performs on the part.']],
+ trap:'⚠️ ___ the part/role of → play. Star in/as; act (well).'},
+{id:8, ref:'#ref-aps', tag:'play / act / star', sent:'The young actress did so well that she was invited to ___ in a big Hollywood film.',
+ opts:[['A','play'],['B','star'],['C','act the'],['D','perform the']], ans:'B',
+ why:'«Запросили на головну роль у великому фільмі» → star in a film. Маркери: did so well (успіх!) + in a film.',
+ no:[['play','play in a film — занадто слабко: контекст («did so well», «big Hollywood film») вимагає ГОЛОВНОЇ ролі → star.'],
+     ['act the','act in a film — можливо, але артикель the ламає конструкцію: act the in a film.'],
+     ['perform the','perform + the + in — конструкція зламані; perform in a film — так, але без the.']],
+ trap:'⚠️ in a film + успіх/голова роль → star in.'},
+{id:9, ref:'#ref-sss', tag:'scene / scenery / stage', sent:'On our way through Wales we stopped to admire the mountain ___.',
+ opts:[['A','scenes'],['B','scenery'],['C','stage'],['D','stages']], ans:'B',
+ why:'Гірські КРАЄВИДИ → scenery (незлічуване!). Admire the scenery — стале.',
+ no:[['scenes','scenes — епізоди п\'єси або «сцени» подій; краєвид — лише scenery.'],
+     ['stage','сцена-майданчик у театрі — до гір не має стосунку.'],
+     ['stages','етапи/сцени — теж не краєвид.']],
+ trap:'⚠️ Краєвид = scenery (U, без «a» і без множини).'},
+{id:10, ref:'#ref-sss', tag:'scene / scenery / stage', sent:'My favourite part is the last ___, when the two families finally make peace.',
+ opts:[['A','scenery'],['B','stage'],['C','scene'],['D','scenes of']], ans:'C',
+ why:'Епізод п\'єси/фільму, де щось відбувається → scene. «The last scene» — заключна сцена.',
+ no:[['scenery','краєвид/декорації — «останній краєвид, коли родини миряться» — безглуздо.'],
+     ['stage','майданчик сцени; «останній майданчик» — не те.'],
+     ['scenes of','зайве of ламає конструкцію: «the last scenes of when…» — не англійська.']],
+ trap:'⚠️ Епізод із подією → scene; майданчик → stage; краєвид → scenery.'},
+{id:11, ref:'#ref-bog', tag:'band / orchestra / group', sent:'More than eighty musicians, with violins and a conductor, form the city symphony ___.',
+ opts:[['A','band'],['B','group'],['C','orchestra'],['D','comedian']], ans:'C',
+ why:'80 музикантів + скрипки + диригент + symphony → orchestra. Усі маркери класичного оркестру.',
+ no:[['band','гурт — 4–5 людей із гітарами; симфонія потребує оркестру.'],
+     ['group','надто загальне; точне слово за описом — orchestra.'],
+     ['comedian','комік — одна людина з жартами, не 80 музикантів.']],
+ trap:'⚠️ Скрипки/диригент/симфонія → orchestra.'},
+{id:12, ref:'#ref-rp', tag:'rehearse / practise', sent:'The opening night is on Friday, so the cast must ___ the whole play twice this week.',
+ opts:[['A','practise'],['B','rehearse'],['C','review'],['D','perform on']], ans:'B',
+ why:'Проганяють ЦІЛУ виставу перед прем\'єрою → rehearse. Маркери: opening night, the whole play, cast.',
+ no:[['practise','practise — тренувати НАВИЧКУ (practise the piano / your lines); прогін вистави цілком перед показом — rehearse.'],
+     ['review','review — писати рецензію або повторювати матеріал (AmE); актори перед прем\'єрою репетирують.'],
+     ['perform on','perform — виступати перед глядачами; «on» ламає конструкцію, та й прем\'єра ще не настала.']],
+ trap:'⚠️ Вистава цілком + перед прем\'єрою → rehearse; навичка щодня → practise.'},
+{id:13, ref:'#ref-rp', tag:'rehearse / practise', sent:'If you want to play the violin well, you need to ___ for at least an hour a day.',
+ opts:[['A','rehearse'],['B','practise'],['C','star'],['D','review']], ans:'B',
+ why:'Щоденні вправи для вміння грати → practise. Маркери: want to play WELL, an hour a day.',
+ no:[['rehearse','rehearse — прогін конкретного твору/вистави перед показом; щоденна робота над вмінням — practise.'],
+     ['star','star in — грати головну роль; тут про тренування.'],
+     ['review','повторювати нотний матеріал — не той зміст; з інструментом — practise.']],
+ trap:'⚠️ Інструмент/спорт/мова + щодня → practise (дієслово з S!).'},
+{id:14, ref:'#ref-ccc', tag:'comic / cartoon / comedian', sent:'The ___ told a joke about exams, and the whole theatre burst out laughing.',
+ opts:[['A','cartoon'],['B','comic'],['C','comedian'],['D','scene']], ans:'C',
+ why:'ЛЮДИНА, що жартує зі сцени → comedian. Маркери: told a joke, theatre, laughing.',
+ no:[['cartoon','мультфільм не розповідає жарти вживу в театрі.'],
+     ['comic','comic як іменник — комікс (журнал); людина-комік → comedian. (Comic — ще й прикметник «комічний».)'],
+     ['scene','сцена-епізод не розповідає жартів.']],
+ trap:'⚠️ Хто жартує? Людина → comedian; журнал → comic; анімація → cartoon.'}
+];
+
+const TEXT1 = {
+1:{ans:'D', word:'rehearsed', opts:[['A','practised'],['B','reviewed'],['C','performed'],['D','rehearsed']],
+   quote:'We <mark class="q">rehearsed</mark> every Tuesday and Thursday, going through the whole play again and again.',
+   why:'«Going through the whole play again and again» до відкриття → репетирували → rehearsed. Пояснення після коми — пряма підказка.',
+   no:[['practised','practise — тренування навички (інструмент, окремі репліки); прогін ВСІЄЇ п\'єси перед показом — rehearse.'],
+      ['reviewed','писати рецензії чи повторювати уроки — трупа цього не робить щовівторка перед прем\'єрою.'],
+      ['performed','perform — грати ПЕРЕД ГЛЯДАЧАМИ; глядачі з\'являться лише на opening night, а це репетиції.']],
+   trap:'⚠️ Whole play + before opening night → rehearse.'},
+2:{ans:'A', word:'play', opts:[['A','play'],['B','star'],['C','act'],['D','perform']],
+   quote:'…I was lucky enough to <mark class="q">play</mark> the part of Juliet…',
+   why:'«Грати роль Джульєтти» → play the part of — стала конструкція.',
+   no:[['star','star + in/as: star in the play / star as Juliet; з «the part of» не поєднується.'],
+      ['act','act = акторствувати; конкретну роль грають play the part of.'],
+      ['perform','perform a play / perform on stage — але роль play, не perform the part (у тестовому стандарті).']],
+   trap:'⚠️ ___ the part of X → play.'},
+3:{ans:'C', word:'scenery', opts:[['A','scenes'],['B','stage'],['C','scenery'],['D','scene']],
+   quote:'…volunteers painted the <mark class="q">scenery</mark> — a balcony, an Italian garden, even a fountain.',
+   why:'Розписані ДЕКОРАЦІЇ (балкон, сад, фонтан) → scenery. Перелік після тире — це елементи оформлення сцени.',
+   no:[['scenes','scenes — епізоди п\'єси; епізоди не малюють фарбами.'],
+      ['stage','stage — сам майданчик; малюють не підлогу сцени, а декорації.'],
+      ['scene','один епізод — не збігається з переліком «балкон, сад, фонтан».']],
+   trap:'⚠️ Декорації/краєвид → scenery (U). Епізоди → scenes.'},
+4:{ans:'B', word:'audience', opts:[['A','spectators'],['B','audience'],['C','orchestra'],['D','review']],
+   quote:'…the hall was full — an <mark class="q">audience</mark> of two hundred parents, teachers and friends.',
+   why:'Шкільна вистава в залі — культурна подія → an audience of 200. Маркер: артикль an + зібраний іменник.',
+   no:[['spectators','spectators — вболівальники на спорті; вистава — audience. І ще: «an spectators» граматично неможливо (множина).'],
+      ['orchestra','оркестр ГРАЄ музику; 200 батьків і друзів — слухачі/глядачі.'],
+      ['review','рецензія — текст у газеті, не 200 людей у залі.']],
+   trap:'⚠️ an ___ of two hundred + театр → audience.'},
+5:{ans:'D', word:'stage', opts:[['A','scenery'],['B','scene'],['C','audience'],['D','stage']],
+   quote:'When I first stepped onto the <mark class="q">stage</mark>, my legs were shaking.',
+   why:'«Вийшла на СЦЕНУ» → step onto the stage. Майданчик, куди ступають актори.',
+   no:[['scenery','декорації — фон; на них не «ступають» як на майданчик.'],
+      ['scene','епізод — частина п\'єси, а не місце, куди виходять ногами.'],
+      ['audience','на глядачів не виходять — виступають ПЕРЕД ними.']],
+   trap:'⚠️ step onto the ___ → stage. On stage = на сцені.'},
+6:{ans:'A', word:'scene', opts:[['A','scene'],['B','stage'],['C','scenery'],['D','actress']],
+   quote:'But the balcony <mark class="q">scene</mark> in Act 2 went perfectly…',
+   why:'Епізод «на балконі» в другому акті → scene. Маркер: in Act 2 (акти діляться на сцени).',
+   no:[['stage','«балконний майданчик у Акті 2» — акти складаються зі сцен-епізодів, не з майданчиків.'],
+      ['scenery','декорація-балкон не «went perfectly» — вдало пройшла СЦЕНА (гра акторів).'],
+      ['actress','актриса — людина; «the balcony actress in Act 2» — безглуздо.']],
+   trap:'⚠️ Act 2 + епізод → scene. Act/Scene — структура п\'єси.'},
+7:{ans:'C', word:'review', opts:[['A','criticism'],['B','rehearsal'],['C','review'],['D','channel']],
+   quote:'…our school newspaper printed a wonderful <mark class="q">review</mark> of the show.',
+   why:'Стаття в газеті з оцінкою («A triumph!») → review. Маркери: newspaper printed + артикль a.',
+   no:[['criticism','незлічуване — «a criticism» неможливо; і «wonderful» свідчить про схвальну РЕЦЕНЗІЮ, а не критику.'],
+      ['rehearsal','репетицію не друкують у газеті.'],
+      ['channel','телеканал не друкують у шкільній газеті.']],
+   trap:'⚠️ Newspaper + a ___ of the show → review.'}
+};
+
+const TEXT2 = {
+8:{ans:'B', word:'programme', opts:[['A','channel'],['B','programme'],['C','review'],['D','scene']],
+   quote:'…we always watch a quiz <mark class="q">programme</mark> called «Brainbox»…',
+   why:'Передача з назвою («Brainbox») → a quiz programme. Маркер: called + назва.',
+   no:[['channel','канал — станція, що МОВИТЬ цілодобово; «Brainbox» — одна передача на ньому.'],
+      ['review','рецензія — стаття критика, а не вікторина, яку дивляться.'],
+      ['scene','епізод — частина передачі; «Brainbox» — це програма цілком.']],
+   trap:'⚠️ Назва в лапках → programme.'},
+9:{ans:'A', word:'channel', opts:[['A','channel'],['B','programme'],['C','remote'],['D','stage']],
+   quote:'…Mum takes the remote and changes the <mark class="q">channel</mark> to BBC Two…',
+   why:'Пульт + перемикання НА BBC Two (назва КАНАЛУ) → change the channel to…',
+   no:[['programme','перемикають КАНАЛ, на якому йде програма; «to BBC Two» — то канал.'],
+      ['remote','remote — сам пульт, він уже в неї в руках (takes the remote).'],
+      ['stage','сцена театральна — не перемикається пультом.']],
+   trap:'⚠️ remote + changes the ___ to BBC → channel.'},
+10:{ans:'D', word:'scene', opts:[['A','review'],['B','stage'],['C','scenery'],['D','scene']],
+   quote:'…ended with a shocking <mark class="q">scene</mark> in which the detective finally met her enemy face to face.',
+   why:'Епізод серіалу, де щось відбувається (зустріч із ворогом) → scene. Маркер: in which + подія.',
+   no:[['review','рецензія — стаття ПРО серіал; епізод завершується сценою, не рецензією.'],
+      ['stage','театральний майданчик — серіал на ТБ ділиться на scenes.'],
+      ['scenery','краєвид/декорації — фон, а «met her enemy» — подія-сцена.']],
+   trap:'⚠️ Епізод із подією → scene.'},
+11:{ans:'C', word:'comedian', opts:[['A','cartoon'],['B','comic'],['C','comedian'],['D','orchestra']],
+   quote:'…a famous <mark class="q">comedian</mark> who has everyone laughing with his jokes about school dinners.',
+   why:'Людина, що жартує вживу → comedian. Маркери: his jokes, has everyone laughing.',
+   no:[['cartoon','мультфільм — анімація, не «a famous… who jokes».'],
+      ['comic','comic (іменник) = комікс-журнал; ЛЮДИНА-комік = comedian.'],
+      ['orchestra','оркестр грає музику, а не «жарти про шкільні обіди».']],
+   trap:'⚠️ Жарти + людина → comedian.'},
+12:{ans:'B', word:'band', opts:[['A','orchestra'],['B','band'],['C','audience'],['D','comedian']],
+   quote:'…a rock <mark class="q">band</mark> from Manchester plays live in the studio — four lads with guitars and drums.',
+   why:'Рок + гітари й барабани + четверо → band. Пояснення після тире — повний опис рок-гурту.',
+   no:[['orchestra','оркестр — скрипки, диригент, симфонії; рок-гурт із гітарами — band.'],
+      ['audience','глядачі СЛУХАЮТЬ, а тут ті, хто «plays live».'],
+      ['comedian','комік — одна людина з жартами, не четверо з гітарами.']],
+   trap:'⚠️ Guitars and drums → band; violins and a conductor → orchestra.'},
+13:{ans:'A', word:'spectators', opts:[['A','spectators'],['B','audience'],['C','viewers'],['D','actors']],
+   quote:'…being one of 80,000 <mark class="q">spectators</mark> in the stadium is ten times better…',
+   why:'Футбольний фінал на стадіоні → spectators. Маркери: Cup Final, stadium, 80,000.',
+   no:[['audience','audience — глядачі шоу/концерту в залі; спорт на стадіоні — spectators.'],
+      ['viewers','viewers — ТЕЛЕглядачі; а він іде НА стадіон особисто.'],
+      ['actors','актори грають у театрі, не на футбольному фіналі.']],
+   trap:'⚠️ Stadium + match → spectators.'},
+14:{ans:'D', word:'comics', opts:[['A','cartoons'],['B','comedians'],['C','reviews'],['D','comics']],
+   quote:'…I can always read one of my <mark class="q">comics</mark> about superheroes under the blanket.',
+   why:'Читає під ковдрою журнали про супергероїв → comics. Маркер: READ (читати!) + superheroes.',
+   no:[['cartoons','мультики ДИВЛЯТЬСЯ, а не читають (read).'],
+      ['comedians','коміків-людей не «читають під ковдрою».'],
+      ['reviews','рецензії читають, але не «про супергероїв» і не колекційні «one of my…» — контекст дитячий, про журнали.']],
+   trap:'⚠️ read + superheroes → comics; watch → cartoons.'}
+};
+
+const TOTAL = SINGLES.length + Object.keys(TEXT1).length + Object.keys(TEXT2).length;
+
+/* ===================== РУШІЙ ===================== */
+const attempts = {};
+const solved   = {};
+const mistakeIds = new Set();
+
+function getData(block, id){
+  if(block === 's')  return SINGLES.find(q => q.id === id);
+  if(block === 't1') return TEXT1[id];
+  if(block === 't2') return TEXT2[id];
+}
+function explId(block, id){ return 'expl-' + (block==='s' ? 's' + id : block + '-' + id); }
+function keyOf(block, id){ return block + '-' + id; }
+
+function buildGap(sel){
+  const block = sel.dataset.block, id = +sel.dataset.gap;
+  const d = getData(block, id);
+  sel.innerHTML = '';
+  const ph = document.createElement('option');
+  ph.value = ''; ph.textContent = '…оберіть…'; ph.disabled = true; ph.selected = true;
+  sel.appendChild(ph);
+  d.opts.forEach(([letter, word]) => {
+    const o = document.createElement('option');
+    o.value = letter; o.textContent = letter + '  ' + word;
+    sel.appendChild(o);
+  });
+}
+
+function buildSingles(){
+  const host = document.getElementById('singles');
+  SINGLES.forEach(q => {
+    const box = document.createElement('div');
+    box.className = 'q';
+    box.innerHTML =
+      '<div class="q-top"><span class="q-num">Завдання ' + q.id + ' / 14</span>' +
+      '<span class="q-tag">' + q.tag + '</span></div>' +
+      '<div class="sent">' + q.sent.replace('___', '<select class="gap" data-block="s" data-gap="' + q.id + '"></select>') + '</div>' +
+      '<div class="expl" id="expl-s' + q.id + '"></div>';
+    host.appendChild(box);
+  });
+}
+
+function renderExplanation(block, id, correctLetter, chosenLetter){
+  const d = getData(block, id);
+  const ex = document.getElementById(explId(block, id));
+  const correctWord = d.opts.find(([l]) => l === correctLetter)[1];
+  const chosenWord  = chosenLetter ? d.opts.find(([l]) => l === chosenLetter)[1] : null;
+
+  let html = '<div class="ans-line">✅ Правильна відповідь: ' + correctLetter + ') ' + correctWord + '</div>';
+  if (d.quote) {
+    html += '<span class="lbl">Підказка з тексту</span><div class="quote">«' + d.quote + '»</div>';
+  } else {
+    html += '<div class="quote">«' + d.sent.replace('___', '<mark class="q">' + correctWord + '</mark>') + '»</div>';
+  }
+  html += '<span class="lbl">Чому саме так?</span><p class="note">' + d.why + '</p>';
+  if (chosenLetter && chosenLetter !== correctLetter) {
+    const row = d.no.find(([w]) => w === chosenWord);
+    html += '<span class="lbl">Ваша відповідь</span><table><tr><td class="no">❌ ' +
+            chosenLetter + ') ' + chosenWord + '</td><td>' + (row ? row[1] : '') + '</td></tr></table>';
+  }
+  html += '<span class="lbl">Інші варіанти</span><table>' +
+          d.no.filter(([w]) => w !== chosenWord)
+              .map(([w, why]) => '<tr><td class="no">❌ ' + w + '</td><td>' + why + '</td></tr>').join('') +
+          '</table>';
+  html += '<div class="trap">' + d.trap + '</div>';
+  if (block === 's') {
+    html += '<p class="note" style="margin-top:8px">📖 Див. довідник: <a href="' + d.ref + '" style="color:var(--blue)">' + d.tag + '</a></p>';
+  }
+  ex.innerHTML = html;
+  ex.classList.add('show');
+}
+
+function refreshScore(){
+  let n = 0;
+  for (const k in solved) if (solved[k] && (attempts[k] || 0) === 1) n++;
+  const el = document.getElementById('score');
+  el.textContent = 'Результат: ' + n + ' / ' + TOTAL + ' з першої спроби';
+  el.className = n === TOTAL ? 'good' : (n >= TOTAL * 0.66 ? 'mid' : 'low');
+}
+
+function renderClinic(){
+  const host = document.getElementById('clinicList');
+  if (!mistakeIds.size) {
+    host.innerHTML = '<div class="clinic-empty">Поки що помилок немає. Чудово — так тримати! 💪</div>';
+    return;
+  }
+  host.innerHTML = '';
+  [...mistakeIds].forEach(key => {
+    const [block, idStr] = key.split('-');
+    const id = +idStr;
+    const d = getData(block, id);
+    const item = document.createElement('div');
+    item.className = 'clinic-item';
+    const label = block === 's' ? 'Завдання ' + id + ' (тренажер)' :
+                  block === 't1' ? 'Текст 1, пропуск ' + id : 'Текст 2, пропуск ' + id;
+    const correctLetter = d.ans;
+    const correctWord = d.opts.find(([l]) => l === correctLetter)[1];
+    item.innerHTML =
+      '<b>' + label + ':</b> <span class="sent-wrong">«' +
+      (d.sent || d.quote.replace(/<[^>]+>/g, '')) + '»</span><br>' +
+      'Правильно: <b style="color:var(--green)">' + correctLetter + ') ' + correctWord + '</b>' +
+      '<span class="rule-line">' + d.trap + '</span>';
+    host.appendChild(item);
+  });
+}
+
+document.addEventListener('change', e => {
+  const sel = e.target.closest('select.gap');
+  if (!sel) return;
+  const block = sel.dataset.block, id = +sel.dataset.gap;
+  const key = keyOf(block, id);
+  const d = getData(block, id);
+  attempts[key] = (attempts[key] || 0) + 1;
+
+  if (sel.value === d.ans) {
+    solved[key] = true;
+    sel.classList.remove('bad'); sel.classList.add('ok');
+    sel.disabled = true;
+  } else {
+    solved[key] = false;
+    mistakeIds.add(key);
+    sel.classList.remove('ok'); sel.classList.add('bad');
+    setTimeout(() => sel.classList.remove('bad'), 600);
+    sel.value = '';
+  }
+  renderExplanation(block, id, d.ans, sel.value);
+  refreshScore();
+  renderClinic();
+});
+
+document.getElementById('resetBtn').addEventListener('click', () => {
+  Object.keys(attempts).forEach(k => delete attempts[k]);
+  Object.keys(solved).forEach(k => delete solved[k]);
+  mistakeIds.clear();
+  document.querySelectorAll('select.gap').forEach(sel => {
+    sel.disabled = false;
+    sel.classList.remove('ok', 'bad');
+    buildGap(sel);
+  });
+  document.querySelectorAll('.expl').forEach(el => { el.innerHTML = ''; el.classList.remove('show'); });
+  refreshScore();
+  renderClinic();
+});
+
+buildSingles();
+document.querySelectorAll('select.gap').forEach(buildGap);
+refreshScore();
+</script>
+</body>
+</html>
